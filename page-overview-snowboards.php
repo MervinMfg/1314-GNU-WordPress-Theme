@@ -177,12 +177,8 @@ get_header();
                     <?php }; // getMens function ?>
 
                     <?php function getWomensHeader() { ?>
-                    <div class="overview-header womens-snowboards">
-                        <div class="header-video">
-                            <iframe src="http://player.vimeo.com/video/43508719?title=0&amp;byline=0&amp;portrait=0&amp;color=99cc33" width="462" height="260" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-                        </div>
-                        <p>From the beginning gnu has focused on working with the world’s best female riders to create snowboards that make every day on edge a magical experience. From 80's World Champion Amy Howat and 90's X Games and US Open champion Barrett Christy to current u-ditch champion Kaitlyn Farrington, GNU ladies have amassed more awards and podium appearances than any other woman's snowboard brand over the past three decades.</p>
-                        <p>A family affair, Barrett Christy now oversee's the Gnu Girls Division, working closely with the team riders to give our designers and machinists unmatched insight into the subtle nuances that transform women's snowboards from functional to fantasy.</p>
+                    <div class="overview-header">
+                        <p><strong>Make Magic!</strong> Gnu is focused on high performance women’s snowboard products; Mt Baker’s World Champion Amy Howatt worked with us in the 80s and super star Barrett Christy pushed design in the 90s. Today Barrett lives 5 miles from the factory and leads the Gnu women’s program. She worked with our design /production crew, her team and artists riding and refining boards to develop every magical board in this years line. Whether you are a first timer, an urban jibber, a freerider or an Olympic athlete; Barrett has put together the perfect combination of Gnu technologies, geometry and flex for you.</p>
                     </div>
                     <?php } // getWomensHeader function ?>
 

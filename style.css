@@ -1497,14 +1497,6 @@ h2.keep-snowboarding-weird {
 .overview-header {
 	padding-bottom: 10px;
 }
-	.overview-header .header-video {
-		width: 462px;
-		height: 260px;
-		padding: 0 239px 20px 239px;
-	}
-		.overview-header.womens-snowboards .header-video {
-			background: url(_/img/header-womens-snowboards.jpg) no-repeat top center;
-		}
 	.overview-header p {
 		padding-bottom: 10px;
 	}
