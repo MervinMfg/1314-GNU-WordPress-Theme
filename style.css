@@ -254,10 +254,9 @@ img.alignright {
 	display: none; 
 }
 .offscreen {
-	position: absolute;
-	display: block;
-	left: -999999px;
-	top: -999999px;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
 }
 .clear {
 	clear: both;
@@ -1523,7 +1522,7 @@ h2.keep-snowboarding-weird {
 		width: 106px;
 		height: 106px;
 		position: absolute;
-		left: 340px;
+		left: 70px;
 		top: 120px;
 		background: url('_/img/sprite.png') -250px -364px;
 		text-indent: -999999px;
@@ -1602,6 +1601,9 @@ h2.keep-snowboarding-weird {
 	.single-gnu_weirdwear .product-overview .column-right {
 		background: url('_/img/bg-splat-yellow.png') no-repeat 20px 0px;
 	}
+	.product-overview .column-right.title-image {
+		background: none;
+	}
 	.product-overview .column-right h1 {
 		font-size: 48px;
 		color: #fff;
@@ -1610,6 +1612,16 @@ h2.keep-snowboarding-weird {
 		width: 280px;
 		text-shadow: 2px 2px 0 black;
 	}
+		.product-overview .column-right.title-image h1 {
+			background-image: url('_/img/_RIDERS-CHOICE.png');
+			height: 230px;
+			width: 230px;
+			padding: 0;
+			margin-bottom: 20px;
+			text-indent: 100%;
+			white-space: nowrap;
+			overflow: hidden;
+		}
 		.product-overview .column-right h1.extra-small {
 			font-size: 38px;
 		}

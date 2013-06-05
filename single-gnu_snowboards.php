@@ -89,6 +89,16 @@ Template Name: Snowboards Detail Template
 					</div>
 
 					<?php
+						// check for product title image
+						$useTitleImage = false;
+						if (get_field('gnu_product_title_image')) {
+							$useTitleImage = true;
+							$productTitleImage = get_field('gnu_product_title_image');
+							$productTitleImage = wp_get_attachment_image_src($productTitleImage, 'full', false);
+
+							$productTitleImageStyle = ' style="background-image:url(\'' . $productTitleImage[0] . '\');"';
+						}
+						// check length of product title
 						$titleLength = strlen(get_the_title());
 						if ($titleLength >= 36) {
 							$titleClass = "extra-small";
@@ -103,7 +113,7 @@ Template Name: Snowboards Detail Template
 						}
 					?>
 
-					<div class="column-right">
+					<div class="column-right<?php if($useTitleImage){echo ' title-image';}; ?>">
 						<div class="breadcrumb">
 							<?php
 							// Loop over each item since it's an array
@@ -124,7 +134,7 @@ Template Name: Snowboards Detail Template
 							?>
 							<a href="/snowboards/">Snowboards</a> • <a href="/snowboards/?gender=<?php echo $categorySlug; ?>"><?php echo $categoryName; ?></a>
 						</div>
-						<h1 class="<?php echo $titleClass; ?>"><?php the_title(); ?></h1>
+						<h1 class="<?php echo $titleClass; ?>"<?php if($useTitleImage){echo $productTitleImageStyle;}; ?>><?php the_title(); ?></h1>
 						<div class="product-price">
 							<?php getDisplayPrice( get_field('gnu_product_price_us'), get_field('gnu_product_price_ca'), get_field('gnu_product_on_sale'), get_field('gnu_product_sale_percentage') ); ?>
 						</div>
