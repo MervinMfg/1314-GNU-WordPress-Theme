@@ -352,36 +352,40 @@ Template Name: Snowboards Detail Template
 					<div id="science-prev"></div>
 					<ul id="science-photos">
 						<?php
-							if( in_array( 'Experiment', get_field('gnu_snowboard_science') ) ):
-								echo '<li class="science-experiment">Experiment!</li>';
+							if( in_array( 'Weird Science', get_field('gnu_snowboard_science') ) ):
+								echo '<li class="science-weird">Weird Science</li>';
 							endif;
 
 							if( in_array( 'Construction', get_field('gnu_snowboard_science') ) ):
-								echo '<li class="science-construction">Construction Standards and Oddities.</li>';
+								echo '<li class="science-construction">Construction - Handbuilt by Snowboarders with Jobs</li>';
 							endif;
 
 							if( in_array( 'Magne-Traction', get_field('gnu_snowboard_science') ) ):
-								echo '<li class="science-magne-traction">Magne-Traction "Turns Ice Into Powder"</li>';
+								echo '<li class="science-magne-traction">Magne-Traction Edge Grip - "Turns Ice Into Powder"</li>';
 							endif;
 
 							if( in_array( 'Pickle Tech', get_field('gnu_snowboard_science') ) ):
-								echo '<li class="science-pickle-tech">Pickle Tech.</li>';
+								echo '<li class="science-pickle-tech">Pickle Technology - Asymmetric Sidecuts and Construction</li>';
 							endif;
 
-							if( in_array( 'Banana Tech', get_field('gnu_snowboard_science') ) ):
-								echo '<li class="science-banana-tech">Banana Tech.</li>';
-							endif;
-
-							if( in_array( 'Wood Core', get_field('gnu_snowboard_science') ) ):
-								echo '<li class="science-wood-core">Wood Core</li>';
-							endif;
-
-							if( in_array( 'Magnesium', get_field('gnu_snowboard_science') ) ):
-								echo '<li class="science-magnesium">Magnesium - A Strange Metal.</li>';
+							if( in_array( 'ASS Tech', get_field('gnu_snowboard_science') ) ):
+								echo '<li class="science-ass-tech">A.S.S. Pickle Technology - Asym. Sym. Synchronization.</li>';
 							endif;
 
 							if( in_array( 'Liquid Crystal Polymer', get_field('gnu_snowboard_science') ) ):
-								echo '<li class="science-liquid-crystal">Liquid Crystal Polymer</li>';
+								echo '<li class="science-liquid-crystal">Liquid Crystal Polymer - Tempered Polymer</li>';
+							endif;
+
+							if( in_array( 'Magnesium', get_field('gnu_snowboard_science') ) ):
+								echo '<li class="science-magnesium">Odd Metal - Magnesium</li>';
+							endif;
+
+							if( in_array( 'Magic', get_field('gnu_snowboard_science') ) ):
+								echo '<li class="science-magic">Make Magic - Magic</li>';
+							endif;
+
+							if( in_array( 'Wood Core', get_field('gnu_snowboard_science') ) ):
+								echo '<li class="science-wood-core">Weird Wood - GNU Sustainable Natural Fiber or SNF</li>';
 							endif;
 						?>
 

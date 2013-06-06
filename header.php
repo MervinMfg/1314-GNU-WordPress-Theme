@@ -500,34 +500,6 @@ G   GGGGGGG    N, GG8    G  $GGGGGGGGGGD  GGGGGGGGGGGGG GGGGGGGGGGGGGGGGGGGG   G
 
 					<nav class="nav-dropdown-weirdwear">
 						<div class="nav-column">
-							<h3>Outerwear</h3>
-							<a href="/weirdwear/#outerwear" class="view-all">View All</a>
-							<ul>
-								<?php
-									// get navigation for outerwear
-									$args = array(
-										'post_type' => 'gnu_weirdwear',
-										'posts_per_page' => -1,
-										'orderby' => 'menu_order',
-										'order' => 'ASC',
-										'tax_query' => array(
-											array(
-												'taxonomy' => 'gnu_weirdwear_categories',
-												'field' => 'slug',
-												'terms' => 'outerwear',
-												'include_children' => false
-											)
-										)
-									);
-									$loop = new WP_Query( $args );
-									while ( $loop->have_posts() ) : $loop->the_post();
-										echo '<li><a href="'. get_permalink() .'">' . get_the_title() . '</a></li>';
-									endwhile;
-									wp_reset_query();
-								?>
-							</ul>
-						</div>
-						<div class="nav-column">
 							<h3>Mens Apparel</h3>
 							<a href="/weirdwear/#mens-apparel" class="view-all">View All</a>
 							<ul>
@@ -556,11 +528,11 @@ G   GGGGGGG    N, GG8    G  $GGGGGGGGGGD  GGGGGGGGGGGGG GGGGGGGGGGGGGGGGGGGG   G
 							</ul>
 						</div>
 						<div class="nav-column">
-							<h3>Womens Apparel</h3>
-							<a href="/weirdwear/#womens-apparel" class="view-all">View All</a>
+							<h3>Outerwear</h3>
+							<a href="/weirdwear/#outerwear" class="view-all">View All</a>
 							<ul>
 								<?php
-									// get navigation for weirdwear womens apparel
+									// get navigation for outerwear
 									$args = array(
 										'post_type' => 'gnu_weirdwear',
 										'posts_per_page' => -1,
@@ -570,7 +542,7 @@ G   GGGGGGG    N, GG8    G  $GGGGGGGGGGD  GGGGGGGGGGGGG GGGGGGGGGGGGGGGGGGGG   G
 											array(
 												'taxonomy' => 'gnu_weirdwear_categories',
 												'field' => 'slug',
-												'terms' => 'womens-apparel',
+												'terms' => 'outerwear',
 												'include_children' => false
 											)
 										)
@@ -584,11 +556,11 @@ G   GGGGGGG    N, GG8    G  $GGGGGGGGGGD  GGGGGGGGGGGGG GGGGGGGGGGGGGGGGGGGG   G
 							</ul>
 						</div>
 						<div class="nav-column">
-							<h3>Youth Apparel</h3>
-							<a href="/weirdwear/#youth-apparel" class="view-all">View All</a>
+							<h3>Sale Apparel</h3>
+							<a href="/weirdwear/#sale-apparel" class="view-all">View All</a>
 							<ul>
 								<?php
-									// get navigation for weirdwear youth apparel
+									// get navigation for weirdwear sale apparel
 									$args = array(
 										'post_type' => 'gnu_weirdwear',
 										'posts_per_page' => -1,
@@ -598,7 +570,7 @@ G   GGGGGGG    N, GG8    G  $GGGGGGGGGGD  GGGGGGGGGGGGG GGGGGGGGGGGGGGGGGGGG   G
 											array(
 												'taxonomy' => 'gnu_weirdwear_categories',
 												'field' => 'slug',
-												'terms' => 'youth-apparel',
+												'terms' => 'sale-apparel',
 												'include_children' => false
 											)
 										)
@@ -610,6 +582,34 @@ G   GGGGGGG    N, GG8    G  $GGGGGGGGGGD  GGGGGGGGGGGGG GGGGGGGGGGGGGGGGGGGG   G
 									wp_reset_query();
 								?>
 							</ul>
+						</div>
+						<div class="nav-column-featured">
+							<?php
+								// get random apparel
+								$args = array(
+									'post_type' => 'gnu_weirdwear',
+									'posts_per_page' => 1,
+									'orderby' => 'rand',
+									'tax_query' => array(
+										array(
+											'taxonomy' => 'gnu_weirdwear_categories',
+											'field' => 'slug',
+											'terms' => 'mens-apparel',
+											'include_children' => false
+										)
+									)
+								);
+								$loop = new WP_Query( $args );
+								while ( $loop->have_posts() ) : $loop->the_post();
+									$title = get_the_title();
+									$linkUrl = get_permalink();
+									$imageID = get_field('gnu_product_image');
+                                	$imageFile = wp_get_attachment_image_src($imageID, 'thumbnail');
+                                	$slogan = get_field('gnu_product_slogan');
+									echo "<a href=\"$linkUrl\"><h3>Weird Alert</h3><div class=\"featured-slogan\"><h5>$title</h5>$slogan</div><div class=\"featured-image-container\"><div class=\"featured-image\"><img src=\"$imageFile[0]\" width=\"$imageFile[1]\" height=\"$imageFile[2]\" alt=\"$title Snowboard\" /></div></div></a>";
+								endwhile;
+								wp_reset_query();
+							?>
 						</div>
 					</nav><!-- end .nav-dropdown-weirdwear -->
 

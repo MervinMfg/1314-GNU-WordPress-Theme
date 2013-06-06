@@ -126,9 +126,9 @@ button {width: auto; overflow: visible;}
 .ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
 
 /* let's clear some floats */
-.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
-.clearfix:after { clear: both; }  
-.clearfix { zoom: 1; }  
+.clearfix:before, .clearfix:after, .clear:before, .clear:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+.clearfix:after, .clear:after { clear: both; }  
+.clearfix, .clear { zoom: 1; }  
 
 
 
@@ -257,18 +257,6 @@ img.alignright {
 	text-indent: 100%;
 	white-space: nowrap;
 	overflow: hidden;
-}
-.clear {
-	clear: both;
-	height: 0px;
-	visibility: hidden;
-}
-.clearfix:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
 }
 .no-margin 	{
 	margin: 0;
@@ -611,6 +599,9 @@ div {
 				}
 					#header .nav-dropdown nav.nav-dropdown-bindings .nav-column-featured a h3 {
 						color: #ff3399;
+					}
+					#header .nav-dropdown nav.nav-dropdown-weirdwear .nav-column-featured a h3 {
+						color: #ffff00;
 					}
 				#header .nav-dropdown nav .nav-column-featured a .featured-slogan {
 					width: 115px;
@@ -2059,7 +2050,7 @@ h2.keep-snowboarding-weird {
 			float: left;
 			text-indent:-999999px;
 		}
-			.weird-science ul li.science-experiment {
+			.weird-science ul li.science-weird {
 				background-position: 0px 0px;
 			}
 			.weird-science ul li.science-construction {
@@ -2071,17 +2062,20 @@ h2.keep-snowboarding-weird {
 			.weird-science ul li.science-pickle-tech {
 				background-position: -645px 0px;
 			}
-			.weird-science ul li.science-banana-tech {
+			.weird-science ul li.science-ass-tech {
 				background-position: -860px 0px;
 			}
-			.weird-science ul li.science-wood-core {
+			.weird-science ul li.science-liquid-crystal {
 				background-position: -1075px 0px;
 			}
 			.weird-science ul li.science-magnesium {
 				background-position: -1290px 0px;
 			}
-			.weird-science ul li.science-liquid-crystal {
+			.weird-science ul li.science-magic {
 				background-position: -1505px 0px;
+			}
+			.weird-science ul li.science-wood-core {
+				background-position: -1720px 0px;
 			}
 		.weird-science #science-prev {
 			float: left;
