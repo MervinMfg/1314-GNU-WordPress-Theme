@@ -2511,9 +2511,6 @@ ul.collab-list li {
 /* About styles
 -------------------------------------------------------------------------------*/
 .about-content {
-	background: url('_/img/about-since-1977.png') no-repeat top right;
-	padding-top: 60px;
-	margin-top: -20px;
 }
 .about-content h1 {
 	display: none;
@@ -2521,11 +2518,18 @@ ul.collab-list li {
 .about-content h2 {
 	font-size: 54px;
 	padding-bottom: 20px;
+	text-align: center;
 }
 .about-content h3 {
-	padding-bottom: 20px;
+	margin-bottom: 20px;
 	font-size: 36px;
-	text-align: right;
+	text-align: center;
+	color: #0099FF;
+}
+.about-content h4 {
+	text-align: center;
+	margin-bottom: 20px;
+	color: #FF3399;
 }
 .about-content p {
 	padding-bottom: 10px;
@@ -2534,10 +2538,10 @@ ul.collab-list li {
 }
 
 .about-footer {
-	width: 580px;
-	height: 620px;
+	width: 442px;
+	height: 368px;
 	background: url('_/img/about-footer.png');
-	margin: 0 auto -20px auto;
+	margin: 0 auto;
 }
 /* Blog styles
 -------------------------------------------------------------------------------*/
