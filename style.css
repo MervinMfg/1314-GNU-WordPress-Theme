@@ -1894,7 +1894,6 @@ h2.keep-snowboarding-weird {
 /* area below product overview */
 .product-details {
 	text-shadow: 1px 1px 1px #000;
-	background: url('_/img/bg-board-details.png') no-repeat 0px 240px;
 	padding-bottom: 20px;
 }
 	.product-details h4 {
@@ -1905,8 +1904,11 @@ h2.keep-snowboarding-weird {
 		list-style: none;
 		width: 360px;
 		float: left;
-		padding: 35px 0 10px 40px;
+		padding: 0 0 10px 0;
 	}
+		.product-details .quick-specs li .contour {
+			padding-bottom: 10px;
+		}
 		.single-gnu_bindings .product-details .quick-specs {
 			width: 240px;
 			padding-right: 20px;
@@ -1958,7 +1960,7 @@ h2.keep-snowboarding-weird {
 			background-position: 0px -540px;
 		}
 	.product-details .product-technology {
-		width: 520px;
+		width: 560px;
 		padding: 0 0 10px 20px;
 		float: left;
 	}

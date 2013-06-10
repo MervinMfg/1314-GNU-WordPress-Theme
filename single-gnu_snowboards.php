@@ -302,11 +302,43 @@ Template Name: Snowboards Detail Template
 									$wideSizesString .= ", ";
 								}
 							}
+							// get contour image
+							switch (get_field('gnu_snowboard_contour')) {
+								case "BTX":
+									$contourImage = get_bloginfo('template_directory') . '/_/img/snowboard-contour-BTX.png';
+									break;
+								case "PBTX":
+									$contourImage = get_bloginfo('template_directory') . '/_/img/snowboard-contour-PBTX.png';
+									break;
+								case "C2 PBTX":
+									$contourImage = get_bloginfo('template_directory') . '/_/img/snowboard-contour-C2-PBTX.png';
+									break;
+								case "C2 BTX":
+									$contourImage = get_bloginfo('template_directory') . '/_/img/snowboard-contour-C2-BTX.png';
+									break;
+								case "XC2 BTX":
+									$contourImage = get_bloginfo('template_directory') . '/_/img/snowboard-contour-XC2-BTX.png';
+									break;
+								case "C3 BTX":
+									$contourImage = get_bloginfo('template_directory') . '/_/img/snowboard-contour-C3-BTX.png';
+									break;
+								case "EC2 BTX":
+									$contourImage = get_bloginfo('template_directory') . '/_/img/snowboard-contour-EC2-BTX.png';
+									break;
+								case "EC2 PBTX":
+									$contourImage = get_bloginfo('template_directory') . '/_/img/snowboard-contour-EC2-PBTX.png';
+									break;
+							}
 						?>
+						<li>
+							<div class="contour">
+								<img src="<?php echo $contourImage; ?>" alt="<?php the_field('gnu_snowboard_contour'); ?>" />
+							</div>
+							<span>Contour</span> <?php the_field('gnu_snowboard_contour'); ?>
+						</li>
 						<li><span>Sizes</span> <?php echo $normalSizesString; ?></li>
 						<li><span>Wide Sizes</span> <?php echo $wideSizesString; ?></li>
 						<li><span>Shape</span> <?php the_field('gnu_snowboard_shape'); ?></li>
-						<li><span>Contour</span> <?php the_field('gnu_snowboard_contour'); ?></li>
 						<li><span>About the Art</span><?php the_field('gnu_snowboard_about_art'); ?></li>
 					</ul>
 					<div class="product-technology">
