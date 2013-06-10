@@ -230,9 +230,23 @@ function bindingSizeLookup ($sizeString, $verbose = true) {
                 $returnString = "S";
             }
             break;
+        case "S (US M 6-8), S (US W 7-9)":
+            if ($verbose) {
+                $returnString = "S (US M 6-8), S (US W 7-9)";
+            } else {
+                $returnString = "S";
+            }
+            break;
         case "S/M (US W 4-7)":
             if ($verbose) {
                 $returnString = "S/M (US W 4-7), (MP 21-24)";
+            } else {
+                $returnString = "S/M";
+            }
+            break;
+        case "S/M (US M 5-9)":
+            if ($verbose) {
+                $returnString = "S/M (US M 5-9)";
             } else {
                 $returnString = "S/M";
             }
@@ -258,9 +272,23 @@ function bindingSizeLookup ($sizeString, $verbose = true) {
                 $returnString = "M";
             }
             break;
+        case "M (US M 8.5-11)":
+            if ($verbose) {
+                $returnString = "M (US M 8.5-11)";
+            } else {
+                $returnString = "M";
+            }
+            break;            
         case "M/L (US W 6-9)":
             if ($verbose) {
                 $returnString = "M/L (US W 6-9), (MP 23-26)";
+            } else {
+                $returnString = "M/L";
+            }
+            break;
+        case "M/L (US M 9-14)":
+            if ($verbose) {
+                $returnString = "M/L (US M 9-14)";
             } else {
                 $returnString = "M/L";
             }
@@ -282,6 +310,13 @@ function bindingSizeLookup ($sizeString, $verbose = true) {
         case "L (US M 9-12)":
             if ($verbose) {
                 $returnString = "L (US M 9-12), (MP 27-30)";
+            } else {
+                $returnString = "L";
+            }
+            break;
+        case "L (US M 11.5-13)":
+            if ($verbose) {
+                $returnString = "L (US M 11.5-13)";
             } else {
                 $returnString = "L";
             }
