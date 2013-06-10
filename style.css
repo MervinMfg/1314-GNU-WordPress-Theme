@@ -1586,6 +1586,7 @@ h2.keep-snowboarding-weird {
 	float: left;
 	background: url('_/img/bg-splat-blue.png') no-repeat 20px 0px;
 	position: relative;
+	margin-top: 20px;
 }
 	.single-gnu_bindings .product-overview .column-right {
 		background: url('_/img/bg-splat-pink.png') no-repeat 20px 0px;
@@ -2512,7 +2513,7 @@ ul.collab-list li {
 .about-content {
 	background: url('_/img/about-since-1977.png') no-repeat top right;
 	padding-top: 60px;
-	margin-top: -60px;
+	margin-top: -20px;
 }
 .about-content h1 {
 	display: none;
