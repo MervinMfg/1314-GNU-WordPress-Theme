@@ -1,15 +1,16 @@
 /*
 
     GNU - gnu.com
-    VERSION 1.1
+    VERSION 1.2
     AUTHOR brian.behrens@mervin.com
 
     DEPENDENCIES:
-    - jQuery v1.8.0
-    - Modernizr 2.6.1
+    - jQuery v1.8.3
+    - Shopatron API v2.2.0
+    - Modernizr v2.6.1
     - ColorBox v1.3.20
     - jQuery bxSlider v3.0
-    - jQuery Treeview 1.5
+    - jQuery Treeview v1.5
     - embedagram
 
 */
@@ -79,14 +80,21 @@ GNU.main = {
         $("body").append('<div id="shopatronCart">' + shopAPIKeyString + '</div>');
         // request the shopatron api
         $.ajax({
-            url: "//mediacdn.shopatron.com/media/js/product/shopatronCart-1.0.min.js",
+            url: "//mediacdn.shopatron.com/media/js/product/shopatronAPI-2.2.0.min.js",
             dataType: "script",
             success: function (data) {
-                // init the shopatron page elements
-                self.quickCartInit();
-                if ($('body').hasClass('page-template-page-shopping-cart-php')) {
-                    self.shoppingCartInit();
-                }
+                // request other aditional api for quick cart and shopping cart
+                $.ajax({
+                    url: "//mediacdn.shopatron.com/media/js/product/shopatronJST-2.2.0.min.js",
+                    dataType: "script",
+                    success: function (data) {
+                        // init the shopatron page elements
+                        self.quickCartInit();
+                        if ($('body').hasClass('page-template-page-shopping-cart-php')) {
+                            self.shoppingCartInit();
+                        }
+                    }
+                });
             }
         });
     },
@@ -440,7 +448,7 @@ GNU.main = {
             $('.product-buy ul li.loading').addClass('visible').removeClass('hidden');
             $('.product-buy ul li.cart-button').addClass('hidden').removeClass('visible');
             // call shopatron's api
-            shopatron.addToCart({
+            Shopatron.addToCart({
                 quantity: '1', // Optional: Defaults to 1 if not set
                 partNumber: boardSKU // Required: This is the product that will be added to the cart.
             }, {
@@ -577,7 +585,7 @@ GNU.main = {
             $('.product-buy ul li.loading').addClass('visible').removeClass('hidden');
             $('.product-buy ul li.cart-button').addClass('hidden').removeClass('visible');
             // call shopatron's api
-            shopatron.addToCart({
+            Shopatron.addToCart({
                 quantity: '1', // Optional: Defaults to 1 if not set
                 partNumber: productSKU // Required: This is the product that will be added to the cart.
             }, {
@@ -663,7 +671,7 @@ GNU.main = {
             $('.product-buy ul li.loading').addClass('visible').removeClass('hidden');
             $('.product-buy ul li.cart-button').addClass('hidden').removeClass('visible');
             // call shopatron's api
-            shopatron.addToCart({
+            Shopatron.addToCart({
                 quantity: '1', // Optional: Defaults to 1 if not set
                 partNumber: productSKU // Required: This is the product that will be added to the cart.
             }, {
@@ -731,7 +739,7 @@ GNU.main = {
             $('.product-buy ul li.loading').addClass('visible').removeClass('hidden');
             $('.product-buy ul li.cart-button').addClass('hidden').removeClass('visible');
             // call shopatron's api
-            shopatron.addToCart({
+            Shopatron.addToCart({
                 quantity: productQty, // Optional: Defaults to 1 if not set
                 partNumber: productSku // Required: This is the product that will be added to the cart.
             }, {
@@ -876,7 +884,7 @@ GNU.main = {
     shoppingCartInit: function () {
         var self, lang, regionCookie;
         self = this;
-
+        /*
         shopatron.getCart({
             template: 'default'
         }, {
@@ -885,6 +893,15 @@ GNU.main = {
             success: function (data, textStatus) {},
             error: function (textStatus, errorThrown) {},
             complete: function (textStatus) {}
+        });
+        */
+        Shopatron('#shopping-cart').getCart({
+            imageWidth: 100,
+            imageHeight: 100
+        },{
+            success: function(cartData) {},
+            error: function() {},
+            complete: function() {}
         });
         // check for the region
         regionCookie = self.utilities.cookie.getCookie('GNURegion');
@@ -908,6 +925,7 @@ GNU.main = {
         });
     },
     quickCartInit: function () {
+        /*
         shopatron.getQuickCart({
             cartLink: '/shopping-cart/'
         }, {
@@ -922,6 +940,17 @@ GNU.main = {
             },
             error: function (textStatus, errorThrown) {},
             complete: function (textStatus) {}
+        });
+        */
+        Shopatron.getCart({
+            success: function (data, textStatus) {
+                var itemsInCart = 0;
+                // find quantity of items in cart
+                $.each(data.cartItems, function (key, value) {
+                    itemsInCart += parseInt(value.quantity);
+                });
+                $('#quick-cart a span').html(itemsInCart);
+            },
         });
     },
     utilities: {

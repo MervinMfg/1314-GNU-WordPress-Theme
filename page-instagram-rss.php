@@ -10,9 +10,9 @@ if (isset($_GET["username"])) {
 
 <rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:creativeCommons="http://backend.userland.com/creativeCommonsRssModule">
 	<channel>
-		<title>GNU Instagram Feed</title>
-		<link>http://www.gnu.com</link>
-		<description>Instagram Feed for GNU @clubweird</description>
+		<title><?php echo $_GET["username"]; ?> Instagram Feed</title>
+		<link>http://www.instagram.com/<?php echo $_GET["username"]; ?></link>
+		<description>Instagram Feed for GNU @<?php echo $_GET["username"]; ?></description>
 
 <?php
 	$items = $feed->getElementsByTagName('channel')->item(0)->getElementsByTagName('item');
