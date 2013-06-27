@@ -11,7 +11,7 @@ Template Name: Shopping Cart Template
 					
 				<div class="shopping-cart-wrapper">
 					<h1><?php the_title(); ?></h1>
-					<div id="shopping-cart"><span></span></div>
+					<div id="shopping-cart"><span class="loading"></span></div>
 
 					<?php the_content(); ?>
 

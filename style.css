@@ -3309,6 +3309,16 @@ body.international .shopping-cart-wrapper { display: none; }
 .shopping-cart-wrapper a {
 	color: #ffff00;
 }
+
+#shopping-cart {
+	min-height:100px;
+}
+	#shopping-cart .loading {
+		width:34px;
+		height:34px;
+		background:url('_/img/loading.gif') no-repeat top left;
+		display:block;
+	}
 /* Default */
 .shptrn_quantity {
 	overflow:hidden;
@@ -3317,13 +3327,14 @@ body.international .shopping-cart-wrapper { display: none; }
 	padding:8px 10px 0;
 }
 .shptrn_no_items_in_cart {
-	background:#fff4cc;
-	border:2px solid #ffac4c;
-	color:#960;
+	background:#ffff00;
+	border:2px solid #0099ff;
+	color:#9933cc;
 	font-weight:700;
 	text-align:center;
 	font-size:14px;
 	padding:15px;
+	margin-bottom: 20px;
 }
 #shptrn_cart_items {
 	font-size:12px;
