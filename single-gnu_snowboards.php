@@ -359,8 +359,10 @@ Template Name: Snowboards Detail Template
 									foreach( $relatedItems as $relatedItem):
 										if($relatedItem->ID == $thePostID):
 						?>
-						<h4><?php the_title(); ?></h4>
-						<?php the_content(); ?>
+						<div id="<?php echo $post->post_name; ?>" class="deeplink-top-fix">
+							<h4><?php the_title(); ?></h4>
+							<?php the_content(); ?>
+						</div>
 						<?php
 										endif;
 									endforeach;

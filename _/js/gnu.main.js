@@ -326,7 +326,12 @@ GNU.main = {
     },
     snowboardProductInit: function () {
         var self = this;
-
+        // on selection of featured tech, scroll page
+        $('.product-tech ul li a').click(function (e) {
+            e.preventDefault();
+            var url = $(this).attr('href');
+            self.utilities.pageScroll(url);
+        });
         // selecting the proper tab at start
         $('.product-navigation ul li a:first').addClass('selected');
         $('#board-details, #weird-science, #board-specs, #interview').addClass("hide");
