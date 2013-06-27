@@ -160,11 +160,7 @@ function display_related_products($language){
             $relatedLink = get_permalink($post_object->ID);
             $relatedTitle = get_the_title($post_object->ID);
             // get price
-            if($language == "ca"){
-                $relatedPrice = '$' . get_field('gnu_product_price_ca', $post_object->ID) . ' <span>CAD</span>';
-            } else {
-                $relatedPrice = '$' . get_field('gnu_product_price_us', $post_object->ID) . ' <span>USD</span>';
-            }
+            $relatedPrice = getDisplayPrice(get_field('gnu_product_price_us', $post_object->ID), get_field('gnu_product_price_ca', $post_object->ID), get_field('gnu_product_on_sale', $post_object->ID), get_field('gnu_product_sale_percentage', $post_object->ID));
             // add to related product array
             array_push($relatedProducts, Array($relatedTitle, $relatedLink, $relatedImage, $relatedPrice));
         endforeach;
@@ -334,19 +330,21 @@ function bindingSizeLookup ($sizeString, $verbose = true) {
 
 // GET PRICE DISPLAY
 function getDisplayPrice ($usPrice, $caPrice, $sale, $salePercent) {
+    $price = "";
     if($GLOBALS['language'] == "ca"){
         if ($sale == "Yes") {
-            echo '<p class="ca-price strike"><span>$' . $caPrice . '</span> CAD</p><p class="ca-price"><span>$' . round($caPrice * ((100 - $salePercent) / 100), 2) . '</span> CAD (' . $salePercent . '% off)</p>';
+            $price = '<p class="ca-price strike"><span>$' . $caPrice . '</span> CAD</p><p class="ca-price"><span>$' . round($caPrice * ((100 - $salePercent) / 100), 2) . '</span> CAD (' . $salePercent . '% off)</p>';
         } else {
-            echo '<p class="ca-price"><span>$' . $caPrice . '</span> CAD</p>';
+            $price = '<p class="ca-price"><span>$' . $caPrice . '</span> CAD</p>';
         }
     } else {
         if ($sale == "Yes") {
-            echo '<p class="us-price strike"><span>$' . $usPrice . '</span> USD</p><p class="us-price"><span>$' . round($usPrice * ((100 - $salePercent) / 100), 2) . '</span> USD (' . $salePercent . '% off)</p>';
+            $price = '<p class="us-price strike"><span>$' . $usPrice . '</span> USD</p><p class="us-price"><span>$' . round($usPrice * ((100 - $salePercent) / 100), 2) . '</span> USD (' . $salePercent . '% off)</p>';
         } else {
-            echo '<p class="us-price"><span>$' . $usPrice . '</span> USD</p>';
+            $price = '<p class="us-price"><span>$' . $usPrice . '</span> USD</p>';
         }
     }
+    return $price;
 }
 
 /*

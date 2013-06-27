@@ -136,7 +136,7 @@ Template Name: Snowboards Detail Template
 						</div>
 						<h1 class="<?php echo $titleClass; ?>"<?php if($useTitleImage){echo $productTitleImageStyle;}; ?>><?php the_title(); ?></h1>
 						<div class="product-price">
-							<?php getDisplayPrice( get_field('gnu_product_price_us'), get_field('gnu_product_price_ca'), get_field('gnu_product_on_sale'), get_field('gnu_product_sale_percentage') ); ?>
+							<?php echo getDisplayPrice( get_field('gnu_product_price_us'), get_field('gnu_product_price_ca'), get_field('gnu_product_on_sale'), get_field('gnu_product_sale_percentage') ); ?>
 						</div>
 						<?php
 							$snowboards = Array();
@@ -260,7 +260,9 @@ Template Name: Snowboards Detail Template
 						<li><h2><a href="#board-details" class="first">Board Details</a></h2></li>
 						<li><h2><a href="#weird-science">Weird Science</a></h2></li>
 						<li><h2><a href="#board-specs">Board Specs</a></h2></li>
+						<?php if (get_field('gnu_snowboard_interview') != ""): ?>
 						<li><h2><a href="#interview" class="last"><?php the_field('gnu_snowboard_interview_type'); ?></a></h2></li>
+						<?php endif; ?>
 					</ul>
 					<div class="clearfix"></div>
 				</nav>
@@ -321,6 +323,9 @@ Template Name: Snowboards Detail Template
 									break;
 								case "C3 BTX":
 									$contourImage = get_bloginfo('template_directory') . '/_/img/snowboard-contour-C3-BTX.png';
+									break;
+								case "DC3 BTX":
+									$contourImage = get_bloginfo('template_directory') . '/_/img/snowboard-contour-DC3-BTX.png';
 									break;
 								case "EC2 BTX":
 									$contourImage = get_bloginfo('template_directory') . '/_/img/snowboard-contour-EC2-BTX.png';

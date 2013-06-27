@@ -54,7 +54,7 @@ if (have_posts()) : while (have_posts()) : the_post();
 						</div>
 						<h1 class="<?php echo $titleClass; ?>"><?php the_title(); ?></h1>
 						<div class="product-price">
-							<?php getDisplayPrice( get_field('gnu_product_price_us'), get_field('gnu_product_price_ca'), get_field('gnu_product_on_sale'), get_field('gnu_product_sale_percentage') ); ?>
+							<?php echo getDisplayPrice( get_field('gnu_product_price_us'), get_field('gnu_product_price_ca'), get_field('gnu_product_on_sale'), get_field('gnu_product_sale_percentage') ); ?>
 						</div>
 						<?php
 							$isProductAvailable = "No";

@@ -1275,7 +1275,9 @@ h2.keep-snowboarding-weird {
 					color: #99cc33;
 					font-family: "gnuregular", Helvetica, Arial, sans-serif;
 				}
-					.product-listing li a .price p.strike {
+					.product-listing li a .price p.strike,
+					.product-related .product-item .us-price.strike,
+					.product-related .product-item .ca-price.strike {
 						text-decoration: line-through;
 						margin-bottom: -5px;
 					}

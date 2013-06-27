@@ -641,6 +641,32 @@ G   GGGGGGG    N, GG8    G  $GGGGGGGGGGD  GGGGGGGGGGGGG GGGGGGGGGGGGGGGGGGGG   G
 									wp_reset_query();
 								?>
 							</ul>
+							<h3>Mens Euro Pro</h3>
+							<a href="/team/#mens-euro-pro" class="view-all">View All</a>
+							<ul>
+								<?php
+									// get navigation for outerwear
+									$args = array(
+										'post_type' => 'gnu_team',
+										'posts_per_page' => -1,
+										'orderby' => 'menu_order',
+										'order' => 'ASC',
+										'tax_query' => array(
+											array(
+												'taxonomy' => 'gnu_team_categories',
+												'field' => 'slug',
+												'terms' => 'mens-euro-pro',
+												'include_children' => false
+											)
+										)
+									);
+									$loop = new WP_Query( $args );
+									while ( $loop->have_posts() ) : $loop->the_post();
+										echo '<li><a href="'. get_permalink() .'">' . get_the_title() . '</a></li>';
+									endwhile;
+									wp_reset_query();
+								?>
+							</ul>
 						</div>
 						<div class="nav-column">
 							<h3>Mens Ams</h3>
