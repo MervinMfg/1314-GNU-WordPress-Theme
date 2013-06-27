@@ -342,7 +342,7 @@ Template Name: Snowboards Detail Template
 							<span>Contour</span> <?php the_field('gnu_snowboard_contour'); ?>
 						</li>
 						<li><span>Sizes</span> <?php echo $normalSizesString; ?></li>
-						<li><span>Wide Sizes</span> <?php echo $wideSizesString; ?></li>
+						<?php if($wideSizesString !=""): ?><li><span>Wide Sizes</span> <?php echo $wideSizesString; ?></li><?php endif; ?>
 						<li><span>Shape</span> <?php the_field('gnu_snowboard_shape'); ?></li>
 						<li><span>About the Art</span><?php the_field('gnu_snowboard_about_art'); ?></li>
 					</ul>
