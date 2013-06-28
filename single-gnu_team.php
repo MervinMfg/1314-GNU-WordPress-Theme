@@ -10,17 +10,18 @@ if (have_posts()) : while (have_posts()) : the_post();
 	$taxTerms = get_the_terms($thePostID, 'gnu_team_categories');		
 ?>
 		<div id="content">
+			<?php if(get_field('gnu_team_hero_images')): ?>
 			<div class="hero-slider">
 				<div class="hero-image-wrapper">
 					<ul>
-						<?php if(get_field('gnu_team_hero_images')): while(the_repeater_field('gnu_team_hero_images')):
+						<?php while(the_repeater_field('gnu_team_hero_images')):
 							$heroAreaImage = get_sub_field('gnu_team_hero_images_image');
 		       				$heroAreaImage = wp_get_attachment_image_src($heroAreaImage, 'full', false);
 						?>
 
 						<li><img src="<?php echo $heroAreaImage[0]; ?>" alt="<?php the_sub_field('gnu_team_hero_images_alt_text'); ?>" width="<?php echo $heroAreaImage[1]; ?>" height="<?php echo $heroAreaImage[2]; ?>" /></li>
 
-						<?php endwhile; endif; ?>
+						<?php endwhile; ?>
 
 					</ul>
 					<div id="hero-prev"></div>
@@ -29,6 +30,9 @@ if (have_posts()) : while (have_posts()) : the_post();
 			</div>
 			<div class="purple-divider"></div>
 			<div class="main-column team-details">
+			<?php else: ?>
+			<div class="main-column team-details pad-top">
+			<?php endif; ?>
 				<div class="left-column">
 					
 					<?php
