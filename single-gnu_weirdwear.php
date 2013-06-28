@@ -52,9 +52,9 @@ Template Name: Weirdwear Detail Template
 							$titleClass = "extra-small";
 						} else if ($titleLength >= 20 && $titleLength < 36) {
 							$titleClass = "small";
-						} else if ($titleLength >= 14 && $titleLength < 20) {
+						} else if ($titleLength >= 11 && $titleLength < 20) {
 							$titleClass = "medium";
-						} else if ($titleLength >= 8 && $titleLength < 14) {
+						} else if ($titleLength >= 8 && $titleLength < 11) {
 							$titleClass = "large";
 						} else if ($titleLength < 8) {
 							$titleClass = "extra-large";
