@@ -201,7 +201,7 @@ Template Name: Snowboards Detail Template
 								<li class="loading hidden"></li>
 								<li class="cart-button visible"><a href="#" class="add-to-cart">Add to Cart</a></li>
 								<?php else: ?>
-								<li>Item is currently not available online.</li>
+								<li>2013/2014 Products available soon.</li>
 								<?php endif; ?>
 								<li class="find-dealer"><a href="/store-locator/">Find a Dealer</a></li>
 							</ul>
