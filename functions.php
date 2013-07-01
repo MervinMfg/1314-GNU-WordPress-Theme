@@ -268,9 +268,9 @@ function bindingSizeLookup ($sizeString, $verbose = true) {
                 $returnString = "M";
             }
             break;
-        case "M (US M 8.5-11)":
+        case "M (US M 8.5-11), W (US W 8+)":
             if ($verbose) {
-                $returnString = "M (US M 8.5-11)";
+                $returnString = "M (US M 8.5-11), W (US W 8+)";
             } else {
                 $returnString = "M";
             }
