@@ -229,7 +229,7 @@ Template Name: Snowboards Detail Template
 									//gnu_technology_type
 									$imageID = get_field('gnu_technology_icon', $tech->ID);
 									$imageFile = wp_get_attachment_image_src($imageID, 'thumbnail');
-									echo '<li><a href="#' .$tech->post_name. '"><img src="'.$imageFile[0].'" width="'.$imageFile[0].'" height="'.$imageFile[0].'" /><div class="tool-tip">' . get_the_title($tech->ID) . '</div></a></li>';
+									echo '<li><a href="#' .$tech->post_name. '"><img src="'.$imageFile[0].'" width="'.$imageFile[1].'" height="'.$imageFile[2].'" /><div class="tool-tip">' . get_the_title($tech->ID) . '</div></a></li>';
 								endforeach;
 							?>
 							</ul>
@@ -245,7 +245,7 @@ Template Name: Snowboards Detail Template
 								foreach( $awards as $award):
 									$imageID = get_field('gnu_award_image', $award->ID);
 									$imageFile = wp_get_attachment_image_src($imageID, 'thumbnail');
-									echo '<li><img src="'.$imageFile[0].'" width="'.$imageFile[0].'" height="'.$imageFile[0].'" /><div class="tool-tip">' . get_the_title($award->ID) . '</div></li>';
+									echo '<li><img src="'.$imageFile[0].'" width="'.$imageFile[1].'" height="'.$imageFile[2].'" /><div class="tool-tip">' . get_the_title($award->ID) . '</div></li>';
 								endforeach;
 							?>
 
