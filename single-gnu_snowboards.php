@@ -345,6 +345,24 @@ Template Name: Snowboards Detail Template
 						<?php if($wideSizesString !=""): ?><li><span>Wide Sizes</span> <?php echo $wideSizesString; ?></li><?php endif; ?>
 						<li><span>Shape</span> <?php the_field('gnu_snowboard_shape'); ?></li>
 						<li><span>About the Art</span><?php the_field('gnu_snowboard_about_art'); ?></li>
+						<?php
+						// display additional products
+					    $post_objects = get_field('gnu_snowboard_collab');
+					    if( $post_objects ):
+					        // get each related product
+					        foreach( $post_objects as $post_object):
+					            $postType = $post_object->post_type;
+					            // get variable values
+					            $imageID = get_field('gnu_product_image', $post_object->ID);
+					            // check which image size to use based on post type
+					            $relatedImage = wp_get_attachment_image_src($imageID, 'overview-thumb');
+					            $relatedLink = get_permalink($post_object->ID);
+					            $relatedTitle = get_the_title($post_object->ID);
+					            // render out co-lab product
+					            echo "<li class=\"binding-collab\"><span>Co-Lab Binding</span><div><a href=\"$relatedLink\">$relatedTitle<br /><img src=\"$relatedImage[0]\" width=\"$relatedImage[1]\" height=\"$relatedImage[2]\" /></a></div></li>";
+					        endforeach;
+					    endif;
+						?>
 					</ul>
 					<div class="product-technology">
 						<h3>Board Tech</h3>
