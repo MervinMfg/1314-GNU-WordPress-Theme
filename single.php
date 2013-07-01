@@ -12,7 +12,7 @@
 							<?php //edit_post_link('Edit this entry','','.'); ?>
 							<ul class="entry-share">
 								<li><div class="fb-like" data-href="<? the_permalink(); ?>" data-send="true" data-layout="button_count" data-width="150" data-show-faces="false" data-colorscheme="dark" data-font="trebuchet ms"></div></li>
-								<li><a href="https://twitter.com/share" class="twitter-share-button" data-via="gnu_snowboards">Tweet</a></li>
+								<li><a href="https://twitter.com/share" class="twitter-share-button" data-via="GNUsnowboards">Tweet</a></li>
 								<li><div class="g-plusone" data-size="medium" data-href="<? the_permalink(); ?>"></div></li>
 								<li><a href="http://pinterest.com/pin/create/button/?url=<?php the_permalink(); ?>&media=<?php echo $GLOBALS['pageImage']; ?>&description=<?php echo $GLOBALS['pageTitle']; ?>" class="pin-it-button" count-layout="horizontal"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" /></a></li>
 							</ul>

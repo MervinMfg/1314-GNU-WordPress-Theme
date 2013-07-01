@@ -109,7 +109,7 @@ if (have_posts()) : while (have_posts()) : the_post();
 						</div>
 						<ul class="product-share clearfix">
 							<li><div class="fb-like" data-href="<?php the_permalink(); ?>" data-layout="button_count" data-width="120" data-show-faces="false" data-colorscheme="dark" data-font="trebuchet ms"></div></li>
-							<li><a href="https://twitter.com/share" class="twitter-share-button" data-via="gnu_snowboards">Tweet</a></li>
+							<li><a href="https://twitter.com/share" class="twitter-share-button" data-via="GNUsnowboards">Tweet</a></li>
 							<li><div class="g-plusone" data-size="medium" data-href="<?php the_permalink(); ?>"></div></li>
 							<li><a href="http://pinterest.com/pin/create/button/?url=<?php the_permalink(); ?>&media=<?php echo $GLOBALS['pageImage']; ?>&description=<?php echo $GLOBALS['pageTitle']; ?>" class="pin-it-button" count-layout="horizontal"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" /></a></li>
 						</ul>

@@ -38,7 +38,7 @@
         <h2>Follow Us</h2>
         <ul class="social-icons">
             <li><a href="http://www.facebook.com/gnuSnowboards" class="icon-facebook" target="_blank">Facebook</a></li>
-            <li><a href="http://twitter.com/gnu_snowboards" class="icon-twitter" target="_blank">Twitter</a></li>
+            <li><a href="http://twitter.com/GNUsnowboards" class="icon-twitter" target="_blank">Twitter</a></li>
             <li><a href="http://vimeo.com/gnu" class="icon-vimeo" target="_blank">Vimeo</a></li>
             <li><a href="http://instagram.com/clubweird" class="icon-instagram" target="_blank">Instagram</a></li>
             <li><a href="<?php bloginfo('rss2_url'); ?>" class="icon-rss" target="_blank">RSS</a></li>

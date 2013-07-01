@@ -3344,15 +3344,19 @@ body.international .shopping-cart-wrapper { display: none; }
 }
 #shptrn_cart_items_header {
 	overflow:hidden;
-	background-color:#d9d9d9;
 	background-image:0;
 	border-bottom:1px solid #ccc;
-	text-shadow:0 1px 1px #fff;
 	padding:5px 10px;
+
+	background:#2D2D2E;
+	background: rgba(45, 45, 46, .9);
 }
 #shptrn_cart_items_header label {
 	float:left;
 	font-weight:700;
+	font-family: "gnuregular", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	color: #fff;
 }
 #shptrn_ch_item {
 	width:35%;
@@ -3410,10 +3414,10 @@ body.international .shopping-cart-wrapper { display: none; }
 	font-size:11px;
 	margin:0 5px 0 0;
 	padding:5px;
+	color: #000;
 }
 .shptrn_ci_qty button {
 	border:1px solid #cdcdcd;
-	border-radius:5px;
 	background:#e6e6e6;
 	margin:0 3px 0 0;
 	padding:3px 5px;
@@ -3463,6 +3467,8 @@ body.international .shopping-cart-wrapper { display: none; }
 }
 .shptrn_cart_price_row span.left {
 	float:left;
+	font-family: "gnuregular", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
 }
 .shptrn_cart_price_row span.right {
 	float:right;
@@ -3470,18 +3476,16 @@ body.international .shopping-cart-wrapper { display: none; }
 .shptrn_checkout_button button {
 	font-size:14px;
 	font-weight:700;
-	border-radius:10px;
-	box-shadow:0 2px 1px #7f7f7f;
-	border:1px solid maroon;
-	background-color:#b20000;
+	border:1px solid #cdcdcd;
+	background-color:#ffff00;
 	background-image:0;
-	color:#fff;
-	text-transform:uppercase;
-	text-shadow:0 1px 1px #4d0000;
 	padding:10px 30px;
+	color:#000;
+	font-family: "gnuregular", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
 }
 .shptrn_atc_button button:hover,.shptrn_checkout_button button:hover {
-	background-color:#e50000;
+	background-color:#99cc33;
 	background-image:0;
 }
 .shptrn_atc_button button:active,.shptrn_checkout_button button:active {

@@ -8,14 +8,14 @@
 				<h3>Stay Weird</h3>
 				<ul class="social-icons">
 					<li><a href="http://www.facebook.com/gnuSnowboards" class="icon-facebook" target="_blank">Facebook</a></li>
-					<li><a href="http://twitter.com/gnu_snowboards" class="icon-twitter" target="_blank">Twitter</a></li>
+					<li><a href="http://twitter.com/GNUsnowboards" class="icon-twitter" target="_blank">Twitter</a></li>
 					<li><a href="http://vimeo.com/gnu" class="icon-vimeo" target="_blank">Vimeo</a></li>
 					<li><a href="http://instagram.com/clubweird" class="icon-instagram" target="_blank">Instagram</a></li>
 					<li><a href="<?php bloginfo('rss2_url'); ?>" class="icon-rss" target="_blank">RSS</a></li>
 				</ul>
 				<ul class="social-ctas">
 					<li><div class="fb-like" data-href="http://www.facebook.com/gnuSnowboards" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial"></div></li>
-					<li><a href="https://twitter.com/share" data-url="<?php echo get_option('siteurl'); ?>" data-text="<?php $shareTitle = get_bloginfo('name') . ' - ' . get_bloginfo('description'); echo $shareTitle; ?>" data-via="gnu_snowboards" data-count="none" class="twitter-share-button"></a></li>
+					<li><a href="https://twitter.com/share" data-url="<?php echo get_option('siteurl'); ?>" data-text="<?php $shareTitle = get_bloginfo('name') . ' - ' . get_bloginfo('description'); echo $shareTitle; ?>" data-via="GNUsnowboards" data-count="none" class="twitter-share-button"></a></li>
 					<li><div class="g-plusone" data-size="medium" data-annotation="none" data-href="<?php echo get_option('siteurl'); ?>"></div></li>
 					<li><a data-pin-config="none" href="//pinterest.com/pin/create/button/?url=<?php the_permalink(); ?>&media=<?php echo $GLOBALS['pageImage']; ?>&description=<?php echo $GLOBALS['pageTitle']; ?>" data-pin-do="buttonPin" ><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" /></a></li>
 				</ul>
