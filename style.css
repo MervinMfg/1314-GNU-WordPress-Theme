@@ -1249,15 +1249,28 @@ h2.keep-snowboarding-weird {
 			text-align: center;
 			height: 340px;
 		}
+			.snowboards .product-listing li {
+				height: 430px;
+			}
 			.product-listing li.last {
 				padding:0 0 0 0;
 			}
 			.product-listing li a {
 				color:#fff;
+				display: block;
 				text-decoration: none;
-				display:block;
 				position:relative;
+				overflow: hidden;
 			}
+				.product-listing li a .vertical-img {
+					width: 160%;
+					margin-left: -30%;
+					height: auto;
+				}
+					.product-listing li a .vertical-img img {
+						width: 100%;
+						height: auto;
+					}
 				.snowboards .product-listing li a h4 {
 					color: #0099ff;
 				}

@@ -49,7 +49,7 @@ get_header();
                             $loop = new WP_Query( $args );
                             while ( $loop->have_posts() ) : $loop->the_post();
                                 $imageID = get_field('gnu_product_image');
-                                $imageFile = wp_get_attachment_image_src($imageID, 'overview-thumb');
+                                $imageFile = wp_get_attachment_image_src($imageID, 'medium');
 
                                 if($counter % 4 == 0){
                                     $class = "product-item last ";
@@ -61,7 +61,9 @@ get_header();
 
                         <li class="<?php echo $class; ?>">
                             <a href="<? the_permalink(); ?>">
-                                <img src="<?php echo $imageFile[0]; ?>" width="<?php echo $imageFile[1]; ?>" height="<?php echo $imageFile[2]; ?>" alt="<?php the_title(); ?> Image" />
+                                <div class="vertical-img">
+                                    <img src="<?php echo $imageFile[0]; ?>" width="<?php echo $imageFile[1]; ?>" height="<?php echo $imageFile[2]; ?>" alt="<?php the_title(); ?> Image" />
+                                </div>
                                 <h4><?php the_title(); ?></h4>
                                 <div class="price">
                                     <?php echo getDisplayPrice( get_field('gnu_product_price_us'), get_field('gnu_product_price_ca'), get_field('gnu_product_on_sale'), get_field('gnu_product_sale_percentage') ); ?>
@@ -97,7 +99,7 @@ get_header();
                                 $loop = new WP_Query( $args );
                                 while ( $loop->have_posts() ) : $loop->the_post();
                                     $imageID = get_field('gnu_product_image');
-                                    $imageFile = wp_get_attachment_image_src($imageID, 'overview-thumb');
+                                    $imageFile = wp_get_attachment_image_src($imageID, 'medium');
 
                                     if($counter % 4 == 0){
                                         $class = "product-item last ";
@@ -109,7 +111,9 @@ get_header();
 
                             <li class="<?php echo $class; ?>">
                                 <a href="<? the_permalink(); ?>">
-                                    <img src="<?php echo $imageFile[0]; ?>" width="<?php echo $imageFile[1]; ?>" height="<?php echo $imageFile[2]; ?>" alt="<?php the_title(); ?> Image" />
+                                    <div class="vertical-img">
+                                        <img src="<?php echo $imageFile[0]; ?>" width="<?php echo $imageFile[1]; ?>" height="<?php echo $imageFile[2]; ?>" alt="<?php the_title(); ?> Image" />
+                                    </div>
                                     <h4><?php the_title(); ?></h4>
                                     <div class="price">
                                         <?php echo getDisplayPrice( get_field('gnu_product_price_us'), get_field('gnu_product_price_ca'), get_field('gnu_product_on_sale'), get_field('gnu_product_sale_percentage') ); ?>
@@ -146,7 +150,7 @@ get_header();
                                 $loop = new WP_Query( $args );
                                 while ( $loop->have_posts() ) : $loop->the_post();
                                     $imageID = get_field('gnu_product_image');
-                                    $imageFile = wp_get_attachment_image_src($imageID, 'overview-thumb');
+                                    $imageFile = wp_get_attachment_image_src($imageID, 'medium');
 
                                     if($counter % 4 == 0){
                                         $class = "product-item last ";
@@ -158,7 +162,9 @@ get_header();
 
                             <li class="<?php echo $class; ?>">
                                 <a href="<? the_permalink(); ?>">
-                                    <img src="<?php echo $imageFile[0]; ?>" width="<?php echo $imageFile[1]; ?>" height="<?php echo $imageFile[2]; ?>" alt="<?php the_title(); ?> Image" />
+                                    <div class="vertical-img">
+                                        <img src="<?php echo $imageFile[0]; ?>" width="<?php echo $imageFile[1]; ?>" height="<?php echo $imageFile[2]; ?>" alt="<?php the_title(); ?> Image" />
+                                    </div>
                                     <h4><?php the_title(); ?></h4>
                                     <div class="price">
                                         <?php echo getDisplayPrice( get_field('gnu_product_price_us'), get_field('gnu_product_price_ca'), get_field('gnu_product_on_sale'), get_field('gnu_product_sale_percentage') ); ?>
@@ -206,7 +212,7 @@ get_header();
                             $loop = new WP_Query( $args );
                             while ( $loop->have_posts() ) : $loop->the_post();
                                 $imageID = get_field('gnu_product_image');
-                                $imageFile = wp_get_attachment_image_src($imageID, 'overview-thumb');
+                                $imageFile = wp_get_attachment_image_src($imageID, 'medium');
 
                                 if($counter % 4 == 0){
                                     $class = "product-item last ";
@@ -218,7 +224,9 @@ get_header();
 
                         <li class="<?php echo $class; ?>">
                             <a href="<? the_permalink(); ?>">
-                                <img src="<?php echo $imageFile[0]; ?>" width="<?php echo $imageFile[1]; ?>" height="<?php echo $imageFile[2]; ?>" alt="<?php the_title(); ?> Image" />
+                                <div class="vertical-img">
+                                    <img src="<?php echo $imageFile[0]; ?>" width="<?php echo $imageFile[1]; ?>" height="<?php echo $imageFile[2]; ?>" alt="<?php the_title(); ?> Image" />
+                                </div>
                                 <h4><?php the_title(); ?></h4>
                                 <div class="price">
                                     <?php echo getDisplayPrice( get_field('gnu_product_price_us'), get_field('gnu_product_price_ca'), get_field('gnu_product_on_sale'), get_field('gnu_product_sale_percentage') ); ?>
@@ -254,7 +262,7 @@ get_header();
                                 $loop = new WP_Query( $args );
                                 while ( $loop->have_posts() ) : $loop->the_post();
                                     $imageID = get_field('gnu_product_image');
-                                    $imageFile = wp_get_attachment_image_src($imageID, 'overview-thumb');
+                                    $imageFile = wp_get_attachment_image_src($imageID, 'medium');
 
                                     if($counter % 4 == 0){
                                         $class = "product-item last ";
@@ -266,7 +274,9 @@ get_header();
 
                             <li class="<?php echo $class; ?>">
                                 <a href="<? the_permalink(); ?>">
-                                    <img src="<?php echo $imageFile[0]; ?>" width="<?php echo $imageFile[1]; ?>" height="<?php echo $imageFile[2]; ?>" alt="<?php the_title(); ?> Image" />
+                                    <div class="vertical-img">
+                                        <img src="<?php echo $imageFile[0]; ?>" width="<?php echo $imageFile[1]; ?>" height="<?php echo $imageFile[2]; ?>" alt="<?php the_title(); ?> Image" />
+                                    </div>
                                     <h4><?php the_title(); ?></h4>
                                     <div class="price">
                                         <?php echo getDisplayPrice( get_field('gnu_product_price_us'), get_field('gnu_product_price_ca'), get_field('gnu_product_on_sale'), get_field('gnu_product_sale_percentage') ); ?>
@@ -303,7 +313,7 @@ get_header();
                                 $loop = new WP_Query( $args );
                                 while ( $loop->have_posts() ) : $loop->the_post();
                                     $imageID = get_field('gnu_product_image');
-                                    $imageFile = wp_get_attachment_image_src($imageID, 'overview-thumb');
+                                    $imageFile = wp_get_attachment_image_src($imageID, 'medium');
 
                                     if($counter % 4 == 0){
                                         $class = "product-item last ";
@@ -315,7 +325,9 @@ get_header();
 
                             <li class="<?php echo $class; ?>">
                                 <a href="<? the_permalink(); ?>">
-                                    <img src="<?php echo $imageFile[0]; ?>" width="<?php echo $imageFile[1]; ?>" height="<?php echo $imageFile[2]; ?>" alt="<?php the_title(); ?> Image" />
+                                    <div class="vertical-img">
+                                        <img src="<?php echo $imageFile[0]; ?>" width="<?php echo $imageFile[1]; ?>" height="<?php echo $imageFile[2]; ?>" alt="<?php the_title(); ?> Image" />
+                                    </div>
                                     <h4><?php the_title(); ?></h4>
                                     <div class="price">
                                         <?php echo getDisplayPrice( get_field('gnu_product_price_us'), get_field('gnu_product_price_ca'), get_field('gnu_product_on_sale'), get_field('gnu_product_sale_percentage') ); ?>
