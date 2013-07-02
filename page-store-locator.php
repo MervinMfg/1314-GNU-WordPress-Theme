@@ -101,10 +101,6 @@ $companiesArr[23]['name'] = 'Backcountry';
 $companiesArr[23]['img_path'] = 'backcountry.jpg';
 $companiesArr[23]['link'] = 'http://www.backcountry.com/gnu?CMP_ID=PM_VL0054';
 
-$companiesArr[24]['name'] = 'Norse Snowboarding';
-$companiesArr[24]['img_path'] = 'norse.jpg';
-$companiesArr[24]['link'] = 'http://www.norseboards.com/gnu.html';
-
 $companiesArr[25]['name'] = 'SHRD';
 $companiesArr[25]['img_path'] = 'shrd.jpg';
 $companiesArr[25]['link'] = 'http://www.shrd.com/gnu';

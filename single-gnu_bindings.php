@@ -306,8 +306,11 @@ Template Name: Bindings Detail Template
 						<?php
 											}else{
 						?>
-						<h4><?php the_title(); ?></h4>
-						<div class="tech-content"><?php the_content(); ?></div>
+						<div class="tech-content">
+							<div class="tech-content-icon"></div>
+							<div class="tech-content-text"><h4><?php the_title(); ?></h4><?php the_content(); ?></div>
+							<div class="clearfix"></div>
+						</div>
 						<?php
 											}
 										endif;
