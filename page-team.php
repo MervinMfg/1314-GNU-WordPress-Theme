@@ -239,8 +239,8 @@ Template Name: Team Template
 					</ul>
 					<h3>The Gifted</h3>
 					<ul class="collab-list">
-						<li><a href="/?s=Bryn Valaika">Bryn Valaika</a></li>
-						<li><a href="/?s=Maribeth Kramer">Maribeth Kramer</a></li>
+						<li><a href="/team/bryn-valaika/">Bryn Valaika</a></li>
+						<li><a href="/team/maribeth-kramer/">Maribeth Kramer</a></li>
 						<li><a href="/?s=Sandra Hillen">Sandra Hillen</a></li>
 						<li><a href="/?s=Jenna Blasman">Jenna Blasman</a></li>
 						<li><a href="/?s=Michelle Zeller">Michelle Zeller</a></li>
