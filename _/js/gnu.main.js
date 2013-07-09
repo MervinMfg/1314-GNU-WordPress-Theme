@@ -1,7 +1,7 @@
 /*
 
     GNU - gnu.com
-    VERSION 1.2
+    VERSION 1.2.1
     AUTHOR brian.behrens@mervin.com
 
     DEPENDENCIES:
@@ -104,19 +104,19 @@ GNU.main = {
         // add listeners to top menu items that have drop downs
         $("#nav-primary .snowboards").click(function (e) {
             e.preventDefault();
-            toggleMenu($(this).attr("class"));
+            toggleMenu($(this).attr("id"));
         });
         $("#nav-primary .bindings").click(function (e) {
             e.preventDefault();
-            toggleMenu($(this).attr("class"));
+            toggleMenu($(this).attr("id"));
         });
         $("#nav-primary .weirdwear").click(function (e) {
             e.preventDefault();
-            toggleMenu($(this).attr("class"));
+            toggleMenu($(this).attr("id"));
         });
         $("#nav-primary .weirdos").click(function (e) {
             e.preventDefault();
-            toggleMenu($(this).attr("class"));
+            toggleMenu($(this).attr("id"));
         });
         // main toggle function for animating the state of the drop down menu
         function toggleMenu ( linkClass ) {
@@ -132,7 +132,7 @@ GNU.main = {
             var navToDisplay = "nav.nav-dropdown-" + linkClass;
             $(navToDisplay).addClass("selected");
 
-            if (self.config.selectedMenu === '') {
+            if (self.config.selectedMenu == '') {
                 // expand container div
                 $("#header .nav-dropdown-container-hide-overflow").addClass("selected");
                 // expand menu with JS
@@ -148,7 +148,7 @@ GNU.main = {
                 });
                 // set selected link
                 self.config.selectedMenu = linkClass;
-            } else if ( linkClass === self.config.selectedMenu ) {
+            } else if ( linkClass == self.config.selectedMenu ) {
                 // collapse menu with JS
                 $('#header .nav-dropdown-container').animate({
                     top: '-800px'

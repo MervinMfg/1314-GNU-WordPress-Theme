@@ -141,11 +141,11 @@ G   GGGGGGG    N, GG8    G  $GGGGGGGGGGD  GGGGGGGGGGGGG GGGGGGGGGGGGGGGGGGGG   G
 		<div class="nav-primary-container">
 			<nav id="nav-primary">
 				<ul>
-					<li><a href="/snowboards/" class="snowboards">Snowboards</a></li>
-					<li><a href="/bindings/" class="bindings">Bindings</a></li>
-					<li><a href="/weirdwear/" class="weirdwear">Weirdwear</a></li>
-					<li><a href="/team/" class="weirdos">Weirdos</a></li>
-					<li><a href="/blog/" class="glog">Glog</a></li>
+					<li><a href="/snowboards/" class="snowboards" id="snowboards">Snowboards</a></li>
+					<li><a href="/bindings/" class="bindings" id="bindings">Bindings</a></li>
+					<li><a href="/weirdwear/" class="weirdwear" id="weirdwear">Weirdwear</a></li>
+					<li><a href="/team/" class="weirdos" id="weirdos">Weirdos</a></li>
+					<li><a href="/blog/" class="glog" id="glog">Glog</a></li>
 					<!--<li><a href="/cinema/" class="cinema">Cinema</a></li>-->
 				</ul>
 			</nav>
