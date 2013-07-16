@@ -100,7 +100,7 @@ if (have_posts()) : while (have_posts()) : the_post();
 								<?php endif; ?>
 								<li class="find-dealer"><a href="/store-locator/">Find a Dealer</a></li>
 							</ul>
-							<div class="cart-success hidden"><p>The items has been added to your cart.<br /><a href="/shopping-cart/">View your shopping cart.</a></p></div>
+							<div class="cart-success hidden"><p>The item has been added to your cart.<br /><a href="/shopping-cart/">View your shopping cart.</a></p></div>
 							<div class="cart-failure hidden"><p>There has been an error adding the item to your cart. Try again later.</p></div>
 						</div>
 						<h2><?php the_field('gnu_product_slogan'); ?></h2>
