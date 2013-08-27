@@ -93,7 +93,7 @@ Template Name: Home Template
 					</ul>
 				</section>
 				<section class="instagram">
-					<h4>Follow us on Instagram @clubweird</h4>
+					<h4>Follow us on Instagram @GNUsnowboards</h4>
 					<div class="instagram-slider">
 						<div id="insta-prev"></div>
 						<div class="insta-photo-wrapper">
