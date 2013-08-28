@@ -26,24 +26,26 @@
 	$GLOBALS['pageImage'] = get_bloginfo('template_directory') . "/_/img/fb-like.png";
 	$pageDescriptionDefault = "GNU speed-entry performance bindings and snowboards handbuilt by snowboarders with jobs in the USA since 1977. Keep snowboarding weird!";
 	// GET THE PAGE DESCRIPTION, AND IMAGE IF IT'S SINGLE
-	if (is_single()){
-		if (have_posts()){
-			while (have_posts()){
+	if (is_single()) {
+		if (have_posts()) {
+			while (have_posts()) {
 				the_post();
 				$pageDescription = strip_tags(get_the_excerpt());
 				// set page thumbnail now that we know we have a single post, used for FB likes
 				$GLOBALS['pageImage'] = get_post_image('medium');
 				$GLOBALS['pageImage'] = $GLOBALS['pageImage'][0];
 			}
-		}else{
+		} else {
 			$pageDescription = $pageDescriptionDefault;
 		}
 	}else{
-		if(has_post_thumbnail($post->ID) && !is_home()){
-            $GLOBALS['pageImage'] = get_post_image('medium');
-            $GLOBALS['pageImage'] = $GLOBALS['pageImage'][0];
+		if (!is_home() && !is_search()) {
+			if (has_post_thumbnail($post->ID)) {
+				$GLOBALS['pageImage'] = get_post_image('medium');
+            	$GLOBALS['pageImage'] = $GLOBALS['pageImage'][0];
+			}
         }
-        if (have_posts() && !is_home()){
+        if (have_posts() && !is_home()) {
         	while (have_posts()){
         		the_post();
 				$pageDescription = strip_tags(get_the_excerpt());
@@ -55,7 +57,7 @@
 				   $pageDescription = "Visit us at SIA. Join our experiment in weirdness at the Club Weird Photo Booth.";
 				endif;
 			}
-        }else {
+        } else {
         	$pageDescription = $pageDescriptionDefault;
         }
 	}
@@ -91,8 +93,7 @@ G   GGGGGGG    N, GG8    G  $GGGGGGGGGGD  GGGGGGGGGGGGG GGGGGGGGGGGGGGGGGGGG   G
 <html class="no-js" <?php language_attributes(); ?> itemscope itemtype="http://schema.org/Blog" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
 <head id="www-gnu-com" data-template-set="gnu-wordpress-theme" profile="http://gmpg.org/xfn/11">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- force latest IE rendering engine -->
-	<meta charset="<?php bloginfo('charset'); ?>">
-	<?php if (is_search()) { ?><meta name="robots" content="noindex, nofollow" /><?php } ?>
+	<meta charset="<?php bloginfo('charset'); ?>"><?php if (is_search()) { echo "\n\t"; ?><meta name="robots" content="noindex, nofollow" /><?php } echo "\n"; ?>
 	<title><?php echo $GLOBALS['pageTitle']; ?></title>
 	<meta name="title" content="<?php echo $GLOBALS['pageTitle']; ?>" />
 	<meta name="description" content="<?php echo $pageDescription; ?>" />
@@ -124,7 +125,7 @@ G   GGGGGGG    N, GG8    G  $GGGGGGGGGGD  GGGGGGGGGGGGG GGGGGGGGGGGGGGGGGGGG   G
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<!-- all our JS is at the bottom of the page, except for Modernizr. -->
 	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/lib/modernizr-2.6.1.min.js"></script>
-	<!-- WordPress Head -->
+	<!-- WP Head -->
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

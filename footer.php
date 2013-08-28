@@ -57,28 +57,41 @@
                 <div class="handbuilt">Handbuilt in the U.S.A. by snowboarders with jobs</div>
 			</div>
 		</div>
-	</footer>
-	<!-- END FOOTER -->
-
-	<!-- Region Selector -->
-    <div class="hidden">
-        <div id="region-selector-overlay">
-            <div class="choose-region">
-                <h4>Choose your region:</h4>
-                <ul>
-                    <li><a href="#" class="usa">USA</a></li>
-                    <li><a href="#" class="canada">CANADA</a></li>
-                    <li><a href="#" class="international">INTERNATIONAL</a></li>
-                </ul>
-            </div>
-            <p>GNU does not accept online orders outside of the US and Canada.</p>
-        </div>
-    </div>
-
-	<!-- WP FOOTER -->
+	</footer><!-- END #footer -->
+	<!-- Region Selector Overlay -->
+	<div class="hidden">
+		<div id="region-selector-overlay">
+			<div class="choose-region">
+				<h4>Choose your region:</h4>
+				<ul>
+					<li><a href="#" class="usa">USA</a></li>
+					<li><a href="#" class="canada">CANADA</a></li>
+					<li><a href="#" class="international">INTERNATIONAL</a></li>
+				</ul>
+			</div>
+			<p>GNU does not accept online orders outside of the US and Canada.</p>
+		</div>
+	</div>
 	<?php wp_footer(); ?>
 
-	<!-- SOCIAL MEDIA INCLUDES -->
+	<!-- JavaScript includes -->
+	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/lib/jquery-1.10.2.min.js"><\/script>')</script>
+	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/lib/jquery.bxSlider.min.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/lib/jquery-embedagram.pack.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/lib/jquery.colorbox-min.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/lib/jquery.cookie.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/lib/jquery.treeview.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/lib/TimelineMax.min.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/gnu.main.js"></script>
+	<!-- Init the main JS -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			GNU.main.init();
+		});
+	</script>
+	<!-- Social Media Includes -->
 	<div id="fb-root"></div>
 	<script type="text/javascript">
 		// Facebook
@@ -99,23 +112,6 @@
 		})();
 	</script>
 	<script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
-	<!-- JavaScript includes -->
-	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
-	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/lib/jquery-1.10.2.min.js"><\/script>')</script>
-	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/lib/jquery.bxSlider.min.js"></script>
-	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/lib/jquery-embedagram.pack.js"></script>
-	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/lib/jquery.colorbox-min.js"></script>
-	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/lib/jquery.cookie.js"></script>
-	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/lib/jquery.treeview.js"></script>
-	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/lib/TimelineMax.min.js"></script>
-	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/gnu.main.js"></script>
-	<!-- Init the main JS -->
-	<script type="text/javascript">
-		$(document).ready(function(){
-			GNU.main.init();
-		});
-	</script>
 	<!-- Google Analytics -->
 	<script type="text/javascript">
 		var _gaq = _gaq || [];
