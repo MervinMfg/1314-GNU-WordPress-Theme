@@ -360,24 +360,15 @@ body.international #quick-cart { display: none; }
 /* Homepage area styles
 -------------------------------------------------------------------------------*/
 .hero-slider { width: 100%; height: 530px; background: #fff; margin-top: -22px; overflow: hidden; }
-
-.hero-image-wrapper { text-align: center; width: 960px; margin: 0 auto; position: relative; }
-
-.hero-image-wrapper .bx-window { overflow: visible !important; }
-
-.hero-slider ul li { display: inline-block; width: 1400px; margin-left: -220px; }
-
-#hero-prev { height: 61px; width: 71px; position: absolute; top: 235px; left: 10px; z-index: 100; }
-
-#hero-prev a { height: 61px; width: 71px; display: block; text-indent: -999999px; background: url("_/img/sprite.png") -514px 0px no-repeat; transition: background 100ms ease-in-out, color 200ms ease-in-out; -webkit-transition: background 100ms ease-in-out, color 200ms ease-in-out; -moz-transition: background 100ms ease-in-out, color 200ms ease-in-out; -o-transition: background 100ms ease-in-out, color 200ms ease-in-out; }
-
-#hero-prev a:hover { background: url("_/img/sprite.png") -524px 0px no-repeat; }
-
-#hero-next { height: 61px; width: 71px; position: absolute; top: 235px; right: 10px; z-index: 100; }
-
-#hero-next a { height: 61px; width: 71px; display: block; text-indent: -999999px; background: url("_/img/sprite.png") -635px 0px no-repeat; transition: background 100ms ease-in-out, color 200ms ease-in-out; -webkit-transition: background 100ms ease-in-out, color 200ms ease-in-out; -moz-transition: background 100ms ease-in-out, color 200ms ease-in-out; -o-transition: background 100ms ease-in-out, color 200ms ease-in-out; }
-
-#hero-next a:hover { background: url("_/img/sprite.png") -625px 0px no-repeat; }
+.hero-slider .hero-image-wrapper { width: 960px; margin: 0 auto; position: relative; }
+.hero-slider .hero-image-wrapper .bx-viewport { overflow: visible !important; }
+.hero-slider .hero-image-wrapper ul li img { width: 1400px !important; max-width: none; margin-left: -220px; }
+.hero-slider .hero-image-wrapper #hero-prev { height: 61px; width: 71px; position: absolute; top: 235px; left: 10px; z-index: 100; }
+.hero-slider .hero-image-wrapper #hero-prev a { height: 61px; width: 71px; display: block; text-indent: -999999px; background: url("_/img/sprite.png") -514px 0px no-repeat; transition: background 100ms ease-in-out, color 200ms ease-in-out; -webkit-transition: background 100ms ease-in-out, color 200ms ease-in-out; -moz-transition: background 100ms ease-in-out, color 200ms ease-in-out; -o-transition: background 100ms ease-in-out, color 200ms ease-in-out; }
+.hero-slider .hero-image-wrapper #hero-prev a:hover { background: url("_/img/sprite.png") -524px 0px no-repeat; }
+.hero-slider .hero-image-wrapper #hero-next { height: 61px; width: 71px; position: absolute; top: 235px; right: 10px; z-index: 100; }
+.hero-slider .hero-image-wrapper #hero-next a { height: 61px; width: 71px; display: block; text-indent: -999999px; background: url("_/img/sprite.png") -635px 0px no-repeat; transition: background 100ms ease-in-out, color 200ms ease-in-out; -webkit-transition: background 100ms ease-in-out, color 200ms ease-in-out; -moz-transition: background 100ms ease-in-out, color 200ms ease-in-out; -o-transition: background 100ms ease-in-out, color 200ms ease-in-out; }
+.hero-slider .hero-image-wrapper #hero-next a:hover { background: url("_/img/sprite.png") -625px 0px no-repeat; }
 
 h2.keep-snowboarding-weird { position: absolute; top: -130px; right: 0; z-index: 100; height: 150px; width: 150px; display: block; text-indent: -999999px; background: url("_/img/sprite.png") 0px -364px no-repeat; }
 
@@ -513,40 +504,25 @@ body.international .product-listing li a .price { display: none; }
 /* Binding Overview styles
 -------------------------------------------------------------------------------*/
 .binding-animation { width: 100%; height: 222px; position: relative; overflow: hidden; padding-bottom: 20px; }
-
 .binding-animation .bx-wrapper { width: 745px; float: left; padding: 0 26px; }
-
 .binding-animation ul li { display: inline-block; width: 745px; height: 222px; }
-
 .binding-animation .animation-prev { height: 222px; width: 71px; float: left; }
-
 .binding-animation .animation-prev a { margin-top: 80px; height: 61px; width: 71px; display: block; text-indent: -999999px; background: url("_/img/sprite.png") -514px 0px no-repeat; transition: background 100ms ease-in-out, color 200ms ease-in-out; -webkit-transition: background 100ms ease-in-out, color 200ms ease-in-out; -moz-transition: background 100ms ease-in-out, color 200ms ease-in-out; -o-transition: background 100ms ease-in-out, color 200ms ease-in-out; }
-
 .binding-animation .animation-prev a:hover, .binding-animation .animation-prev a:focus { background: url("_/img/sprite.png") -524px 0px no-repeat; }
-
 .binding-animation .animation-next { height: 222px; width: 71px; float: left; }
-
 .binding-animation .animation-next a { margin-top: 80px; height: 61px; width: 71px; display: block; text-indent: -999999px; background: url("_/img/sprite.png") -635px 0px no-repeat; transition: background 100ms ease-in-out, color 200ms ease-in-out; -webkit-transition: background 100ms ease-in-out, color 200ms ease-in-out; -moz-transition: background 100ms ease-in-out, color 200ms ease-in-out; -o-transition: background 100ms ease-in-out, color 200ms ease-in-out; }
-
 .binding-animation .animation-next a:hover, .binding-animation .animation-next a:focus { background: url("_/img/sprite.png") -625px 0px no-repeat; }
 
 /* fix for fixed header, adds spacing to div you have anchor links to */
 #binding-comparison:before { display: block; content: ""; height: 240px; margin: -240px 0 0; }
 
 .binding-compare { width: 340px; float: right; }
-
 .binding-compare h4 span { color: #fff; font-size: 14px; }
-
 .binding-compare ul { padding: 10px 20px 0 0; }
-
 .binding-compare ul li { width: 60px; height: 90px; float: left; padding-right: 20px; }
-
 .binding-compare ul li.active:hover, .binding-compare ul li.active:focus { background: url("_/img/sprite.png") -444px -31px no-repeat; cursor: pointer; }
-
 .binding-compare ul li span { font-size: 14px; color: #FF3399; font-family: "gnuregular", Helvetica, Arial, sans-serif; display: block; text-align: center; text-transform: uppercase; }
-
 .binding-compare a.compare-link { background: #ffff00; padding: 7px 6px 6px 6px; text-transform: uppercase; line-height: 18px; font-size: 18px; font-family: "gnuregular", Helvetica, Arial, sans-serif; color: #000; float: left; margin-top: 20px; }
-
 .binding-compare a.compare-link:hover, .binding-compare a.compare-link:focus { background: #99cc33; text-decoration: none; }
 
 .compare { color: #ffff00; }
@@ -597,34 +573,23 @@ body.international .product-listing li a .price { display: none; }
 .product-overview { padding-bottom: 20px; }
 
 .product-images { width: 460px; float: left; padding-top: 32px; position: relative; }
-
 .product-images.video { padding-top: 65px; }
-
 .product-images a.additional-images { display: block; width: 106px; height: 106px; position: absolute; left: 70px; top: 120px; background: url("_/img/sprite.png") -250px -364px; text-indent: -999999px; }
-
 .product-images .bx-wrapper { width: 460px; height: 460px; overflow: hidden; float: left; position: relative; }
+.product-images #image-list { width: 460px !important; height: 460px; overflow: hidden; float: left; }
+.product-images #image-list li { width: 460px; height: 460px; }
+.product-images .image-list-thumbs { width: 460px; float: left; padding-top: 20px; text-align: center; }
+.product-images .image-list-thumbs li { display: inline-block; width: 100px; font-size: 11px; padding: 0 10px 10px 0; }
+.product-images .image-list-thumbs li a { display: block; padding-bottom: 7px; }
+.product-images .image-list-thumbs li a:hover, .product-images .image-list-thumbs li a:focus { color: #0099ff; text-decoration: none; }
+.product-images .image-list-thumbs li a.pager-active { color: #0099ff; background: url("_/img/bg-horizontal-line.png") no-repeat bottom center; }
 
 .single-gnu_snowboards .product-images .bx-wrapper { width: 340px; height: 715px; padding-right: 20px; }
 
-.product-images #image-list { width: 460px; height: 460px; overflow: hidden; float: left; }
-
-.single-gnu_snowboards .product-images #image-list { width: 340px; height: 715px; padding-right: 20px; }
-
-.product-images #image-list li { width: 460px; height: 460px; }
-
+.single-gnu_snowboards .product-images #image-list { width: 340px !important; height: 715px; padding-right: 20px; }
 .single-gnu_snowboards .product-images #image-list li { width: 340px; height: 715px; }
 
-.product-images .image-list-thumbs { width: 460px; float: left; padding-top: 20px; text-align: center; }
-
 .single-gnu_snowboards .product-images .image-list-thumbs { width: 100px; }
-
-.product-images .image-list-thumbs li { display: inline-block; width: 100px; font-size: 11px; padding: 0 10px 10px 0; }
-
-.product-images .image-list-thumbs li a { display: block; padding-bottom: 7px; }
-
-.product-images .image-list-thumbs li a:hover, .product-images .image-list-thumbs li a:focus { color: #0099ff; text-decoration: none; }
-
-.product-images .image-list-thumbs li a.pager-active { color: #0099ff; background: url("_/img/bg-horizontal-line.png") no-repeat bottom center; }
 
 /* Right column */
 .product-overview .column-right { width: 400px; padding-left: 80px; float: left; background: url("_/img/bg-splat-blue.png") no-repeat 20px 0px; position: relative; margin-top: 20px; }
@@ -821,85 +786,50 @@ body.international .product-price { display: none; }
 .product-video a:hover { color: #9933cc; text-decoration: none; }
 
 .weird-science { padding-bottom: 40px; }
-
 .weird-science ul, .weird-science .bx-wrapper { width: 860px; height: 330px; overflow: hidden; float: left; }
-
-.weird-science ul li { width: 215px; height: 330px; background: url("_/img/sprite-weird-science.png") no-repeat; float: left; text-indent: -999999px; }
-
+.weird-science ul li { width: 215px !important; height: 330px; background: url("_/img/sprite-weird-science.png") no-repeat; float: left; text-indent: -999999px; }
 .weird-science ul li.science-weird { background-position: 0px 0px; }
-
 .weird-science ul li.science-construction { background-position: -215px 0px; }
-
 .weird-science ul li.science-magne-traction { background-position: -430px 0px; }
-
 .weird-science ul li.science-pickle-tech { background-position: -645px 0px; }
-
 .weird-science ul li.science-ass-tech { background-position: -860px 0px; }
-
 .weird-science ul li.science-liquid-crystal { background-position: -1075px 0px; }
-
 .weird-science ul li.science-magnesium { background-position: -1290px 0px; }
-
 .weird-science ul li.science-magic { background-position: -1505px 0px; }
-
 .weird-science ul li.science-wood-core { background-position: -1720px 0px; }
-
 .weird-science #science-prev { float: left; width: 40px; height: 160px; }
-
 .weird-science #science-prev a { width: 40px; height: 330px; display: block; background: url("_/img/sprite.png") -765px 150px; text-indent: -999999px; transition: background 100ms ease-in-out; -webkit-transition: background 100ms ease-in-out; -moz-transition: background 100ms ease-in-out; -o-transition: background 100ms ease-in-out; }
-
 .weird-science #science-prev a:hover { background: url("_/img/sprite.png") -770px 150px; }
-
 .weird-science #science-next { float: left; width: 40px; height: 160px; }
-
 .weird-science #science-next a { width: 40px; height: 330px; display: block; background: url("_/img/sprite.png") -845px 150px; text-indent: -999999px; transition: background 100ms ease-in-out; -webkit-transition: background 100ms ease-in-out; -moz-transition: background 100ms ease-in-out; -o-transition: background 100ms ease-in-out; }
-
 .weird-science #science-next a:hover { background: url("_/img/sprite.png") -840px 150px; }
 
 .product-specs { width: 100%; padding-bottom: 40px; }
-
 .product-specs h3 { padding-bottom: 20px; }
-
 .product-specs table { width: 100%; }
-
 .product-specs table thead { background: #333333; }
-
 .product-specs table thead th { padding: 10px; vertical-align: top; text-transform: uppercase; font-size: 11px; }
-
 .product-specs table thead th span { font-size: 9px; font-weight: normal; }
-
 .product-specs table tbody tr { background: #000; }
-
 .product-specs table tbody tr:nth-child(even) { background: #181818; }
-
 .product-specs table tbody tr td { padding: 10px; }
 
 .product-interview { padding-bottom: 30px; }
-
 .product-interview h3 { padding-bottom: 20px; }
-
 .product-interview img { float: right; padding: 0 0 20px 20px; }
-
 .product-interview p { padding-bottom: 10px; }
 
 .product-related { padding: 20px 0 20px 0; }
-
 .product-related h2 { padding-bottom: 10px; background: url("_/img/bg-horizontal-line.png") no-repeat bottom center; margin-bottom: 20px; }
-
 .product-related li { width: 220px; padding: 0 20px 0 0; float: left; text-align: center; }
-
 .product-related li.last { padding: 0; }
-
 .product-related li a h4 { color: #0099ff; }
-
 .product-related li a p { color: #99cc33; font-family: "gnuregular", Helvetica, Arial, sans-serif; }
+.product-related li a p span { color: #fff; }
 
 body.international .product-related li a p { display: none; }
 
-.product-related li a p span { color: #fff; }
-
 .reviews { clear: both; }
-
 .reviews h2 { padding-bottom: 10px; background: url("_/img/bg-horizontal-line.png") no-repeat bottom center; margin-bottom: 20px; }
 
 /* Team Overview styles
@@ -1374,6 +1304,71 @@ body.international .shopping-cart-wrapper { display: none; }
 #shptrn_ch_item_qty, .shptrn_ci_qty { width: 30%; }
 
 .shptrn_ci_details h3, .shptrn_quick_cart { font-size: 12px; font-weight: 700; }
+
+/* BxSlider v4.0 - Fully loaded, responsive content slider http://bxslider.com Written by: Steven Wanderski, 2012 http://stevenwanderski.com
+-------------------------------------------------------------------------------*/
+/** RESET AND LAYOUT
+===================================*/
+.bx-wrapper { position: relative; margin: 0 auto; padding: 0; *zoom: 1; }
+
+.bx-wrapper img { max-width: 100%; display: block; }
+
+/** THEME
+===================================*/
+.bx-wrapper .bx-viewport { /*-moz-box-shadow: 0 0 5px #ccc;
+-webkit-box-shadow: 0 0 5px #ccc;
+box-shadow: 0 0 5px #ccc;
+border: solid #fff 5px;
+left: -5px;
+background: #fff;*/ }
+
+.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto { position: absolute; bottom: -30px; width: 100%; }
+
+/* LOADER */
+.bx-wrapper .bx-loading { min-height: 50px; height: 100%; width: 100%; position: absolute; top: 0; left: 0; z-index: 200; }
+
+/* PAGER */
+.bx-wrapper .bx-pager { text-align: center; font-size: .85em; font-family: Arial; font-weight: bold; color: #666; padding-top: 20px; }
+
+.bx-wrapper .bx-pager .bx-pager-item, .bx-wrapper .bx-controls-auto .bx-controls-auto-item { display: inline-block; *zoom: 1; *display: inline; }
+
+.bx-wrapper .bx-pager.bx-default-pager a { background: #666; text-indent: -9999px; display: block; width: 10px; height: 10px; margin: 0 5px; outline: 0; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active { background: #000; }
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+.bx-wrapper .bx-prev { left: 10px; background: url(images/controls.png) no-repeat 0 -32px; }
+
+.bx-wrapper .bx-next { right: 10px; background: url(images/controls.png) no-repeat -43px -32px; }
+
+.bx-wrapper .bx-prev:hover { background-position: 0 0; }
+
+.bx-wrapper .bx-next:hover { background-position: -43px 0; }
+
+.bx-wrapper .bx-controls-direction a { position: absolute; top: 50%; margin-top: -16px; outline: 0; width: 32px; height: 32px; text-indent: -9999px; z-index: 9999; }
+
+.bx-wrapper .bx-controls-direction a.disabled { display: none; }
+
+/* AUTO CONTROLS (START / STOP) */
+.bx-wrapper .bx-controls-auto { text-align: center; }
+
+.bx-wrapper .bx-controls-auto .bx-start { display: block; text-indent: -9999px; width: 10px; height: 11px; outline: 0; background: url(images/controls.png) -86px -11px no-repeat; margin: 0 3px; }
+
+.bx-wrapper .bx-controls-auto .bx-start:hover, .bx-wrapper .bx-controls-auto .bx-start.active { background-position: -86px 0; }
+
+.bx-wrapper .bx-controls-auto .bx-stop { display: block; text-indent: -9999px; width: 9px; height: 11px; outline: 0; background: url(images/controls.png) -86px -44px no-repeat; margin: 0 3px; }
+
+.bx-wrapper .bx-controls-auto .bx-stop:hover, .bx-wrapper .bx-controls-auto .bx-stop.active { background-position: -86px -33px; }
+
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager { text-align: left; width: 80%; }
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto { right: 0; width: 35px; }
+
+/* IMAGE CAPTIONS */
+.bx-wrapper .bx-caption { position: absolute; bottom: 0; left: 0; background: #666666 \9; background: rgba(80, 80, 80, 0.75); width: 100%; }
+
+.bx-wrapper .bx-caption span { color: #fff; font-family: Arial; display: block; font-size: .85em; padding: 10px; }
 
 /* Colorbox Core Style
 -------------------------------------------------------------------------------*/

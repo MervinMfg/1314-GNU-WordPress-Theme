@@ -78,7 +78,7 @@
 	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/lib/jquery-1.10.2.min.js"><\/script>')</script>
-	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/lib/jquery.bxSlider.min.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/lib/jquery.bxslider.min.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/lib/jquery-embedagram.pack.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/lib/jquery.colorbox-min.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/lib/jquery.cookie.js"></script>

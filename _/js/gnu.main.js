@@ -5,13 +5,14 @@
     AUTHOR brian.behrens@mervin.com
 
     DEPENDENCIES:
-    - jQuery v1.8.3
+    - jQuery v1.10.2
     - Shopatron API v2.2.0
     - Modernizr v2.6.1
-    - ColorBox v1.3.20
-    - jQuery bxSlider v3.0
+    - ColorBox v1.4.21
+    - jQuery bxSlider v4.1.1
     - jQuery Treeview v1.5
     - embedagram
+    - TimelineMax v1.10.2
 
 */
 
@@ -255,14 +256,16 @@ GNU.main = {
             prevSelector: '#hero-prev',
             nextSelector: '#hero-next',
             autoHover: false,
-            randomStart: false
+            randomStart: false,
+            responsive: false,
+            pager: false
         });
         // instagram photos
         $('#instagram-photos').embedagram({
             instagram_id: 14985997,
             thumb_width: 152,
             limit: 24,
-            success: function () { $('#instagram-photos').bxSlider({displaySlideQty: 4, moveSlideQty: 4, prevSelector: '#insta-prev', nextSelector: '#insta-next', auto: true, pause: 6000, autoHover: true}); }
+            success: function () { $('#instagram-photos').bxSlider({minSlides: 4, maxSlides: 4, moveSlides: 4, slideWidth:180, prevSelector: '#insta-prev', nextSelector: '#insta-next', auto: true, pause: 6000, autoHover: true, responsive: false, pager: false}); }
         });
         //self.homeTakeoverInit();
     },
@@ -352,13 +355,17 @@ GNU.main = {
         });
         // weird science slider
         $('#science-photos').bxSlider({
-            displaySlideQty: 4,
-            moveSlideQty: 1,
+            minSlides: 4,
+            maxSlides: 4,
+            moveSlides: 1,
+            slideWidth: 215,
             prevSelector: '#science-prev',
             nextSelector: '#science-next',
             auto: false,
             pause: 6000,
-            autoHover: true
+            autoHover: true,
+            responsive: false,
+            pager: false
         });
         // check for product video callout
         if ($('.product-video')) {
@@ -395,7 +402,9 @@ GNU.main = {
         var slider = $('#image-list').bxSlider({
             controls: false,
             mode: 'fade',
-            speed: 200
+            speed: 200,
+            responsive: false,
+            pager: false
         });
         // assign a click event to the external thumbnails
         $('.image-list-thumbs a').click(function () {
@@ -482,7 +491,9 @@ GNU.main = {
             prevSelector: '.animation-prev',
             nextSelector: '.animation-next',
             autoHover: true,
-            randomStart: false
+            randomStart: false,
+            responsive: false,
+            pager: false
         });
         GNU.BindingsCompare.init(); // initialize binding comparison class
     },
@@ -493,7 +504,9 @@ GNU.main = {
         var slider = $('#image-list').bxSlider({
             controls: false,
             mode: 'fade',
-            speed: 200
+            speed: 200,
+            responsive: false,
+            pager: false
         });
         // assign a click event to the external thumbnails
         $('.image-list-thumbs a').click(function () {
@@ -618,7 +631,9 @@ GNU.main = {
         var slider = $('#image-list').bxSlider({
             controls: false,
             mode: 'fade',
-            speed: 200
+            speed: 200,
+            responsive: false,
+            pager: false
         });
         // assign a click event to the external thumbnails
         $('.image-list-thumbs a').click(function () {
@@ -836,7 +851,7 @@ GNU.main = {
                                 }
                             }
                             $('#instagram-photos').html(imgList);
-                            $('#instagram-photos').bxSlider({displaySlideQty: 4, moveSlideQty: 4, prevSelector: '#insta-prev', nextSelector: '#insta-next', auto: true, pause: 6000, autoHover: true});
+                            $('#instagram-photos').bxSlider({minSlides: 4, maxSlides: 4, moveSlides:4, slideWidth:160, slideMargin:20, prevSelector: '#insta-prev', nextSelector: '#insta-next', auto: true, pause: 6000, autoHover: true, responsive: false, pager: false});
                             $('#instagram-photos li.pager a').colorbox({rel: 'instaImages', opacity: 1});
                         }
                     }
@@ -852,7 +867,9 @@ GNU.main = {
                 prevSelector: '#hero-prev',
                 nextSelector: '#hero-next',
                 autoHover: false,
-                randomStart: false
+                randomStart: false,
+                responsive: false,
+                pager: false
             });
         }
     },
@@ -862,7 +879,7 @@ GNU.main = {
             instagram_id: 14985997,
             thumb_width: 70,
             limit: 20,
-            success: function () { $('#instagram-photos').bxSlider({displaySlideQty: 2, moveSlideQty: 2, prevSelector: '#insta-prev', nextSelector: '#insta-next', auto: true, pause: 6000, autoHover: true}); }
+            success: function () { $('#instagram-photos').bxSlider({minSlides: 2, maxSlides: 2, moveSlides: 2, slideWidth:70, slideMargin:20, prevSelector: '#insta-prev', nextSelector: '#insta-next', auto: true, pause: 6000, autoHover: true, responsive: false, pager: false}); }
         });
         // CATEGORY TREE VIEW ON BLOG PAGES
         $(".widget_mycategoryorder ul").treeview({
