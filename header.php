@@ -1,3 +1,65 @@
+<?php
+	// GET THE REGION
+	getRegionCode();
+	// GET THE PAGE TITLE
+	$GLOBALS['pageTitle'] = "";
+	if (function_exists('is_tag') && is_tag()) {
+		$GLOBALS['pageTitle'] .= single_tag_title("Tag Archive for &quot;", false) . '&quot; - ';
+	} elseif (is_archive()) {
+		$GLOBALS['pageTitle'] .= wp_title('', false) . ' Archive - ';
+	} elseif (is_search()) {
+		$GLOBALS['pageTitle'] .= 'Search for &quot;'.esc_html($s).'&quot; - ';
+	} elseif (!(is_404()) && (is_single()) || (is_page()) && !(is_front_page())) {
+		$GLOBALS['pageTitle'] .= wp_title('-',false,'right');
+	} elseif (is_404()) {
+		$GLOBALS['pageTitle'] .=  'Not Found - ';
+	}
+	if (is_home() || is_front_page()) {
+		$GLOBALS['pageTitle'] .= get_bloginfo('name') . ' - ' . get_bloginfo('description');
+	} else {
+		$GLOBALS['pageTitle'] .= get_bloginfo('name');
+	}
+	if ($paged>1) {
+		$GLOBALS['pageTitle'] .=  ' - page '. $paged;
+	}
+	// SET DEFAULT PAGE IMAGE
+	$GLOBALS['pageImage'] = get_bloginfo('template_directory') . "/_/img/fb-like.png";
+	$pageDescriptionDefault = "GNU speed-entry performance bindings and snowboards handbuilt by snowboarders with jobs in the USA since 1977. Keep snowboarding weird!";
+	// GET THE PAGE DESCRIPTION, AND IMAGE IF IT'S SINGLE
+	if (is_single()){
+		if (have_posts()){
+			while (have_posts()){
+				the_post();
+				$pageDescription = strip_tags(get_the_excerpt());
+				// set page thumbnail now that we know we have a single post, used for FB likes
+				$GLOBALS['pageImage'] = get_post_image('medium');
+				$GLOBALS['pageImage'] = $GLOBALS['pageImage'][0];
+			}
+		}else{
+			$pageDescription = $pageDescriptionDefault;
+		}
+	}else{
+		if(has_post_thumbnail($post->ID) && !is_home()){
+            $GLOBALS['pageImage'] = get_post_image('medium');
+            $GLOBALS['pageImage'] = $GLOBALS['pageImage'][0];
+        }
+        if (have_posts() && !is_home()){
+        	while (have_posts()){
+        		the_post();
+				$pageDescription = strip_tags(get_the_excerpt());
+				if($pageDescription == ""){
+					$pageDescription = $pageDescriptionDefault;
+				}
+				// Check for club weird
+				if($post->ID == "11674"):
+				   $pageDescription = "Visit us at SIA. Join our experiment in weirdness at the Club Weird Photo Booth.";
+				endif;
+			}
+        }else {
+        	$pageDescription = $pageDescriptionDefault;
+        }
+	}
+?>
 <!--
 GNU
 gnu.com
@@ -31,71 +93,6 @@ G   GGGGGGG    N, GG8    G  $GGGGGGGGGGD  GGGGGGGGGGGGG GGGGGGGGGGGGGGGGGGGG   G
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- force latest IE rendering engine -->
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<?php if (is_search()) { ?><meta name="robots" content="noindex, nofollow" /><?php } ?>
-	<?php
-		// GET THE REGION
-		getRegionCode();
-		// GET THE PAGE TITLE
-		$GLOBALS['pageTitle'] = "";
-		if (function_exists('is_tag') && is_tag()) {
-			$GLOBALS['pageTitle'] .= single_tag_title("Tag Archive for &quot;", false) . '&quot; - ';
-		} elseif (is_archive()) {
-			$GLOBALS['pageTitle'] .= wp_title('', false) . ' Archive - ';
-		} elseif (is_search()) {
-			$GLOBALS['pageTitle'] .= 'Search for &quot;'.esc_html($s).'&quot; - ';
-		} elseif (!(is_404()) && (is_single()) || (is_page()) && !(is_front_page())) {
-			$GLOBALS['pageTitle'] .= wp_title('-',false,'right');
-		} elseif (is_404()) {
-			$GLOBALS['pageTitle'] .=  'Not Found - ';
-		}
-		if (is_home() || is_front_page()) {
-			$GLOBALS['pageTitle'] .= get_bloginfo('name') . ' - ' . get_bloginfo('description');
-		} else {
-			$GLOBALS['pageTitle'] .= get_bloginfo('name');
-		}
-		if ($paged>1) {
-			$GLOBALS['pageTitle'] .=  ' - page '. $paged;
-		}
-		// SET DEFAULT PAGE IMAGE
-		$GLOBALS['pageImage'] = get_bloginfo('template_directory') . "/_/img/fb-like.png";
-		$pageDescriptionDefault = "GNU speed-entry performance bindings and snowboards handbuilt by snowboarders with jobs in the USA since 1977. Keep snowboarding weird!";
-		// GET THE PAGE DESCRIPTION, AND IMAGE IF IT'S SINGLE
-		if (is_single()){
-			if (have_posts()){
-				while (have_posts()){
-					the_post();
-					$pageDescription = strip_tags(get_the_excerpt());
-					// set page thumbnail now that we know we have a single post, used for FB likes
-					$GLOBALS['pageImage'] = get_post_image('medium');
-					$GLOBALS['pageImage'] = $GLOBALS['pageImage'][0];
-				}
-			}else{
-				$pageDescription = $pageDescriptionDefault;
-			}
-		}else{
-			if(has_post_thumbnail($post->ID) && !is_home()){
-                $GLOBALS['pageImage'] = get_post_image('medium');
-                $GLOBALS['pageImage'] = $GLOBALS['pageImage'][0];
-            }
-            if (have_posts() && !is_home()){
-            	while (have_posts()){
-            		the_post();
-					$pageDescription = strip_tags(get_the_excerpt());
-					if($pageDescription == ""){
-						$pageDescription = $pageDescriptionDefault;
-					}
-					// Check for club weird
-					if($post->ID == "11674"):
-					   $pageDescription = "Visit us at SIA. Join our experiment in weirdness at the Club Weird Photo Booth.";
-					endif;
-				}
-            }else {
-            	$pageDescription = $pageDescriptionDefault;
-            }
-		}
-
-		
-	?>
-
 	<title><?php echo $GLOBALS['pageTitle']; ?></title>
 	<meta name="title" content="<?php echo $GLOBALS['pageTitle']; ?>" />
 	<meta name="description" content="<?php echo $pageDescription; ?>" />
@@ -127,9 +124,6 @@ G   GGGGGGG    N, GG8    G  $GGGGGGGGGGD  GGGGGGGGGGGGG GGGGGGGGGGGGGGGGGGGG   G
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<!-- all our JS is at the bottom of the page, except for Modernizr. -->
 	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/lib/modernizr-2.6.1.min.js"></script>
-	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
-	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/lib/jquery-1.8.3.min.js"><\/script>')</script>
 	<!-- WordPress Head -->
 	<?php wp_head(); ?>
 </head>
