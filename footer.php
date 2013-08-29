@@ -83,7 +83,7 @@
 	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/lib/jquery.colorbox-min.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/lib/jquery.cookie.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/lib/jquery.treeview.js"></script>
-	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/lib/TimelineMax.min.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/lib/TweenMax.min.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/gnu.main.js"></script>
 	<!-- Init the main JS -->
 	<script type="text/javascript">

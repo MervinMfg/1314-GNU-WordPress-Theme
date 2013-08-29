@@ -1060,11 +1060,11 @@ h2.keep-snowboarding-weird {
 	height: 160px;
 	clear: both;
 	padding-top: 20px;
-}
-	.instagram.hidden {
+
+	&.hidden {
 		display: none;
 	}
-	.instagram h4 {
+	h4 {
 		background: url('_/img/sprite.png') 0px -255px;
 		width: 100px;
 		height: 109px;
@@ -1073,84 +1073,95 @@ h2.keep-snowboarding-weird {
 		float: left;
 		padding-right: 20px;
 	}
-		.instagram.team h4 {
-			background: url('_/img/sprite.png') -265px -255px;
-			text-indent: 0px;
-			font-family: $bodyFont;
-			color: #ff3399;
-			font-size: 11px;
-			font-weight: bold;
-			text-align: center;
-			padding-top: 52px;
-			height: 57px;
-			text-shadow: 1px 1px 0 #fff;
+	&.team h4 {
+		background: url('_/img/sprite.png') -265px -255px;
+		text-indent: 0px;
+		font-family: $bodyFont;
+		color: #ff3399;
+		font-size: 11px;
+		font-weight: bold;
+		text-align: center;
+		padding-top: 52px;
+		height: 57px;
+		text-shadow: 1px 1px 0 #fff;
+
+		span {
+			display: block;
+			text-indent: -999999px;
 		}
-			.instagram.team h4 span {
-				display: block;
-				text-indent: -999999px;
-			}
-	.instagram .instagram-slider {
+	}
+	.instagram-slider {
 		width: 820px;
 		height: 160px;
 		float: left;
-	}
-		.instagram .instagram-slider #insta-prev {
+
+		#insta-prev {
 			float: left;
 			width: 40px;
 			height: 160px;
 			padding-right: 20px;
-		}
-		.instagram .instagram-slider #insta-prev a {
-			width: 40px;
-			height: 160px;
-			display: block;
-			background: url('_/img/sprite.png') -760px 65px;
-			text-indent: -999999px;
 
-			transition: background 100ms ease-in-out;
-			-webkit-transition: background 100ms ease-in-out;
-			-moz-transition: background 100ms ease-in-out;
-			-o-transition: background 100ms ease-in-out;
+			a {
+				width: 40px;
+				height: 160px;
+				display: block;
+				background: url('_/img/sprite.png') -760px 65px;
+				text-indent: -999999px;
+				transition: background 100ms ease-in-out;
+				-webkit-transition: background 100ms ease-in-out;
+				-moz-transition: background 100ms ease-in-out;
+				-o-transition: background 100ms ease-in-out;
+
+				&:hover,
+				&:focus {
+					background: url('_/img/sprite.png') -770px 65px;
+				}
+			}
 		}
-		.instagram .instagram-slider #insta-prev a:hover {
-			background: url('_/img/sprite.png') -770px 65px;
-		}
-		.instagram .instagram-slider #insta-next {
+		#insta-next {
 			float: left;
 			width: 40px;
 			height: 160px;
 			padding-left: 20px;
-		}
-		.instagram .instagram-slider #insta-next a {
-			width: 40px;
-			height: 160px;
-			display: block;
-			background: url('_/img/sprite.png') -850px 65px;
-			text-indent: -999999px;
 
-			transition: background 100ms ease-in-out;
-			-webkit-transition: background 100ms ease-in-out;
-			-moz-transition: background 100ms ease-in-out;
-			-o-transition: background 100ms ease-in-out;
+			a {
+				width: 40px;
+				height: 160px;
+				display: block;
+				background: url('_/img/sprite.png') -850px 65px;
+				text-indent: -999999px;
+				transition: background 100ms ease-in-out;
+				-webkit-transition: background 100ms ease-in-out;
+				-moz-transition: background 100ms ease-in-out;
+				-o-transition: background 100ms ease-in-out;
+
+				&:hover,
+				&:focus {
+					background: url('_/img/sprite.png') -840px 65px;
+				}
+			}
 		}
-		.instagram .instagram-slider #insta-next a:hover {
-			background: url('_/img/sprite.png') -840px 65px;
-		}
-		.instagram .instagram-slider .insta-photo-wrapper {
+		.insta-photo-wrapper {
 			float: left;
 			width: 700px;
+			height: 160px;
 			overflow: hidden;
-		}
-			.instagram .instagram-slider #instagram-photos li {
+
+			#instagram-photos li {
 				width: 180px;
 				height: 160px;
-			}
-				.instagram .instagram-slider #instagram-photos li img {
+				float: left;
+
+				img {
 					border: solid 4px #9933cc;
 					background: #000;
 					width: 152px;
 					height: 152px;
 				}
+			}
+		}
+	}
+}
 
 /* Product Overview styles
 -------------------------------------------------------------------------------*/
@@ -3093,52 +3104,106 @@ table.display th {
 
 /* Homepage Takeover
 -------------------------------------------------------------------------------*/
-
 #homepage-takeover {
-	width: 515px;
-	height: 700px;
+	width: 355px;
+	height: 508px;
 	position: fixed;
 	z-index: 400;
-	top: 75px;
-	left: 0px;
+	bottom: -8px;
+	left: -10px;
 	display: none;
 	cursor: pointer;
-}
-	#homepage-takeover.visible {
+
+	&.visible {
 		display: block;
 	}
-	@media screen and (max-height: 400px) {
-		#homepage-takeover.visible {
-			display: none;
-		}
-	}
-	#homepage-takeover .mathieu-crepel-close {
-		width: 120px;
-		height: 71px;
-		background: url('_/img/homepage-takeover/mathieu-crepel-close.png') no-repeat;
+	.forest-bailey-close {
+		width: 31px;
+		height: 30px;
+		background: url('_/img/homepage-takeover/forest-bailey-close.png') no-repeat;
 		position: absolute;
-		top: 135px;
-		left: 352px;
-		z-index: 30;
+		top: 40px;
+		left: 316px;
+		z-index: 8;
 	}
-	#homepage-takeover .mathieu-crepel {
-		width: 515px;
-		height: 564px;
-		background: url('_/img/homepage-takeover/mathieu-crepel.png') no-repeat;
+	.forest-bailey {
+		width: 186px;
+		height: 504px;
+		background: url('_/img/homepage-takeover/forest-bailey.png') no-repeat;
 		position: absolute;
-		bottom: 0;
+		top: 9px;
+		left: 28px;
+		z-index: 7;
+	}
+	.forest-bailey-board-top {
+		width: 230px;
+		height: 368px;
+		background: url('_/img/homepage-takeover/forest-bailey-board-top.png') no-repeat;
+		position: absolute;
+		top: 84px;
+		left: 48px;
+		z-index: 6;
+	}
+	.forest-bailey-board-base {
+		width: 266px;
+		height: 343px;
+		background: url('_/img/homepage-takeover/forest-bailey-board-base.png') no-repeat;
+		position: absolute;
+		top: 116px;
+		left: 74px;
+		z-index: 5;
+	}
+	.forest-bailey-name {
+		width: 74px;
+		height: 69px;
+		background: url('_/img/homepage-takeover/forest-bailey-name.png') no-repeat;
+		position: absolute;
+		top: 17px;
+		left: 57px;
+		z-index: 4;
+	}
+	.forest-bailey-cloud-1 {
+		width: 170px;
+		height: 83px;
+		background: url('_/img/homepage-takeover/forest-bailey-cloud-1.png') no-repeat;
+		position: absolute;
+		top: 10px;
+		left: 19px;
+		z-index: 3;
+	}
+	.forest-bailey-cloud-2 {
+		width: 116px;
+		height: 41px;
+		background: url('_/img/homepage-takeover/forest-bailey-cloud-2.png') no-repeat;
+		position: absolute;
+		top: 49px;
+		left: 218px;
+		z-index: 2;
+	}
+	.forest-bailey-cloud-3 {
+		width: 131px;
+		height: 58px;
+		background: url('_/img/homepage-takeover/forest-bailey-cloud-3.png') no-repeat;
+		position: absolute;
+		top: 127px;
 		left: 0;
-		z-index: 20;
+		z-index: 1;
 	}
-	#homepage-takeover .mathieu-crepel-snowboard {
-		width: 258px;
-		height: 572px;
-		background: url('_/img/homepage-takeover/mathieu-crepel-snowboard.png') no-repeat;
+	.forest-bailey-bg {
+		width: 332px;
+		height: 502px;
+		background: url('_/img/homepage-takeover/forest-bailey-bg.png') no-repeat;
 		position: absolute;
 		top: 0;
-		left: 0;
-		z-index: 10;
+		left: 23px;
+		z-index: 0;
 	}
+}
+@media screen and (max-height: 615px) {
+	#homepage-takeover.visible {
+		display: none ;
+	}
+}
 
 /* Print styles
 -------------------------------------------------------------------------------*/
@@ -3148,16 +3213,6 @@ table.display th {
 
 /* Media queries
 -------------------------------------------------------------------------------*/
-@media screen and (max-device-width: 480px) {
-		
-}
-@media all and (orientation: portrait) {
-	
-}
-@media all and (orientation: landscape) {
-	
-}
-/* SCREEN WIDTH FIX */
 @media screen and (max-width: 960px), (max-height: 600px) {
 	#header {
 		position:relative;
@@ -3178,15 +3233,11 @@ table.display th {
 		padding-top: 0px;
 	}
 	.hero-slider {
-		margin-top: -42px;
+		margin-top: -22px;
 	}
 	.deeplink-top-fix:before {
 		height: 20px;
 		margin: -20px 0 0;
-	}
-
-	#homepage-takeover.visible {
-		display: block;
 	}
 }
 

@@ -265,67 +265,88 @@ GNU.main = {
             instagram_id: 14985997,
             thumb_width: 152,
             limit: 24,
-            success: function () { $('#instagram-photos').bxSlider({minSlides: 4, maxSlides: 4, moveSlides: 4, slideWidth:180, prevSelector: '#insta-prev', nextSelector: '#insta-next', auto: true, pause: 6000, autoHover: true, responsive: false, pager: false}); }
+            success: function () { $('#instagram-photos').bxSlider({minSlides: 4, maxSlides: 4, moveSlides: 4, slideWidth:180, mode:'horizontal', prevSelector: '#insta-prev', nextSelector: '#insta-next', auto: true, pause: 6000, autoHover: true, responsive: false, pager: false, useCSS: false}); }
         });
-        //self.homeTakeoverInit();
+        self.homeTakeoverInit();
     },
     homeTakeoverInit: function () {
         var self = this;
         $(window).load( function () {
-            // animate mathieu
-            $('#homepage-takeover .mathieu-crepel').css('left', '-515px');
-            $('#homepage-takeover .mathieu-crepel').delay(500).animate({ left: 0 }, { duration: 500, easing: 'swing' });
-            // animate snowboard
-            $('#homepage-takeover .mathieu-crepel-snowboard').css('left', '-258px');
-            $('#homepage-takeover .mathieu-crepel-snowboard').delay(800).animate({ left: 0 }, { duration: 500, easing: 'swing' });
-            // animate close
-            $('#homepage-takeover .mathieu-crepel-close').css('left', '-120px');
-            $('#homepage-takeover .mathieu-crepel-close').delay(1200).animate({
-                left: 343
-            }, {
-                duration: 200,
-                easing: 'swing',
-                complete: function () {
-                    // assign click event to close
-                    $('#homepage-takeover .mathieu-crepel-close').click(function () {
-                        self.homeTakeoverUninit();
-                        return false;
-                    });
-                    // assign hover event to others
-                    $('#homepage-takeover').hover(
-                        function () {
-                            $('#homepage-takeover .mathieu-crepel').animate({ bottom: -5 }, { duration: 100, easing: 'swing' });
-                            $('#homepage-takeover .mathieu-crepel-snowboard').animate({ top: -5 }, { duration: 100, easing: 'swing' });
-                        },
-                        function () {
-                            $('#homepage-takeover .mathieu-crepel').animate({ bottom: 0 }, { duration: 100, easing: 'swing' });
-                            $('#homepage-takeover .mathieu-crepel-snowboard').animate({ top: 0 }, { duration: 100, easing: 'swing' });
-                        }
-                    );
-                    // assign click event to others
-                    $('#homepage-takeover').click(function () {
-                        window.location.href = "/team/mathieu-crepel/";
-                    });
-                }
-            });
+            // Set up tween max for all elements in takeover
+            TweenMax.from($("#homepage-takeover .forest-bailey-bg"), .5, {scaleX:0, scaleY:0, rotation:180, left:"-350px"});
+            TweenMax.from($("#homepage-takeover .forest-bailey"), 1, {rotation:-45, left:"-40px", transformOrigin:"30px 488px", ease:Back.easeOut, delay:.4});
+            TweenMax.from($("#homepage-takeover .forest-bailey-board-top"), .5, {left:"-230px", top:"240px", ease:Back.easeOut, delay:.8});
+            TweenMax.from($("#homepage-takeover .forest-bailey-board-base"), .5, {left:"-266px", top:"280px", ease:Back.easeOut, delay:1});
+            TweenMax.from($("#homepage-takeover .forest-bailey-name"), .5, {left:"-74px", rotation:-180, ease:Back.easeOut, delay:1.2});
+            TweenMax.from($("#homepage-takeover .forest-bailey-cloud-1"), 2, {left:"-170px", ease:Back.easeOut, delay:1, onComplete:animateCloud1});
+            TweenMax.from($("#homepage-takeover .forest-bailey-cloud-2"), 2, {left:"-116px", ease:Back.easeOut, delay:.5, onComplete:animateCloud2});
+            TweenMax.from($("#homepage-takeover .forest-bailey-cloud-3"), 2, {left:"-131px", ease:Back.easeOut, delay:1.5, onComplete:animateCloud3});
+            TweenMax.from($("#homepage-takeover .forest-bailey-close"), .5, {scaleX:0, scaleY:0, rotation:360, ease:Bounce.easeOut, delay:1.5, onComplete:addTakeoverListeners});
+            // onComplete function calls
+            function animateCloud1() {
+                TweenMax.to($("#homepage-takeover .forest-bailey-cloud-1"), 1.8, {left:"40px", ease:Sine.easeInOut, repeat:-1, yoyo:true});
+            }
+            function animateCloud2() {
+                TweenMax.to($("#homepage-takeover .forest-bailey-cloud-2"), 2.2, {left:"235px", ease:Sine.easeInOut, repeat:-1, yoyo:true});
+            }
+            function animateCloud3() {
+                TweenMax.to($("#homepage-takeover .forest-bailey-cloud-3"), 2, {left:"20px", ease:Sine.easeInOut, repeat:-1, yoyo:true});
+            }
+            function addTakeoverListeners() {
+                // assign click event to close
+                $('#homepage-takeover .forest-bailey-close').click(function () {
+                    self.homeTakeoverUninit();
+                    return false;
+                });
+                // assign hover event to others
+                $('#homepage-takeover').hover(
+                    function () {
+                        // over
+                        TweenMax.to($("#homepage-takeover .forest-bailey-board-top"), .3, {left:"60px", top:"60px", ease:Back.easeOut});
+                        TweenMax.to($("#homepage-takeover .forest-bailey-board-base"), .3, {left:"100px", top:"100px", ease:Back.easeOut, delay:.1});
+                        TweenMax.to($("#homepage-takeover .forest-bailey"), .3, {rotation:-2, transformOrigin:"30px 488px", ease:Back.easeOut});
+                    },
+                    function () {
+                        // out
+                        TweenMax.to($("#homepage-takeover .forest-bailey-board-top"), .3, {left:"48px", top:"84px", ease:Back.easeOut, delay:.1});
+                        TweenMax.to($("#homepage-takeover .forest-bailey-board-base"), .3, {left:"74px", top:"116px", ease:Back.easeOut});
+                        TweenMax.to($("#homepage-takeover .forest-bailey"), .3, {rotation:0, transformOrigin:"30px 488px", ease:Back.easeOut});
+                    }
+                );
+                // assign click event to others
+                $('#homepage-takeover').click(function () {
+                    window.location.href = "/snowboards/forest-baileys-space-case/";
+                });
+            }
             $('#homepage-takeover').addClass('visible');
         });
     },
     homeTakeoverUninit: function () {
+        TweenMax.killTweensOf($("#homepage-takeover .forest-bailey-bg"));
+        TweenMax.killTweensOf($("#homepage-takeover .forest-bailey"));
+        TweenMax.killTweensOf($("#homepage-takeover .forest-bailey-board-top"));
+        TweenMax.killTweensOf($("#homepage-takeover .forest-bailey-board-base"));
+        TweenMax.killTweensOf($("#homepage-takeover .forest-bailey-name"));
+        TweenMax.killTweensOf($("#homepage-takeover .forest-bailey-cloud-1"));
+        TweenMax.killTweensOf($("#homepage-takeover .forest-bailey-cloud-2"));
+        TweenMax.killTweensOf($("#homepage-takeover .forest-bailey-cloud-3"));
+        TweenMax.killTweensOf($("#homepage-takeover .forest-bailey-close"));
         // unbind hover
         $("#homepage-takeover").unbind('mouseenter mouseleave');
-        // animate
-        $('#homepage-takeover .mathieu-crepel-close').animate({ left: -120 }, { duration: 300, easing: 'swing' });
-        $('#homepage-takeover .mathieu-crepel-snowboard').delay(200).animate({ left: -258 }, { duration: 400, easing: 'swing' });
-        $('#homepage-takeover .mathieu-crepel').delay(300).animate({
-            left: -515
-        }, {
-            duration: 300,
-            easing: 'swing',
-            complete: function () {
-                $('#homepage-takeover').removeClass('visible');
-            }
-        });
+        // animate closed
+        TweenMax.to($("#homepage-takeover .forest-bailey-bg"), .5, {scaleX:0, scaleY:0, rotation:180, left:"-350px", delay:.5});
+        TweenMax.to($("#homepage-takeover .forest-bailey"), 1, {rotation:-45, left:"-60px", transformOrigin:"30px 488px", ease:Back.easeIn, delay:.2, onComplete:hideTakeover});
+        TweenMax.to($("#homepage-takeover .forest-bailey-board-top"), .5, {left:"-230px", top:"240px", ease:Back.easeIn, delay:.5});
+        TweenMax.to($("#homepage-takeover .forest-bailey-board-base"), .5, {left:"-266px", top:"280px", ease:Back.easeIn, delay:.3});
+        TweenMax.to($("#homepage-takeover .forest-bailey-name"), .5, {left:"-74px", rotation:-180, ease:Back.easeIn, delay:.5});
+        TweenMax.to($("#homepage-takeover .forest-bailey-cloud-1"), .5, {left:"-170px", ease:Back.easeIn, delay:.3});
+        TweenMax.to($("#homepage-takeover .forest-bailey-cloud-2"), .5, {left:"-116px", ease:Back.easeIn, delay:.2});
+        TweenMax.to($("#homepage-takeover .forest-bailey-cloud-3"), .5, {left:"-131px", ease:Back.easeIn, delay:.1});
+        TweenMax.to($("#homepage-takeover .forest-bailey-close"), .5, {scaleX:0, scaleY:0, rotation:360, ease:Bounce.easeIn});
+        // hide from view
+        function hideTakeover () {
+            $('#homepage-takeover').removeClass('visible');
+        }
     },
     snowboardProductInit: function () {
         var self = this;
@@ -851,7 +872,7 @@ GNU.main = {
                                 }
                             }
                             $('#instagram-photos').html(imgList);
-                            $('#instagram-photos').bxSlider({minSlides: 4, maxSlides: 4, moveSlides:4, slideWidth:160, slideMargin:20, prevSelector: '#insta-prev', nextSelector: '#insta-next', auto: true, pause: 6000, autoHover: true, responsive: false, pager: false});
+                            $('#instagram-photos').bxSlider({minSlides: 4, maxSlides: 4, moveSlides: 4, slideWidth:180, mode:'horizontal', prevSelector: '#insta-prev', nextSelector: '#insta-next', auto: true, pause: 6000, autoHover: true, responsive: false, pager: false, useCSS: false});
                             $('#instagram-photos li.pager a').colorbox({rel: 'instaImages', opacity: 1});
                         }
                     }
@@ -879,7 +900,7 @@ GNU.main = {
             instagram_id: 14985997,
             thumb_width: 70,
             limit: 20,
-            success: function () { $('#instagram-photos').bxSlider({minSlides: 2, maxSlides: 2, moveSlides: 2, slideWidth:70, slideMargin:20, prevSelector: '#insta-prev', nextSelector: '#insta-next', auto: true, pause: 6000, autoHover: true, responsive: false, pager: false}); }
+            success: function () { $('#instagram-photos').bxSlider({minSlides: 2, maxSlides: 2, moveSlides: 2, slideWidth:70, slideMargin:20, prevSelector: '#insta-prev', nextSelector: '#insta-next', auto: true, pause: 6000, autoHover: true, responsive: false, pager: false, useCSS: false}); }
         });
         // CATEGORY TREE VIEW ON BLOG PAGES
         $(".widget_mycategoryorder ul").treeview({
@@ -1002,6 +1023,9 @@ GNU.main = {
         pageScroll: function (hash) {
             // Smooth Page Scrolling, update hash on complete of animation
             $('html,body').animate({scrollTop: $(hash).offset().top},'slow', function () { window.location = hash; });
+        },
+        randomInRange: function (min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
         }
     }
 };

@@ -5,13 +5,17 @@ Template Name: Home Template
 ?>
 <?php get_header(); ?>
 
-		<!--
 		<div id="homepage-takeover">
-			<div class="mathieu-crepel-close"></div>
-			<div class="mathieu-crepel"></div>
-			<div class="mathieu-crepel-snowboard"></div>
+			<div class="forest-bailey-close"></div>
+			<div class="forest-bailey"></div>
+			<div class="forest-bailey-board-top"></div>
+			<div class="forest-bailey-board-base"></div>
+			<div class="forest-bailey-name"></div>
+			<div class="forest-bailey-cloud-1"></div>
+			<div class="forest-bailey-cloud-2"></div>
+			<div class="forest-bailey-cloud-3"></div>
+			<div class="forest-bailey-bg"></div>
 		</div>
-		-->
 		<div id="content">
 			<div class="hero-slider">
 				<div class="hero-image-wrapper">
