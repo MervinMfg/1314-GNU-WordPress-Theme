@@ -445,7 +445,7 @@ h2.keep-snowboarding-weird { position: absolute; top: -130px; right: 0; z-index:
 -------------------------------------------------------------------------------*/
 .product-overview-page .free-shipping-banner { padding-bottom: 20px; }
 .product-overview-page h1 { padding-bottom: 10px; margin-bottom: 20px; background: url("_/img/bg-horizontal-line.png") no-repeat bottom center; }
-.product-overview-page.snowboards h1 { color: #0099ff; }
+.product-overview-page.snowboards h1, .product-overview-page.accessories h1 { color: #0099ff; }
 .product-overview-page.bindings h1 { color: #ff3399; }
 .product-overview-page.weirdwear h1 { color: #ffff00; }
 .product-overview-page h3 { padding-bottom: 20px; color: #fff; }
@@ -462,6 +462,7 @@ h2.keep-snowboarding-weird { position: absolute; top: -130px; right: 0; z-index:
 .product-overview-page .product-listing li a .price p span { color: #fff; }
 .product-overview-page.snowboards .product-listing li { height: 430px; }
 .product-overview-page.snowboards .product-listing li a h4 { color: #0099ff; }
+.product-overview-page.accessories .product-listing li a h4 { color: #0099ff; }
 .product-overview-page.bindings .product-listing li a h4 { color: #ff3399; }
 
 .product-listing li a .price p.strike, .product-related .product-item .us-price.strike, .product-related .product-item .ca-price.strike { text-decoration: line-through; margin-bottom: -5px; }

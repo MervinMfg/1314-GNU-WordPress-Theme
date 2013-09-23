@@ -1174,7 +1174,8 @@ h2.keep-snowboarding-weird {
 		margin-bottom: 20px;
 		background: url('_/img/bg-horizontal-line.png') no-repeat bottom center;
 	}
-	&.snowboards h1 {
+	&.snowboards h1,
+	&.accessories h1 {
 		color: #0099ff;
 	}
 	&.bindings h1 {
@@ -1249,6 +1250,9 @@ h2.keep-snowboarding-weird {
 		a h4 {
 			color: #0099ff;
 		}
+	}
+	&.accessories .product-listing li a h4 {
+		color: #0099ff;
 	}
 	&.bindings .product-listing li a h4 {
 		color: #ff3399;
