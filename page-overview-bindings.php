@@ -31,6 +31,7 @@ get_header();
                 </div>
                 <div class="clearfix"></div>
                 <div class="product-overview-page bindings">
+                    <img src="<?php bloginfo('template_directory'); ?>/_/img/free-shipping.png" alt="Free Shipping - For a limited time only!" width="940" height="50" class="free-shipping-banner" />
                     <?php
                     if (isset($_GET["gender"])) {
                         $gender = $_GET["gender"];

@@ -6,8 +6,8 @@ get_header();
 ?>
         <div id="content">
             <div class="main-column pad-top">
-
                 <div class="product-overview-page snowboards">
+                    <img src="<?php bloginfo('template_directory'); ?>/_/img/free-shipping.png" alt="Free Shipping - For a limited time only!" width="940" height="50" class="free-shipping-banner" />
                     <?php
                     if (isset($_GET["gender"])) {
                         $gender = $_GET["gender"];
