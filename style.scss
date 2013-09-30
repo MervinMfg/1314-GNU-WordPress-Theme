@@ -1196,54 +1196,6 @@ h2.keep-snowboarding-weird {
 	&.snowboards .splitboards {
 		padding-right: 20px;
 	}
-	.product-listing {
-		clear: both;
-
-		li {
-			width:220px;
-			padding:0 20px 0 0;
-			float:left;
-			text-align: center;
-			height: 340px;
-
-			&.last {
-				padding:0 0 0 0;
-			}
-			a {
-				color:#fff;
-				display: block;
-				text-decoration: none;
-				position:relative;
-				overflow: hidden;
-
-				.vertical-img {
-					width: 160%;
-					margin-left: -30%;
-					height: auto;
-
-					img {
-						width: 100%;
-						height: auto;
-					}
-				}
-				&:hover h4 {
-					text-decoration: underline;
-				}
-				.price p {
-					font-weight: normal;
-					font-style: normal;
-					padding: 3px 0 0 0;
-					display: block;
-					color: #99cc33;
-					font-family: $gnuFont;
-
-					span {
-						color: #fff;
-					}
-				}
-			}
-		}
-	}
 	&.snowboards .product-listing li {
 		height: 430px;
 
@@ -1256,6 +1208,54 @@ h2.keep-snowboarding-weird {
 	}
 	&.bindings .product-listing li a h4 {
 		color: #ff3399;
+	}
+}
+.product-listing {
+	clear: both;
+
+	li {
+		width:220px;
+		padding:0 20px 0 0;
+		float:left;
+		text-align: center;
+		height: 340px;
+
+		&.last {
+			padding:0 0 0 0;
+		}
+		a {
+			color:#fff;
+			display: block;
+			text-decoration: none;
+			position:relative;
+			overflow: hidden;
+
+			.vertical-img {
+				width: 160%;
+				margin-left: -30%;
+				height: auto;
+
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+			&:hover h4 {
+				text-decoration: underline;
+			}
+			.price p {
+				font-weight: normal;
+				font-style: normal;
+				padding: 3px 0 0 0;
+				display: block;
+				color: #99cc33;
+				font-family: $gnuFont;
+
+				span {
+					color: #fff;
+				}
+			}
+		}
 	}
 }
 .product-listing li a .price p.strike,
@@ -1273,7 +1273,6 @@ body.international .product-overview-page .free-shipping-banner {
 
 /* Binding Overview styles
 -------------------------------------------------------------------------------*/
-
 .binding-animation {
 	width: 100%;
 	height: 222px;
@@ -1417,22 +1416,24 @@ body.international .product-overview-page .free-shipping-banner {
 	width: 220px;
 	padding-right: 20px;
 	float: left;
-}
-	.binding-compare-header h1 {
+
+	h1 {
 		margin-bottom: 20px;
 		color: #ff3399;
 	}
-	.binding-compare-header p {
+	p {
 		margin-bottom: 10px;
 	}
+}
 .binding-compare-products {
 	width: 700px;
 	float: left;
 	clear: none;
-}
-	.binding-compare-products h4 {
+
+	h4 {
 		color: #ff3399;
 	}
+}
 .content-divider {
 	height: 40px;
 	background: url('_/img/bg-horizontal-line.png') no-repeat center center;
@@ -1440,41 +1441,43 @@ body.international .product-overview-page .free-shipping-banner {
 }
 .binding-compare-row {
 	clear: both;
-}
-	.binding-compare-row.odd-row {
+
+	&.odd-row {
 		background: #0099ff;
+
+		h3 {
+			color: #000;
+		}
+		ul li div {
+			color: #000;
+		}
 	}
-	.binding-compare-row.even-row {
+	&.even-row {
 		background: #000;
 	}
-	.binding-compare-row h3 {
+	h3 {
 		color: #fff;
 		width: 220px;
 		float: left;
 		text-align: center;
 		padding: 10px 20px 10px 0px;
 	}
-		.binding-compare-row.odd-row h3 {
-			color: #000;
-		}
-	.binding-compare-row ul li {
+	ul li {
 		float: left;
 		width: 220px;
 		text-align: center;
 		padding: 10px 20px 10px 0px;
-	}
-		.binding-compare-row ul li.last {
+
+		&.last {
 			padding-right: 0px;
 		}
-		.binding-compare-row ul li div {
+		div {
 			padding: 0px 10px;
 			font-size: 16px;
 			font-weight: bold;
 		}
-			.binding-compare-row.odd-row ul li div {
-				color: #000;
-			}
-
+	}
+}
 
 /* Snowboard overview styles - womens
 -------------------------------------------------------------------------------*/
