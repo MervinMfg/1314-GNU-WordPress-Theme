@@ -319,6 +319,9 @@ Template Name: Snowboards Detail Template
 								case "PBTX":
 									$contourImage = get_bloginfo('template_directory') . '/_/img/snowboard-contour-PBTX.png';
 									break;
+								case "SMART PBTX":
+									$contourImage = get_bloginfo('template_directory') . '/_/img/snowboard-contour-SMART-PBTX.png';
+									break;
 								case "C2 PBTX":
 									$contourImage = get_bloginfo('template_directory') . '/_/img/snowboard-contour-C2-PBTX.png';
 									break;
