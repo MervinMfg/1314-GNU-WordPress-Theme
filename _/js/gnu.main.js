@@ -267,7 +267,7 @@ GNU.main = {
             limit: 24,
             success: function () { $('#instagram-photos').bxSlider({minSlides: 4, maxSlides: 4, moveSlides: 4, slideWidth:180, mode:'horizontal', prevSelector: '#insta-prev', nextSelector: '#insta-next', auto: true, pause: 6000, autoHover: true, responsive: false, pager: false, useCSS: false}); }
         });
-        self.homeTakeoverInit();
+        //self.homeTakeoverInit();
     },
     homeTakeoverInit: function () {
         var self = this;
