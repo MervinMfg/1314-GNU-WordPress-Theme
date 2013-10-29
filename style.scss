@@ -3161,9 +3161,10 @@ h2#spec_title {
 }
 table.display {
 	font-size: 77%;
-}
-table.display th {
-	white-space: nowrap;
+
+	/*th {
+		white-space: nowrap;
+	}*/
 }
 .dataTables_info {
 	font-size: 85%;
