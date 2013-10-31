@@ -502,10 +502,12 @@ GNU.main = {
                 }
             });
         });
+        /*
         // free shipping toggle
         $('.product-free-shipping').click(function () {
             $(this).find('.free-shipping-details').toggleClass('show');
         });
+        */
     },
     bindingOverviewInit: function () {
         var self = this;
@@ -647,10 +649,12 @@ GNU.main = {
                 }
             });
         });
+        /*
         // free shipping toggle
         $('.product-free-shipping').click(function () {
             $(this).find('.free-shipping-details').toggleClass('show');
         });
+        */
     },
     weirdwearProductInit: function () {
         var self = this;
@@ -739,10 +743,12 @@ GNU.main = {
                 }
             });
         });
+        /*
         // free shipping toggle
         $('.product-free-shipping').click(function () {
             $(this).find('.free-shipping-details').toggleClass('show');
         });
+        */
     },
     accessoriesProductInit: function () {
         var self = this;
@@ -811,10 +817,12 @@ GNU.main = {
                 }
             });
         });
+        /*
         // free shipping toggle
         $('.product-free-shipping').click(function () {
             $(this).find('.free-shipping-details').toggleClass('show');
         });
+        */
     },
     teamDetailsInit: function () {
         if (typeof teamAlbumId != "undefined") {
