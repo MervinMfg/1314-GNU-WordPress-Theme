@@ -267,34 +267,35 @@ GNU.main = {
             limit: 24,
             success: function () { $('#instagram-photos').bxSlider({minSlides: 4, maxSlides: 4, moveSlides: 4, slideWidth:180, mode:'horizontal', prevSelector: '#insta-prev', nextSelector: '#insta-next', auto: true, pause: 6000, autoHover: true, responsive: false, pager: false, useCSS: false}); }
         });
-        //self.homeTakeoverInit();
+        self.homeTakeoverInit();
     },
     homeTakeoverInit: function () {
         var self = this;
         $(window).load( function () {
             // Set up tween max for all elements in takeover
-            TweenMax.from($("#homepage-takeover .forest-bailey-bg"), .5, {scaleX:0, scaleY:0, rotation:180, left:"-350px"});
-            TweenMax.from($("#homepage-takeover .forest-bailey"), 1, {rotation:-45, left:"-40px", transformOrigin:"30px 488px", ease:Back.easeOut, delay:.4});
-            TweenMax.from($("#homepage-takeover .forest-bailey-board-top"), .5, {left:"-230px", top:"240px", ease:Back.easeOut, delay:.8});
-            TweenMax.from($("#homepage-takeover .forest-bailey-board-base"), .5, {left:"-266px", top:"280px", ease:Back.easeOut, delay:1});
-            TweenMax.from($("#homepage-takeover .forest-bailey-name"), .5, {left:"-74px", rotation:-180, ease:Back.easeOut, delay:1.2});
-            TweenMax.from($("#homepage-takeover .forest-bailey-cloud-1"), 2, {left:"-170px", ease:Back.easeOut, delay:1, onComplete:animateCloud1});
-            TweenMax.from($("#homepage-takeover .forest-bailey-cloud-2"), 2, {left:"-116px", ease:Back.easeOut, delay:.5, onComplete:animateCloud2});
-            TweenMax.from($("#homepage-takeover .forest-bailey-cloud-3"), 2, {left:"-131px", ease:Back.easeOut, delay:1.5, onComplete:animateCloud3});
-            TweenMax.from($("#homepage-takeover .forest-bailey-close"), .5, {scaleX:0, scaleY:0, rotation:360, ease:Bounce.easeOut, delay:1.5, onComplete:addTakeoverListeners});
+            TweenMax.from($("#homepage-takeover .blake-paul"), .5, {rotation:-45, left:"-10px", bottom: "-300px", transformOrigin:"30px 488px"});
+            TweenMax.from($("#homepage-takeover .blake-paul-board-top"), .8, {left:"0px", bottom:"-600px", ease:Back.easeOut, delay:.4});
+            TweenMax.from($("#homepage-takeover .blake-paul-board-base"), .6, {left:"50px", bottom:"-600px", ease:Back.easeOut, delay:.8});
+            TweenMax.from($("#homepage-takeover .blake-paul-name"), .5, {left:"-130px", rotation:180, ease:Back.easeOut, delay:1});
+            TweenMax.from($("#homepage-takeover .blake-paul-triangle-3"), 1, {scaleX:0, scaleY:0, rotation:180, ease:Back.easeOut, delay:1, onComplete:animateTriangle2});
+            TweenMax.to($("#homepage-takeover .blake-paul-triangle-2"), 0, {alpha:0});
+            TweenMax.to($("#homepage-takeover .blake-paul-triangle-1"), 0, {alpha:0});
+            TweenMax.from($("#homepage-takeover .blake-paul-close"), .5, {scaleX:0, scaleY:0, rotation:360, ease:Bounce.easeOut, delay:1.5, onComplete:addTakeoverListeners});
+
             // onComplete function calls
-            function animateCloud1() {
-                TweenMax.to($("#homepage-takeover .forest-bailey-cloud-1"), 1.8, {left:"40px", ease:Sine.easeInOut, repeat:-1, yoyo:true});
+            function animateTriangle1() {
+                TweenMax.to($("#homepage-takeover .blake-paul-triangle-1"), 1, {alpha:1, delay: 2, onComplete:animateTriangle3});
             }
-            function animateCloud2() {
-                TweenMax.to($("#homepage-takeover .forest-bailey-cloud-2"), 2.2, {left:"235px", ease:Sine.easeInOut, repeat:-1, yoyo:true});
+            function animateTriangle2() {
+                TweenMax.to($("#homepage-takeover .blake-paul-triangle-2"), 1, {alpha:1, delay: 2, onComplete:animateTriangle1});
             }
-            function animateCloud3() {
-                TweenMax.to($("#homepage-takeover .forest-bailey-cloud-3"), 2, {left:"20px", ease:Sine.easeInOut, repeat:-1, yoyo:true});
+            function animateTriangle3() {
+                TweenMax.to($("#homepage-takeover .blake-paul-triangle-2"), 0, {alpha:0});
+                TweenMax.to($("#homepage-takeover .blake-paul-triangle-1"), 1, {alpha:0, delay: 2, onComplete:animateTriangle2});
             }
             function addTakeoverListeners() {
                 // assign click event to close
-                $('#homepage-takeover .forest-bailey-close').click(function () {
+                $('#homepage-takeover .blake-paul-close').click(function () {
                     self.homeTakeoverUninit();
                     return false;
                 });
@@ -302,47 +303,45 @@ GNU.main = {
                 $('#homepage-takeover').hover(
                     function () {
                         // over
-                        TweenMax.to($("#homepage-takeover .forest-bailey-board-top"), .3, {left:"60px", top:"60px", ease:Back.easeOut});
-                        TweenMax.to($("#homepage-takeover .forest-bailey-board-base"), .3, {left:"100px", top:"100px", ease:Back.easeOut, delay:.1});
-                        TweenMax.to($("#homepage-takeover .forest-bailey"), .3, {rotation:-2, transformOrigin:"30px 488px", ease:Back.easeOut});
+                        TweenMax.to($("#homepage-takeover .blake-paul-board-top"), .3, {left:"225px", bottom:"-90px", ease:Back.easeOut});
+                        TweenMax.to($("#homepage-takeover .blake-paul-board-base"), .3, {left:"235px", bottom:"-100px", ease:Back.easeOut, delay:.1});
+                        TweenMax.to($("#homepage-takeover .blake-paul"), .3, {rotation:-2, transformOrigin:"30px 488px", bottom:"-20px", ease:Back.easeOut});
                     },
                     function () {
                         // out
-                        TweenMax.to($("#homepage-takeover .forest-bailey-board-top"), .3, {left:"48px", top:"84px", ease:Back.easeOut, delay:.1});
-                        TweenMax.to($("#homepage-takeover .forest-bailey-board-base"), .3, {left:"74px", top:"116px", ease:Back.easeOut});
-                        TweenMax.to($("#homepage-takeover .forest-bailey"), .3, {rotation:0, transformOrigin:"30px 488px", ease:Back.easeOut});
+                        TweenMax.to($("#homepage-takeover .blake-paul-board-top"), .3, {left:"220px", bottom:"-110px", ease:Back.easeOut, delay:.1});
+                        TweenMax.to($("#homepage-takeover .blake-paul-board-base"), .3, {left:"220px", bottom:"-110px", ease:Back.easeOut});
+                        TweenMax.to($("#homepage-takeover .blake-paul"), .3, {rotation:0, transformOrigin:"30px 488px", bottom:"0px", ease:Back.easeOut});
                     }
                 );
                 // assign click event to others
                 $('#homepage-takeover').click(function () {
-                    window.location.href = "/snowboards/forest-baileys-space-case/";
+                    window.location.href = "/team/blake-paul/";
                 });
             }
             $('#homepage-takeover').addClass('visible');
         });
     },
     homeTakeoverUninit: function () {
-        TweenMax.killTweensOf($("#homepage-takeover .forest-bailey-bg"));
-        TweenMax.killTweensOf($("#homepage-takeover .forest-bailey"));
-        TweenMax.killTweensOf($("#homepage-takeover .forest-bailey-board-top"));
-        TweenMax.killTweensOf($("#homepage-takeover .forest-bailey-board-base"));
-        TweenMax.killTweensOf($("#homepage-takeover .forest-bailey-name"));
-        TweenMax.killTweensOf($("#homepage-takeover .forest-bailey-cloud-1"));
-        TweenMax.killTweensOf($("#homepage-takeover .forest-bailey-cloud-2"));
-        TweenMax.killTweensOf($("#homepage-takeover .forest-bailey-cloud-3"));
-        TweenMax.killTweensOf($("#homepage-takeover .forest-bailey-close"));
+        TweenMax.killTweensOf($("#homepage-takeover .blake-paul"));
+        TweenMax.killTweensOf($("#homepage-takeover .blake-paul-board-top"));
+        TweenMax.killTweensOf($("#homepage-takeover .blake-paul-board-base"));
+        TweenMax.killTweensOf($("#homepage-takeover .blake-paul-name"));
+        TweenMax.killTweensOf($("#homepage-takeover .blake-paul-triangle-1"));
+        TweenMax.killTweensOf($("#homepage-takeover .blake-paul-triangle-2"));
+        TweenMax.killTweensOf($("#homepage-takeover .blake-paul-triangle-3"));
+        TweenMax.killTweensOf($("#homepage-takeover .blake-paul-close"));
         // unbind hover
         $("#homepage-takeover").unbind('mouseenter mouseleave');
         // animate closed
-        TweenMax.to($("#homepage-takeover .forest-bailey-bg"), .5, {scaleX:0, scaleY:0, rotation:180, left:"-350px", delay:.5});
-        TweenMax.to($("#homepage-takeover .forest-bailey"), 1, {rotation:-45, left:"-60px", transformOrigin:"30px 488px", ease:Back.easeIn, delay:.2, onComplete:hideTakeover});
-        TweenMax.to($("#homepage-takeover .forest-bailey-board-top"), .5, {left:"-230px", top:"240px", ease:Back.easeIn, delay:.5});
-        TweenMax.to($("#homepage-takeover .forest-bailey-board-base"), .5, {left:"-266px", top:"280px", ease:Back.easeIn, delay:.3});
-        TweenMax.to($("#homepage-takeover .forest-bailey-name"), .5, {left:"-74px", rotation:-180, ease:Back.easeIn, delay:.5});
-        TweenMax.to($("#homepage-takeover .forest-bailey-cloud-1"), .5, {left:"-170px", ease:Back.easeIn, delay:.3});
-        TweenMax.to($("#homepage-takeover .forest-bailey-cloud-2"), .5, {left:"-116px", ease:Back.easeIn, delay:.2});
-        TweenMax.to($("#homepage-takeover .forest-bailey-cloud-3"), .5, {left:"-131px", ease:Back.easeIn, delay:.1});
-        TweenMax.to($("#homepage-takeover .forest-bailey-close"), .5, {scaleX:0, scaleY:0, rotation:360, ease:Bounce.easeIn});
+        TweenMax.to($("#homepage-takeover .blake-paul"), .5, {rotation:-45, left:"-40px", bottom: "-350px", transformOrigin:"30px 488px", delay:1.5, onComplete:hideTakeover});
+        TweenMax.to($("#homepage-takeover .blake-paul-board-top"), .8, {left:"0px", bottom:"-700px", ease:Back.easeIn, delay:.8});
+        TweenMax.to($("#homepage-takeover .blake-paul-board-base"), .6, {left:"50px", bottom:"-700px", ease:Back.easeIn, delay:.6});
+        TweenMax.to($("#homepage-takeover .blake-paul-name"), .5, {left:"-130px", rotation:180, ease:Back.easeIn, delay:.4});
+        TweenMax.to($("#homepage-takeover .blake-paul-triangle-3"), 1, {scaleX:0, scaleY:0, rotation:180, ease:Back.easeIn, delay:.2});
+        TweenMax.to($("#homepage-takeover .blake-paul-triangle-2"), 0, {alpha:0, delay:.2});
+        TweenMax.to($("#homepage-takeover .blake-paul-triangle-1"), 0, {alpha:0, delay:.2});
+        TweenMax.to($("#homepage-takeover .blake-paul-close"), .5, {scaleX:0, scaleY:0, rotation:360, ease:Bounce.easeIn});
         // hide from view
         function hideTakeover () {
             $('#homepage-takeover').removeClass('visible');

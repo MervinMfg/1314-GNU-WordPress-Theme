@@ -5,17 +5,16 @@ Template Name: Home Template
 ?>
 <?php get_header(); ?>
 
-		<!--<div id="homepage-takeover">
-			<div class="forest-bailey-close"></div>
-			<div class="forest-bailey"></div>
-			<div class="forest-bailey-board-top"></div>
-			<div class="forest-bailey-board-base"></div>
-			<div class="forest-bailey-name"></div>
-			<div class="forest-bailey-cloud-1"></div>
-			<div class="forest-bailey-cloud-2"></div>
-			<div class="forest-bailey-cloud-3"></div>
-			<div class="forest-bailey-bg"></div>
-		</div>-->
+		<div id="homepage-takeover">
+			<div class="blake-paul-close"></div>
+			<div class="blake-paul-name"></div>
+			<div class="blake-paul"></div>
+			<div class="blake-paul-board-top"></div>
+			<div class="blake-paul-board-base"></div>
+			<div class="blake-paul-triangle-1"></div>
+			<div class="blake-paul-triangle-2"></div>
+			<div class="blake-paul-triangle-3"></div>
+		</div>
 		<div id="content">
 			<div class="hero-slider">
 				<div class="hero-image-wrapper">
