@@ -198,7 +198,7 @@ div { zoom: 1; }
 #header .nav-secondary-container #nav-secondary #quick-cart a span { display: block; width: 29px; height: 26px; padding: 10px 4px 0 85px; color: #0099ff; font-family: "gnuregular", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; text-align: center; }
 #header .nav-secondary-container #nav-secondary #quick-cart a:hover span { color: #fff; }
 #header .nav-dropdown-container-hide-overflow { position: absolute; top: 80px; z-index: 1; width: 100%; height: auto; overflow: hidden; }
-#header .nav-dropdown-container-hide-overflow.selected { height: 600px; /* may need to fix this overflow issue */ }
+#header .nav-dropdown-container-hide-overflow.selected { height: 630px; /* may need to fix this overflow issue */ }
 #header .nav-dropdown-container-hide-overflow .nav-dropdown-container { position: absolute; top: -800px; /* hide off screen and animate in with js */ z-index: 1; width: 100%; }
 #header .nav-dropdown-container-hide-overflow .nav-dropdown-container .nav-dropdown { background: #333; padding: 40px 0 40px 0; text-shadow: 1px 1px 0 #000; }
 #header .nav-dropdown-container-hide-overflow .nav-dropdown-container .nav-dropdown nav { width: 780px; margin: 0 auto; padding: 0 0 0 160px; }
@@ -1129,7 +1129,7 @@ table.display { font-size: 77%; /*th {
 -------------------------------------------------------------------------------*/
 /* Media queries
 -------------------------------------------------------------------------------*/
-@media screen and (max-width: 960px), (max-height: 600px) { #header { position: relative; }
+@media screen and (max-width: 960px), (max-height: 630px) { #header { position: relative; }
   html, body { height: auto; }
   .content-wrapper { min-height: auto; height: auto; margin: 0; /* the bottom margin is the negative value of the footer's height */ }
   .content-wrapper .end-content { clear: both; height: 0px; /* compensate for footer */ }

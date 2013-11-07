@@ -398,7 +398,7 @@ div {
 		overflow: hidden;
 
 		&.selected {
-			height: 600px; /* may need to fix this overflow issue */
+			height: 630px; /* may need to fix this overflow issue */
 		}
 		.nav-dropdown-container {
 			position: absolute;
@@ -3273,7 +3273,7 @@ table.display {
 
 /* Media queries
 -------------------------------------------------------------------------------*/
-@media screen and (max-width: 960px), (max-height: 600px) {
+@media screen and (max-width: 960px), (max-height: 630px) {
 	#header {
 		position:relative;
 	}
