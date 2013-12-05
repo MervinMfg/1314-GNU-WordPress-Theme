@@ -96,7 +96,7 @@ if (have_posts()) : while (have_posts()) : the_post();
 								<li class="loading hidden"></li>
 								<li class="cart-button visible"><a href="#" class="add-to-cart">Add to Cart</a></li>
 								<?php else: ?>
-								<li>2013/2014 Products available soon.</li>
+								<li>Item is currently not available online.</li>
 								<?php endif; ?>
 								<li class="find-dealer"><a href="/store-locator/">Find a Dealer</a></li>
 							</ul>
