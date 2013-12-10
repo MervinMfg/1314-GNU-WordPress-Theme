@@ -273,29 +273,29 @@ GNU.main = {
         var self = this;
         $(window).load( function () {
             // Set up tween max for all elements in takeover
-            TweenMax.from($("#homepage-takeover .blake-paul"), .5, {rotation:-45, left:"-10px", bottom: "-300px", transformOrigin:"30px 488px"});
-            TweenMax.from($("#homepage-takeover .blake-paul-board-top"), .8, {left:"0px", bottom:"-600px", ease:Back.easeOut, delay:.4});
-            TweenMax.from($("#homepage-takeover .blake-paul-board-base"), .6, {left:"50px", bottom:"-600px", ease:Back.easeOut, delay:.8});
-            TweenMax.from($("#homepage-takeover .blake-paul-name"), .5, {left:"-130px", rotation:180, ease:Back.easeOut, delay:1});
-            TweenMax.from($("#homepage-takeover .blake-paul-triangle-3"), 1, {scaleX:0, scaleY:0, rotation:180, ease:Back.easeOut, delay:1, onComplete:animateTriangle2});
-            TweenMax.to($("#homepage-takeover .blake-paul-triangle-2"), 0, {alpha:0});
-            TweenMax.to($("#homepage-takeover .blake-paul-triangle-1"), 0, {alpha:0});
-            TweenMax.from($("#homepage-takeover .blake-paul-close"), .5, {scaleX:0, scaleY:0, rotation:360, ease:Bounce.easeOut, delay:1.5, onComplete:addTakeoverListeners});
-
+            TweenMax.from($("#homepage-takeover .temple-cummins"), .5, {rotation:-45, left:"-10px", bottom: "-300px", transformOrigin:"30px 488px"});
+            TweenMax.from($("#homepage-takeover .temple-cummins-board-top"), .8, {left:"0px", bottom:"-600px", ease:Back.easeOut, delay:.4});
+            TweenMax.from($("#homepage-takeover .temple-cummins-board-base"), .6, {left:"50px", bottom:"-600px", ease:Back.easeOut, delay:.8});
+            TweenMax.from($("#homepage-takeover .temple-cummins-name"), .5, {left:"-160px", rotation:180, ease:Back.easeOut, delay:1});
+            TweenMax.from($("#homepage-takeover .temple-cummins-circle-3"), 1, {scaleX:0, scaleY:0, rotation:180, ease:Back.easeOut, delay:1, onComplete:animateTriangle2});
+            TweenMax.to($("#homepage-takeover .temple-cummins-circle-2"), 0, {alpha:0});
+            TweenMax.to($("#homepage-takeover .temple-cummins-circle-1"), 0, {alpha:0});
+            TweenMax.from($("#homepage-takeover .temple-cummins-pentagram"), 1, {scaleX:0, scaleY:0, rotation:90, ease:Back.easeOut, delay:1.2});
+            TweenMax.from($("#homepage-takeover .temple-cummins-close"), .5, {scaleX:0, scaleY:0, rotation:360, ease:Bounce.easeOut, delay:1.5, onComplete:addTakeoverListeners});
             // onComplete function calls
             function animateTriangle1() {
-                TweenMax.to($("#homepage-takeover .blake-paul-triangle-1"), 1, {alpha:1, delay: 2, onComplete:animateTriangle3});
+                TweenMax.to($("#homepage-takeover .temple-cummins-circle-1"), 1, {alpha:1, delay: 2, onComplete:animateTriangle3});
             }
             function animateTriangle2() {
-                TweenMax.to($("#homepage-takeover .blake-paul-triangle-2"), 1, {alpha:1, delay: 2, onComplete:animateTriangle1});
+                TweenMax.to($("#homepage-takeover .temple-cummins-circle-2"), 1, {alpha:1, delay: 2, onComplete:animateTriangle1});
             }
             function animateTriangle3() {
-                TweenMax.to($("#homepage-takeover .blake-paul-triangle-2"), 0, {alpha:0});
-                TweenMax.to($("#homepage-takeover .blake-paul-triangle-1"), 1, {alpha:0, delay: 2, onComplete:animateTriangle2});
+                TweenMax.to($("#homepage-takeover .temple-cummins-circle-2"), 0, {alpha:0});
+                TweenMax.to($("#homepage-takeover .temple-cummins-circle-1"), 1, {alpha:0, delay: 2, onComplete:animateTriangle2});
             }
             function addTakeoverListeners() {
                 // assign click event to close
-                $('#homepage-takeover .blake-paul-close').click(function () {
+                $('#homepage-takeover .temple-cummins-close').click(function () {
                     self.homeTakeoverUninit();
                     return false;
                 });
@@ -303,45 +303,50 @@ GNU.main = {
                 $('#homepage-takeover').hover(
                     function () {
                         // over
-                        TweenMax.to($("#homepage-takeover .blake-paul-board-top"), .3, {left:"225px", bottom:"-90px", ease:Back.easeOut});
-                        TweenMax.to($("#homepage-takeover .blake-paul-board-base"), .3, {left:"235px", bottom:"-100px", ease:Back.easeOut, delay:.1});
-                        TweenMax.to($("#homepage-takeover .blake-paul"), .3, {rotation:-2, transformOrigin:"30px 488px", bottom:"-20px", ease:Back.easeOut});
+                        TweenMax.to($("#homepage-takeover .temple-cummins-board-top"), .3, {right:"58px", bottom:"-90px", ease:Back.easeOut});
+                        TweenMax.to($("#homepage-takeover .temple-cummins-board-base"), .3, {right:"-10px", bottom:"-95px", ease:Back.easeOut, delay:.1});
+                        TweenMax.to($("#homepage-takeover .temple-cummins"), .3, {rotation:-2, transformOrigin:"30px 488px", bottom:"-20px", ease:Back.easeOut});
+                        TweenMax.to($("#homepage-takeover .temple-cummins-pentagram"), .3, {scaleX:.9, scaleY:.9, rotation:2, ease:Back.easeOut});
+                        TweenMax.to($("#homepage-takeover .temple-cummins-name"), .2, {rotation:-5, left:"35px", ease:Back.easeOut});
                     },
                     function () {
                         // out
-                        TweenMax.to($("#homepage-takeover .blake-paul-board-top"), .3, {left:"220px", bottom:"-110px", ease:Back.easeOut, delay:.1});
-                        TweenMax.to($("#homepage-takeover .blake-paul-board-base"), .3, {left:"220px", bottom:"-110px", ease:Back.easeOut});
-                        TweenMax.to($("#homepage-takeover .blake-paul"), .3, {rotation:0, transformOrigin:"30px 488px", bottom:"0px", ease:Back.easeOut});
+                        TweenMax.to($("#homepage-takeover .temple-cummins-board-top"), .3, {right:"68px", bottom:"-100px", ease:Back.easeOut, delay:.1});
+                        TweenMax.to($("#homepage-takeover .temple-cummins-board-base"), .3, {right:"0px", bottom:"-100px", ease:Back.easeOut});
+                        TweenMax.to($("#homepage-takeover .temple-cummins"), .3, {rotation:0, transformOrigin:"30px 488px", bottom:"0px", ease:Back.easeOut});
+                        TweenMax.to($("#homepage-takeover .temple-cummins-pentagram"), .3, {scaleX:1, scaleY:1, rotation:0, ease:Back.easeOut});
+                        TweenMax.to($("#homepage-takeover .temple-cummins-name"), .2, {rotation:0, left:"40px", ease:Back.easeOut});
                     }
                 );
                 // assign click event to others
                 $('#homepage-takeover').click(function () {
-                    window.location.href = "/team/blake-paul/";
+                    window.location.href = "/snowboards/billy-goat/";
                 });
             }
             $('#homepage-takeover').addClass('visible');
         });
     },
     homeTakeoverUninit: function () {
-        TweenMax.killTweensOf($("#homepage-takeover .blake-paul"));
-        TweenMax.killTweensOf($("#homepage-takeover .blake-paul-board-top"));
-        TweenMax.killTweensOf($("#homepage-takeover .blake-paul-board-base"));
-        TweenMax.killTweensOf($("#homepage-takeover .blake-paul-name"));
-        TweenMax.killTweensOf($("#homepage-takeover .blake-paul-triangle-1"));
-        TweenMax.killTweensOf($("#homepage-takeover .blake-paul-triangle-2"));
-        TweenMax.killTweensOf($("#homepage-takeover .blake-paul-triangle-3"));
-        TweenMax.killTweensOf($("#homepage-takeover .blake-paul-close"));
+        TweenMax.killTweensOf($("#homepage-takeover .temple-cummins"));
+        TweenMax.killTweensOf($("#homepage-takeover .temple-cummins-board-top"));
+        TweenMax.killTweensOf($("#homepage-takeover .temple-cummins-board-base"));
+        TweenMax.killTweensOf($("#homepage-takeover .temple-cummins-name"));
+        TweenMax.killTweensOf($("#homepage-takeover .temple-cummins-circle-1"));
+        TweenMax.killTweensOf($("#homepage-takeover .temple-cummins-circle-2"));
+        TweenMax.killTweensOf($("#homepage-takeover .temple-cummins-circle-3"));
+        TweenMax.killTweensOf($("#homepage-takeover .temple-cummins-close"));
         // unbind hover
         $("#homepage-takeover").unbind('mouseenter mouseleave');
         // animate closed
-        TweenMax.to($("#homepage-takeover .blake-paul"), .5, {rotation:-45, left:"-40px", bottom: "-350px", transformOrigin:"30px 488px", delay:1.5, onComplete:hideTakeover});
-        TweenMax.to($("#homepage-takeover .blake-paul-board-top"), .8, {left:"0px", bottom:"-700px", ease:Back.easeIn, delay:.8});
-        TweenMax.to($("#homepage-takeover .blake-paul-board-base"), .6, {left:"50px", bottom:"-700px", ease:Back.easeIn, delay:.6});
-        TweenMax.to($("#homepage-takeover .blake-paul-name"), .5, {left:"-130px", rotation:180, ease:Back.easeIn, delay:.4});
-        TweenMax.to($("#homepage-takeover .blake-paul-triangle-3"), 1, {scaleX:0, scaleY:0, rotation:180, ease:Back.easeIn, delay:.2});
-        TweenMax.to($("#homepage-takeover .blake-paul-triangle-2"), 0, {alpha:0, delay:.2});
-        TweenMax.to($("#homepage-takeover .blake-paul-triangle-1"), 0, {alpha:0, delay:.2});
-        TweenMax.to($("#homepage-takeover .blake-paul-close"), .5, {scaleX:0, scaleY:0, rotation:360, ease:Bounce.easeIn});
+        TweenMax.to($("#homepage-takeover .temple-cummins"), .5, {rotation:-45, left:"-40px", bottom: "-350px", transformOrigin:"30px 488px", delay:1.5, onComplete:hideTakeover});
+        TweenMax.to($("#homepage-takeover .temple-cummins-board-top"), .8, {left:"0px", bottom:"-700px", ease:Back.easeIn, delay:.8});
+        TweenMax.to($("#homepage-takeover .temple-cummins-board-base"), .6, {left:"50px", bottom:"-700px", ease:Back.easeIn, delay:.6});
+        TweenMax.to($("#homepage-takeover .temple-cummins-name"), .5, {left:"-160px", rotation:180, ease:Back.easeIn, delay:.4});
+        TweenMax.to($("#homepage-takeover .temple-cummins-circle-3"), 1, {scaleX:0, scaleY:0, rotation:180, ease:Back.easeIn, delay:.2});
+        TweenMax.to($("#homepage-takeover .temple-cummins-circle-2"), 0, {alpha:0, delay:.2});
+        TweenMax.to($("#homepage-takeover .temple-cummins-circle-1"), 0, {alpha:0, delay:.2});
+        TweenMax.to($("#homepage-takeover .temple-cummins-pentagram"), 1, {scaleX:0, scaleY:0, rotation:90, ease:Back.easeIn, delay:.4});
+        TweenMax.to($("#homepage-takeover .temple-cummins-close"), .5, {scaleX:0, scaleY:0, rotation:360, ease:Bounce.easeIn});
         // hide from view
         function hideTakeover () {
             $('#homepage-takeover').removeClass('visible');

@@ -1113,16 +1113,17 @@ table.display { font-size: 77%; /*th {
 
 /* Homepage Takeover
 -------------------------------------------------------------------------------*/
-#homepage-takeover { width: 620px; height: 600px; position: fixed; z-index: 400; bottom: -10px; left: 0px; display: none; cursor: pointer; }
+#homepage-takeover { width: 548px; height: 482px; position: fixed; z-index: 400; bottom: 0px; left: 0px; display: none; cursor: pointer; }
 #homepage-takeover.visible { display: block; }
-#homepage-takeover .blake-paul-close { width: 40px; height: 39px; background: url("_/img/homepage-takeover/blake-paul-close.png") no-repeat; position: absolute; top: 120px; left: 460px; z-index: 8; }
-#homepage-takeover .blake-paul-name { width: 122px; height: 92px; background: url("_/img/homepage-takeover/blake-paul-name.png") no-repeat; position: absolute; bottom: 114px; left: 188px; z-index: 7; }
-#homepage-takeover .blake-paul { width: 341px; height: 465px; background: url("_/img/homepage-takeover/blake-paul.png") no-repeat; position: absolute; bottom: 0px; left: 0px; z-index: 6; }
-#homepage-takeover .blake-paul-board-top { width: 239px; height: 635px; background: url("_/img/homepage-takeover/blake-paul-board-top.png") no-repeat; position: absolute; bottom: -110px; left: 220px; z-index: 5; }
-#homepage-takeover .blake-paul-board-base { width: 389px; height: 564px; background: url("_/img/homepage-takeover/blake-paul-board-base.png") no-repeat; position: absolute; bottom: -110px; left: 220px; z-index: 4; }
-#homepage-takeover .blake-paul-triangle-1 { width: 565px; height: 520px; background: url("_/img/homepage-takeover/blake-paul-triangle-1.png") no-repeat; position: absolute; bottom: -30px; left: 48px; z-index: 3; }
-#homepage-takeover .blake-paul-triangle-2 { width: 565px; height: 520px; background: url("_/img/homepage-takeover/blake-paul-triangle-2.png") no-repeat; position: absolute; bottom: -30px; left: 48px; z-index: 2; }
-#homepage-takeover .blake-paul-triangle-3 { width: 565px; height: 520px; background: url("_/img/homepage-takeover/blake-paul-triangle-3.png") no-repeat; position: absolute; bottom: -30px; left: 48px; z-index: 1; }
+#homepage-takeover .temple-cummins-close { width: 30px; height: 30px; background: url("_/img/homepage-takeover/temple-cummins-close.png") no-repeat; position: absolute; top: 10px; left: 300px; z-index: 9; }
+#homepage-takeover .temple-cummins-name { width: 161px; height: 82px; background: url("_/img/homepage-takeover/temple-cummins-name.png") no-repeat; position: absolute; bottom: 65px; left: 40px; z-index: 8; }
+#homepage-takeover .temple-cummins { width: 247px; height: 377px; background: url("_/img/homepage-takeover/temple-cummins.png") no-repeat; position: absolute; bottom: 0px; left: 5px; z-index: 7; }
+#homepage-takeover .temple-cummins-board-top { width: 282px; height: 548px; background: url("_/img/homepage-takeover/temple-cummins-board-top.png") no-repeat; position: absolute; bottom: -100px; right: 68px; z-index: 6; }
+#homepage-takeover .temple-cummins-board-base { width: 313px; height: 416px; background: url("_/img/homepage-takeover/temple-cummins-board-base.png") no-repeat; position: absolute; bottom: -100px; right: 0px; z-index: 5; }
+#homepage-takeover .temple-cummins-pentagram { width: 330px; height: 347px; background: url("_/img/homepage-takeover/temple-cummins-pentagram.png") no-repeat; position: absolute; top: 0px; left: 100px; z-index: 4; }
+#homepage-takeover .temple-cummins-circle-1 { width: 466px; height: 448px; background: url("_/img/homepage-takeover/temple-cummins-circle-1.png") no-repeat; position: absolute; bottom: -5px; left: 20px; z-index: 3; }
+#homepage-takeover .temple-cummins-circle-2 { width: 466px; height: 448px; background: url("_/img/homepage-takeover/temple-cummins-circle-2.png") no-repeat; position: absolute; bottom: -5px; left: 20px; z-index: 2; }
+#homepage-takeover .temple-cummins-circle-3 { width: 466px; height: 448px; background: url("_/img/homepage-takeover/temple-cummins-circle-3.png") no-repeat; position: absolute; bottom: -5px; left: 20px; z-index: 1; }
 
 @media screen and (max-height: 615px) { #homepage-takeover.visible { display: none; } }
 /* Print styles

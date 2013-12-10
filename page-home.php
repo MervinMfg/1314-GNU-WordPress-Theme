@@ -6,14 +6,15 @@ Template Name: Home Template
 <?php get_header(); ?>
 
 		<div id="homepage-takeover">
-			<div class="blake-paul-close"></div>
-			<div class="blake-paul-name"></div>
-			<div class="blake-paul"></div>
-			<div class="blake-paul-board-top"></div>
-			<div class="blake-paul-board-base"></div>
-			<div class="blake-paul-triangle-1"></div>
-			<div class="blake-paul-triangle-2"></div>
-			<div class="blake-paul-triangle-3"></div>
+			<div class="temple-cummins-close"></div>
+			<div class="temple-cummins-name"></div>
+			<div class="temple-cummins"></div>
+			<div class="temple-cummins-board-top"></div>
+			<div class="temple-cummins-board-base"></div>
+			<div class="temple-cummins-pentagram"></div>
+			<div class="temple-cummins-circle-1"></div>
+			<div class="temple-cummins-circle-2"></div>
+			<div class="temple-cummins-circle-3"></div>
 		</div>
 		<div id="content">
 			<div class="hero-slider">
