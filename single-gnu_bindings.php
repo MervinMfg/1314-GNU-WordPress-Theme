@@ -188,15 +188,10 @@ Template Name: Bindings Detail Template
 							<div class="cart-success hidden"><p>The item has been added to your cart.<br /><a href="/shopping-cart/">View your shopping cart.</a></p></div>
 							<div class="cart-failure hidden"><p>There has been an error adding the item to your cart. Try again later.</p></div>
 						</div>
-						<?php
-						/*<div class="product-free-shipping">
-							<p>Enjoy Free Shipping for a Limited Time!*</p>
-							<div class="free-shipping-details">
-								<p>*Free shipping to the U.S. and Canada on orders placed before November 1, 2013</p>
-								<p>Only orders over a value of $5.00 will be eligible for free shipping. Must be valid U.S. or Canada address, deliveries will not be made to P.O. Boxes.</p>
-							</div>
-						</div>*/
-						?>
+						<div class="holiday-shipping">
+							<a href="#holiday-shipping">Holiday Shipping Schedule - Order before December 18th for gauranteed delivery</a>
+							<p>Orders placed after noon Pacific time Dec. 18th may not arrive before Dec. 25th. Starting December 19th we cannot guarantee Christmas delivery. Our warehouse will be closed for the holidays, but dealers will still try to fulfill orders as soon as they can.</p>
+						</div>
 						<h2><?php the_field('gnu_product_slogan'); ?></h2>
 						<div class="product-description">
 							<?php the_content(); ?>

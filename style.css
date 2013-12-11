@@ -584,6 +584,11 @@ body.international .product-overview-page .free-shipping-banner { display: none;
 .product-overview .column-right .product-buy .cart-success.visible p { padding: 10px; border: dashed 2px #ffff00; }
 .product-overview .column-right .product-buy .cart-failure.hidden { display: none; }
 .product-overview .column-right .product-buy .cart-failure.visible { display: block; padding-top: 20px; }
+.product-overview .column-right .holiday-shipping { font-family: "gnuregular", Helvetica, Arial, sans-serif; padding-bottom: 20px; }
+.product-overview .column-right .holiday-shipping a { width: 400px; height: 100px; display: block; background: #cc0000 url("_/img/holiday-shipping.png"); color: #fff; text-indent: -999999px; }
+.product-overview .column-right .holiday-shipping p { height: 105px; overflow: hidden; background: #fff; color: #CC0000; padding: 10px; display: none; }
+.product-overview .column-right .holiday-shipping.selected a { background-position: 0 -100px; }
+.product-overview .column-right .holiday-shipping.selected p { display: block; }
 .product-overview .column-right .product-free-shipping { border: dashed 2px #99cc33; padding: 10px; margin-bottom: 20px; cursor: pointer; }
 .product-overview .column-right .product-free-shipping .free-shipping-details { display: none; padding-top: 10px; }
 .product-overview .column-right .product-free-shipping .free-shipping-details.show { display: block; }

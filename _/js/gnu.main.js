@@ -506,12 +506,10 @@ GNU.main = {
                 }
             });
         });
-        /*
-        // free shipping toggle
-        $('.product-free-shipping').click(function () {
-            $(this).find('.free-shipping-details').toggleClass('show');
+        // holiday shipping toggle
+        $('.holiday-shipping').click(function () {
+            $(this).toggleClass('selected');
         });
-        */
     },
     bindingOverviewInit: function () {
         var self = this;
@@ -653,12 +651,10 @@ GNU.main = {
                 }
             });
         });
-        /*
-        // free shipping toggle
-        $('.product-free-shipping').click(function () {
-            $(this).find('.free-shipping-details').toggleClass('show');
+        // holiday shipping toggle
+        $('.holiday-shipping').click(function () {
+            $(this).toggleClass('selected');
         });
-        */
     },
     weirdwearProductInit: function () {
         var self = this;
@@ -747,12 +743,10 @@ GNU.main = {
                 }
             });
         });
-        /*
-        // free shipping toggle
-        $('.product-free-shipping').click(function () {
-            $(this).find('.free-shipping-details').toggleClass('show');
+        // holiday shipping toggle
+        $('.holiday-shipping').click(function () {
+            $(this).toggleClass('selected');
         });
-        */
     },
     accessoriesProductInit: function () {
         var self = this;
@@ -821,12 +815,10 @@ GNU.main = {
                 }
             });
         });
-        /*
-        // free shipping toggle
-        $('.product-free-shipping').click(function () {
-            $(this).find('.free-shipping-details').toggleClass('show');
+        // holiday shipping toggle
+        $('.holiday-shipping').click(function () {
+            $(this).toggleClass('selected');
         });
-        */
     },
     teamDetailsInit: function () {
         if (typeof teamAlbumId != "undefined") {
