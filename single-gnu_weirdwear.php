@@ -130,10 +130,10 @@ Template Name: Weirdwear Detail Template
 							<div class="cart-success hidden"><p>The item has been added to your cart.<br /><a href="/shopping-cart/">View your shopping cart.</a></p></div>
 							<div class="cart-failure hidden"><p>There has been an error adding the item to your cart. Try again later.</p></div>
 						</div>
-						<div class="holiday-shipping">
+						<?php /*<div class="holiday-shipping">
 							<a href="#holiday-shipping">Holiday Shipping Schedule - Order before December 18th for gauranteed delivery</a>
 							<p>Orders placed after noon Pacific time Dec. 18th may not arrive before Dec. 25th. Starting December 19th we cannot guarantee Christmas delivery. Our warehouse will be closed for the holidays, but dealers will still try to fulfill orders as soon as they can.</p>
-						</div>
+						</div>*/ ?>
 						<h2><?php the_field('gnu_product_slogan'); ?></h2>
 						<div class="product-description">
 							<?php the_content(); ?>
