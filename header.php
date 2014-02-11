@@ -120,7 +120,7 @@ G   GGGGGGG    N, GG8    G  $GGGGGGGGGGD  GGGGGGGGGGGGG GGGGGGGGGGGGGGGGGGGG   G
 	<!-- Fav Icon -->
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/_/img/favicon.ico" />
 	<!-- Styles -->
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
+	<link rel="stylesheet" href="http://mnbbehrins.americas.quiksilver.corp/~bbehrens/mervin-sites/GNU-1314/style.css" /><?php //bloginfo('stylesheet_url'); ?>
 	<!-- Misc. -->
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<!-- all our JS is at the bottom of the page, except for Modernizr. -->
