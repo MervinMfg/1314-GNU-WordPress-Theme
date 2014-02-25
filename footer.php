@@ -45,6 +45,7 @@
 					<li><a href="http://gnu.shptron.com/home/security/4374.6.1.1" target="_blank" id="link-safety">Safety and Security</a></li>
 					<li><a href="http://gnu.shptron.com/home/policies/4374.6.1.1#Returns" target="_blank" id="link-returns">30-Day Returns</a></li>
 					<li><a href="http://gnu.shptron.com/home/ordering/4374.6.1.1" target="_blank" id="link-ordering">Ordering Info</a></li>
+					<li><a href="/partners/">Partners</a></li>
 				</ul>
 			</div>
 			<div class="footer-region">
