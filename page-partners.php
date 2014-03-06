@@ -77,6 +77,8 @@ get_header();
 								}
 							}
 							array_push($partners, findPartners('vehicles', 'Vehicles'));
+							array_push($partners, findPartners('cat-heli', 'Cat Boarding/Heli'));
+							array_push($partners, findPartners('parks', 'Parks'));
 							array_push($partners, findPartners('camps', 'Camps'));
 							array_push($partners, findPartners('non-profits', 'Non-profits'));
 							array_push($partners, findPartners('academies-clubs', 'Academies/Clubs'));
