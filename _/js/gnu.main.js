@@ -57,7 +57,7 @@ GNU.main = {
         self = this;
         // check the language on the cookie
         regionCookie = self.utilities.cookie.getCookie('GNURegion');
-        if (regionCookie != null || regionCookie != "") {
+        if (regionCookie !== null || regionCookie !== "") {
             lang = regionCookie;
         }
         if (lang) {
@@ -133,7 +133,7 @@ GNU.main = {
             var navToDisplay = "nav.nav-dropdown-" + linkClass;
             $(navToDisplay).addClass("selected");
 
-            if (self.config.selectedMenu == '') {
+            if (self.config.selectedMenu === '') {
                 // expand container div
                 $("#header .nav-dropdown-container-hide-overflow").addClass("selected");
                 // expand menu with JS
@@ -191,7 +191,7 @@ GNU.main = {
 
         regionCookie = self.utilities.cookie.getCookie('GNURegion');
         
-        if (regionCookie != null || regionCookie != "") {
+        if (regionCookie !== null || regionCookie !== "") {
             lang = regionCookie;
         }
 
@@ -228,7 +228,7 @@ GNU.main = {
     },
     regionSelectorOverlayInit: function () {
         var self = this;
-        $.colorbox({inline: true, href: "#region-selector-overlay", opacity: .8});
+        $.colorbox({inline: true, href: "#region-selector-overlay", opacity: 0.8});
         // add click events
         $("#region-selector-overlay .usa").click(function (e) {
             e.preventDefault();
@@ -273,80 +273,83 @@ GNU.main = {
         var self = this;
         $(window).load( function () {
             // Set up tween max for all elements in takeover
-            TweenMax.from($("#homepage-takeover .temple-cummins"), .5, {rotation:-45, left:"-10px", bottom: "-300px", transformOrigin:"30px 488px"});
-            TweenMax.from($("#homepage-takeover .temple-cummins-board-top"), .8, {left:"0px", bottom:"-600px", ease:Back.easeOut, delay:.4});
-            TweenMax.from($("#homepage-takeover .temple-cummins-board-base"), .6, {left:"50px", bottom:"-600px", ease:Back.easeOut, delay:.8});
-            TweenMax.from($("#homepage-takeover .temple-cummins-name"), .5, {left:"-160px", rotation:180, ease:Back.easeOut, delay:1});
-            TweenMax.from($("#homepage-takeover .temple-cummins-circle-3"), 1, {scaleX:0, scaleY:0, rotation:180, ease:Back.easeOut, delay:1, onComplete:animateTriangle2});
-            TweenMax.to($("#homepage-takeover .temple-cummins-circle-2"), 0, {alpha:0});
-            TweenMax.to($("#homepage-takeover .temple-cummins-circle-1"), 0, {alpha:0});
-            TweenMax.from($("#homepage-takeover .temple-cummins-pentagram"), 1, {scaleX:0, scaleY:0, rotation:90, ease:Back.easeOut, delay:1.2});
-            TweenMax.from($("#homepage-takeover .temple-cummins-close"), .5, {scaleX:0, scaleY:0, rotation:360, ease:Bounce.easeOut, delay:1.5, onComplete:addTakeoverListeners});
+            TweenMax.from($("#homepage-takeover .olympics-kaitlyn-farrington"), 0.5, {left:"-276px"});
+            TweenMax.from($("#homepage-takeover .olympics-jamie-anderson"), 0.5, {left: "-280px", delay:0.1});
+            TweenMax.from($("#homepage-takeover .olympics-kaitlyn-farrington-name"), 0.3, {bottom: "-61px", delay:0.5});
+            TweenMax.from($("#homepage-takeover .olympics-jamie-anderson-name"), 0.3, {bottom: "-68px", delay:0.6});
+            TweenMax.from($("#homepage-takeover .olympics-b-pro"), 0.5, {left: "140px", bottom: "-491px", delay:0.8});
+            TweenMax.from($("#homepage-takeover .olympics-ladies-choice"), 0.5, {right: "140px", bottom: "-471px", delay:1});
+            TweenMax.from($("#homepage-takeover .olympics-callout"), 0.4, {bottom: "-73px", delay:1.2});
+            TweenMax.from($("#homepage-takeover .olympics-circle-1"), 1, {scaleX:0, scaleY:0, rotation:180, ease:Back.easeOut, delay:1, onComplete:animateCircle2});
+            TweenMax.to($("#homepage-takeover .olympics-circle-2"), 0, {alpha:0});
+            TweenMax.from($("#homepage-takeover .olympics-close"), 0.5, {scaleX:0, scaleY:0, rotation:360, ease:Bounce.easeOut, delay:1.5, onComplete:addTakeoverListeners});
             // onComplete function calls
-            function animateTriangle1() {
-                TweenMax.to($("#homepage-takeover .temple-cummins-circle-1"), 1, {alpha:1, delay: 2, onComplete:animateTriangle3});
+            function animateCircle1() {
+                TweenMax.to($("#homepage-takeover .olympics-circle-2"), 1, {alpha:0, delay: 2, onComplete:animateCircle2});
             }
-            function animateTriangle2() {
-                TweenMax.to($("#homepage-takeover .temple-cummins-circle-2"), 1, {alpha:1, delay: 2, onComplete:animateTriangle1});
-            }
-            function animateTriangle3() {
-                TweenMax.to($("#homepage-takeover .temple-cummins-circle-2"), 0, {alpha:0});
-                TweenMax.to($("#homepage-takeover .temple-cummins-circle-1"), 1, {alpha:0, delay: 2, onComplete:animateTriangle2});
+            function animateCircle2() {
+                TweenMax.to($("#homepage-takeover .olympics-circle-2"), 1, {alpha:1, delay: 2, onComplete:animateCircle1});
             }
             function addTakeoverListeners() {
                 // assign click event to close
-                $('#homepage-takeover .temple-cummins-close').click(function () {
+                $('#homepage-takeover .olympics-close').click(function () {
                     self.homeTakeoverUninit();
                     return false;
                 });
                 // assign hover event to others
-                $('#homepage-takeover').hover(
-                    function () {
-                        // over
-                        TweenMax.to($("#homepage-takeover .temple-cummins-board-top"), .3, {right:"58px", bottom:"-90px", ease:Back.easeOut});
-                        TweenMax.to($("#homepage-takeover .temple-cummins-board-base"), .3, {right:"-10px", bottom:"-95px", ease:Back.easeOut, delay:.1});
-                        TweenMax.to($("#homepage-takeover .temple-cummins"), .3, {rotation:-2, transformOrigin:"30px 488px", bottom:"-20px", ease:Back.easeOut});
-                        TweenMax.to($("#homepage-takeover .temple-cummins-pentagram"), .3, {scaleX:.9, scaleY:.9, rotation:2, ease:Back.easeOut});
-                        TweenMax.to($("#homepage-takeover .temple-cummins-name"), .2, {rotation:-5, left:"35px", ease:Back.easeOut});
-                    },
-                    function () {
-                        // out
-                        TweenMax.to($("#homepage-takeover .temple-cummins-board-top"), .3, {right:"68px", bottom:"-100px", ease:Back.easeOut, delay:.1});
-                        TweenMax.to($("#homepage-takeover .temple-cummins-board-base"), .3, {right:"0px", bottom:"-100px", ease:Back.easeOut});
-                        TweenMax.to($("#homepage-takeover .temple-cummins"), .3, {rotation:0, transformOrigin:"30px 488px", bottom:"0px", ease:Back.easeOut});
-                        TweenMax.to($("#homepage-takeover .temple-cummins-pentagram"), .3, {scaleX:1, scaleY:1, rotation:0, ease:Back.easeOut});
-                        TweenMax.to($("#homepage-takeover .temple-cummins-name"), .2, {rotation:0, left:"40px", ease:Back.easeOut});
-                    }
-                );
-                // assign click event to others
-                $('#homepage-takeover').click(function () {
-                    window.location.href = "/snowboards/billy-goat/";
+                $('#homepage-takeover .olympics-jamie-anderson, #homepage-takeover .olympics-jamie-anderson-name, #homepage-takeover .olympics-ladies-choice').on("mouseenter", function () {
+                    TweenMax.to($("#homepage-takeover .olympics-jamie-anderson"), 0.4, {left: "312px", ease:Back.easeOut});
+                    TweenMax.to($("#homepage-takeover .olympics-jamie-anderson-name"), 0.2, {bottom: "40px", ease:Back.easeOut});
+                    TweenMax.to($("#homepage-takeover .olympics-ladies-choice"), 0.3, {right: "5px", ease:Back.easeOut});
+                }).on("mouseleave", function () {
+                    TweenMax.to($("#homepage-takeover .olympics-jamie-anderson"), 0.4, {left: "292px", ease:Back.easeOut});
+                    TweenMax.to($("#homepage-takeover .olympics-jamie-anderson-name"), 0.2, {bottom: "20px", ease:Back.easeOut});
+                    TweenMax.to($("#homepage-takeover .olympics-ladies-choice"), 0.3, {right: "0px", ease:Back.easeOut});
+                }).on("click", function () {
+                    window.location.href = "/team/jamie-anderson/";
+                });
+                $('#homepage-takeover .olympics-kaitlyn-farrington, #homepage-takeover .olympics-kaitlyn-farrington-name, #homepage-takeover .olympics-b-pro').on("mouseenter", function () {
+                    // over
+                    TweenMax.to($("#homepage-takeover .olympics-kaitlyn-farrington"), 0.3, {left: "75px", ease:Back.easeOut});
+                    TweenMax.to($("#homepage-takeover .olympics-kaitlyn-farrington-name"), 0.3, {bottom:"54px", ease:Back.easeOut});
+                    TweenMax.to($("#homepage-takeover .olympics-b-pro"), 0.3, {left: "5px", ease:Back.easeOut});
+                }).on("mouseleave", function () {
+                    // out
+                    TweenMax.to($("#homepage-takeover .olympics-kaitlyn-farrington"), 0.3, {left: "95px", ease:Back.easeOut});
+                    TweenMax.to($("#homepage-takeover .olympics-kaitlyn-farrington-name"), 0.3, {bottom:"34px", ease:Back.easeOut});
+                    TweenMax.to($("#homepage-takeover .olympics-b-pro"), 0.3, {left: "0px", ease:Back.easeOut});
+                }).on("click", function () {
+                    window.location.href = "/team/kaitlyn-farrington/";
                 });
             }
             $('#homepage-takeover').addClass('visible');
         });
     },
     homeTakeoverUninit: function () {
-        TweenMax.killTweensOf($("#homepage-takeover .temple-cummins"));
-        TweenMax.killTweensOf($("#homepage-takeover .temple-cummins-board-top"));
-        TweenMax.killTweensOf($("#homepage-takeover .temple-cummins-board-base"));
-        TweenMax.killTweensOf($("#homepage-takeover .temple-cummins-name"));
-        TweenMax.killTweensOf($("#homepage-takeover .temple-cummins-circle-1"));
-        TweenMax.killTweensOf($("#homepage-takeover .temple-cummins-circle-2"));
-        TweenMax.killTweensOf($("#homepage-takeover .temple-cummins-circle-3"));
-        TweenMax.killTweensOf($("#homepage-takeover .temple-cummins-close"));
-        // unbind hover
-        $("#homepage-takeover").unbind('mouseenter mouseleave');
+        TweenMax.killTweensOf($("#homepage-takeover .olympics-close"));
+        TweenMax.killTweensOf($("#homepage-takeover .olympics-jamie-anderson-name"));
+        TweenMax.killTweensOf($("#homepage-takeover .olympics-jamie-anderson"));
+        TweenMax.killTweensOf($("#homepage-takeover .olympics-kaitlyn-farrington-name"));
+        TweenMax.killTweensOf($("#homepage-takeover .olympics-kaitlyn-farrington"));
+        TweenMax.killTweensOf($("#homepage-takeover .olympics-callout"));
+        TweenMax.killTweensOf($("#homepage-takeover .olympics-ladies-choice"));
+        TweenMax.killTweensOf($("#homepage-takeover .olympics-b-pro"));
+        TweenMax.killTweensOf($("#homepage-takeover .olympics-circle-1"));
+        TweenMax.killTweensOf($("#homepage-takeover .olympics-circle-2"));
+        // remove event listeners
+        $('#homepage-takeover .olympics-jamie-anderson, #homepage-takeover .olympics-jamie-anderson-name, #homepage-takeover .olympics-ladies-choice').off('mouseenter mouseleave click');
+        $('#homepage-takeover .olympics-kaitlyn-farrington, #homepage-takeover .olympics-kaitlyn-farrington-name, #homepage-takeover .olympics-b-pro').off('mouseenter mouseleave click');
         // animate closed
-        TweenMax.to($("#homepage-takeover .temple-cummins"), .5, {rotation:-45, left:"-40px", bottom: "-350px", transformOrigin:"30px 488px", delay:1.5, onComplete:hideTakeover});
-        TweenMax.to($("#homepage-takeover .temple-cummins-board-top"), .8, {left:"0px", bottom:"-700px", ease:Back.easeIn, delay:.8});
-        TweenMax.to($("#homepage-takeover .temple-cummins-board-base"), .6, {left:"50px", bottom:"-700px", ease:Back.easeIn, delay:.6});
-        TweenMax.to($("#homepage-takeover .temple-cummins-name"), .5, {left:"-160px", rotation:180, ease:Back.easeIn, delay:.4});
-        TweenMax.to($("#homepage-takeover .temple-cummins-circle-3"), 1, {scaleX:0, scaleY:0, rotation:180, ease:Back.easeIn, delay:.2});
-        TweenMax.to($("#homepage-takeover .temple-cummins-circle-2"), 0, {alpha:0, delay:.2});
-        TweenMax.to($("#homepage-takeover .temple-cummins-circle-1"), 0, {alpha:0, delay:.2});
-        TweenMax.to($("#homepage-takeover .temple-cummins-pentagram"), 1, {scaleX:0, scaleY:0, rotation:90, ease:Back.easeIn, delay:.4});
-        TweenMax.to($("#homepage-takeover .temple-cummins-close"), .5, {scaleX:0, scaleY:0, rotation:360, ease:Bounce.easeIn});
+        TweenMax.to($("#homepage-takeover .olympics-callout"), 0.4, {bottom: "-73px"});
+        TweenMax.to($("#homepage-takeover .olympics-b-pro"), 0.5, {left: "140px", bottom: "-491px"});
+        TweenMax.to($("#homepage-takeover .olympics-ladies-choice"), 0.5, {right: "140px", bottom: "-471px"});
+        TweenMax.to($("#homepage-takeover .olympics-close"), 0.5, {scaleX:0, scaleY:0, rotation:360, ease:Bounce.easeIn});
+        TweenMax.to($("#homepage-takeover .olympics-circle-1"), 0.5, {scaleX:0, scaleY:0, rotation:180, ease:Back.easeIn, delay:0.2});
+        TweenMax.to($("#homepage-takeover .olympics-circle-2"), 0, {alpha:0, delay:0.2});
+        TweenMax.to($("#homepage-takeover .olympics-kaitlyn-farrington-name"), 0.3, {bottom: "-61px", delay:0.2});
+        TweenMax.to($("#homepage-takeover .olympics-jamie-anderson-name"), 0.3, {bottom: "-68px", delay:0.2});
+        TweenMax.to($("#homepage-takeover .olympics-jamie-anderson"), 0.5, {left: "-280px", delay:0.4});
+        TweenMax.to($("#homepage-takeover .olympics-kaitlyn-farrington"), 0.5, {left:"-276px", delay:0.5, onComplete:hideTakeover});
         // hide from view
         function hideTakeover () {
             $('#homepage-takeover').removeClass('visible');
@@ -412,7 +415,7 @@ GNU.main = {
                 var url = $(this).attr('href');
                 self.utilities.pageScroll(url);
             });
-        };
+        }
         // grab any gallery images and turn them into a lightbox
         $('.product-images #image-list li a').colorbox({rel: 'productImages', opacity: 1});
         // grab view all specs link and turn into lightbox
@@ -556,7 +559,7 @@ GNU.main = {
             e.preventDefault();
             var additionalImages, imageTitle;
             additionalImages = $(this).attr('data-additional-images');
-            if (additionalImages != "") {
+            if (additionalImages !== "") {
                 additionalImages = additionalImages.split(',');
                 imageTitle = $(this).attr('title');
                 // add hidden images
@@ -568,7 +571,7 @@ GNU.main = {
             // add main image to colorbox
             $(this).colorbox({rel: imageTitle, opacity: 1});
             // add additional images to colorbox and open
-            if(additionalImages != ""){
+            if(additionalImages !== ""){
                 $("#hidden-images li a").colorbox({rel: imageTitle, open: true, opacity: 1});
             }
         });
@@ -592,7 +595,7 @@ GNU.main = {
                 var url = $(this).attr('href');
                 self.utilities.pageScroll(url);
             });
-        };
+        }
         // select the appropriate binding
         $('#product-variation').change(function () {
             // select the correct image
@@ -968,7 +971,7 @@ GNU.main = {
         });
         // check for the region
         regionCookie = self.utilities.cookie.getCookie('GNURegion');
-        if (regionCookie != null || regionCookie != "") {
+        if (regionCookie !== null || regionCookie !== "") {
             lang = regionCookie;
         } else {
             lang = 'us';
@@ -1010,7 +1013,7 @@ GNU.main = {
                 var itemsInCart = 0;
                 // find quantity of items in cart
                 $.each(data.cartItems, function (key, value) {
-                    itemsInCart += parseInt(value.quantity);
+                    itemsInCart += parseInt(value.quantity, 10);
                 });
                 $('#quick-cart a span').html(itemsInCart);
             },
@@ -1024,7 +1027,7 @@ GNU.main = {
                 for (var i=0; i < ca.length; i++) {
                     var c = ca[i];
                     while (c.charAt(0)==' ') c = c.substring(1,c.length);
-                    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+                    if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length,c.length);
                 }
                 return null;
             },

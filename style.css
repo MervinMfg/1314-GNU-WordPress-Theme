@@ -1153,17 +1153,18 @@ table.display { font-size: 77%; /*th {
 
 /* Homepage Takeover
 -------------------------------------------------------------------------------*/
-#homepage-takeover { width: 548px; height: 482px; position: fixed; z-index: 400; bottom: 0px; left: 0px; display: none; cursor: pointer; }
+#homepage-takeover { width: 650px; height: 500px; position: fixed; z-index: 400; bottom: 0px; left: 0px; display: none; }
 #homepage-takeover.visible { display: block; }
-#homepage-takeover .temple-cummins-close { width: 30px; height: 30px; background: url("_/img/homepage-takeover/temple-cummins-close.png") no-repeat; position: absolute; top: 10px; left: 300px; z-index: 9; }
-#homepage-takeover .temple-cummins-name { width: 161px; height: 82px; background: url("_/img/homepage-takeover/temple-cummins-name.png") no-repeat; position: absolute; bottom: 65px; left: 40px; z-index: 8; }
-#homepage-takeover .temple-cummins { width: 247px; height: 377px; background: url("_/img/homepage-takeover/temple-cummins.png") no-repeat; position: absolute; bottom: 0px; left: 5px; z-index: 7; }
-#homepage-takeover .temple-cummins-board-top { width: 282px; height: 548px; background: url("_/img/homepage-takeover/temple-cummins-board-top.png") no-repeat; position: absolute; bottom: -100px; right: 68px; z-index: 6; }
-#homepage-takeover .temple-cummins-board-base { width: 313px; height: 416px; background: url("_/img/homepage-takeover/temple-cummins-board-base.png") no-repeat; position: absolute; bottom: -100px; right: 0px; z-index: 5; }
-#homepage-takeover .temple-cummins-pentagram { width: 330px; height: 347px; background: url("_/img/homepage-takeover/temple-cummins-pentagram.png") no-repeat; position: absolute; top: 0px; left: 100px; z-index: 4; }
-#homepage-takeover .temple-cummins-circle-1 { width: 466px; height: 448px; background: url("_/img/homepage-takeover/temple-cummins-circle-1.png") no-repeat; position: absolute; bottom: -5px; left: 20px; z-index: 3; }
-#homepage-takeover .temple-cummins-circle-2 { width: 466px; height: 448px; background: url("_/img/homepage-takeover/temple-cummins-circle-2.png") no-repeat; position: absolute; bottom: -5px; left: 20px; z-index: 2; }
-#homepage-takeover .temple-cummins-circle-3 { width: 466px; height: 448px; background: url("_/img/homepage-takeover/temple-cummins-circle-3.png") no-repeat; position: absolute; bottom: -5px; left: 20px; z-index: 1; }
+#homepage-takeover .olympics-close { width: 30px; height: 30px; background: url("_/img/homepage-takeover/olympics-close.png") no-repeat; position: absolute; top: 0px; right: 68px; z-index: 10; cursor: pointer; }
+#homepage-takeover .olympics-jamie-anderson-name { width: 117px; height: 68px; background: url("_/img/homepage-takeover/olympics-jamie-anderson-name.png") no-repeat; position: absolute; bottom: 20px; right: 80px; z-index: 9; cursor: pointer; }
+#homepage-takeover .olympics-jamie-anderson { width: 280px; height: 350px; background: url("_/img/homepage-takeover/olympics-jamie-anderson.png") no-repeat; position: absolute; bottom: 0; left: 292px; z-index: 8; cursor: pointer; }
+#homepage-takeover .olympics-kaitlyn-farrington-name { width: 126px; height: 61px; background: url("_/img/homepage-takeover/olympics-kaitlyn-farrington-name.png") no-repeat; position: absolute; bottom: 34px; left: 115px; z-index: 7; cursor: pointer; }
+#homepage-takeover .olympics-kaitlyn-farrington { width: 276px; height: 336px; background: url("_/img/homepage-takeover/olympics-kaitlyn-farrington.png") no-repeat; position: absolute; bottom: 0; left: 95px; z-index: 6; cursor: pointer; }
+#homepage-takeover .olympics-callout { width: 371px; height: 73px; background: url("_/img/homepage-takeover/olympics-callout.png") no-repeat; position: absolute; bottom: 333px; left: 132px; z-index: 5; }
+#homepage-takeover .olympics-ladies-choice { width: 230px; height: 471px; background: url("_/img/homepage-takeover/olympics-ladies-choice.png") no-repeat; position: absolute; bottom: 0; right: 0; z-index: 4; cursor: pointer; }
+#homepage-takeover .olympics-b-pro { width: 254px; height: 491px; background: url("_/img/homepage-takeover/olympics-b-pro.png") no-repeat; position: absolute; bottom: 0; left: 0; z-index: 3; cursor: pointer; }
+#homepage-takeover .olympics-circle-1 { width: 470px; height: 470px; background: url("_/img/homepage-takeover/olympics-circle-1.png") no-repeat; position: absolute; bottom: 0; left: 160px; z-index: 1; }
+#homepage-takeover .olympics-circle-2 { width: 470px; height: 470px; background: url("_/img/homepage-takeover/olympics-circle-2.png") no-repeat; position: absolute; bottom: 0; left: 160px; z-index: 2; }
 
 @media screen and (max-height: 615px) { #homepage-takeover.visible { display: none; } }
 /* Print styles
