@@ -62,35 +62,32 @@
         }
 	}
 ?>
-<!--
-GNU
-gnu.com
-
-                                                                               GGGGGG        GGGGGGG
-             +GG                                                               GGGGGG        GGGGGGG
-            G GGGG              GGGGGGGGGGGGGGGGGGGGGG   GGGGGG       GG  G    GGGGGG        GGGGGGG
-           G   GGGG             GGGGGGGGGGGGGGGGGGGGGG   GGGGGGN      GGGGGGG  GGGGGG        GGGGGGG
-         8+   GGGGG  GG         GGGGGGGGGGGGGGGGGGGGGG   GGGGGGGN     GGGGGGG  GGGGGG        GGGGGGG
-        G   GGGGG   GGGG        GGGGGGGGGGGGGGGGGGGGGG   GGGGGGGGN    GGGGGGG  GGGGGG        GGGGGGG
-       :   GGGG8   O  GGGG      $GGGGGGGGGGGGDG          GGGGGGGGGG   GGGGGGG  GGGGGG        GGGGGGG
-     G   GGGGG   G   GNGGGGG    NGGGGGG      GGGGGGGGG   GGGGGGGGGGD  GGGGGGG  GGGGGG        GGGGGGG
-    G   GGGGG  :G  GGGN NGGGGG  GGGGGGG   GGGGGGGGGGGGG GGGGGGGGGGGG8 GGGGGGG  GGGGGG        GGGGGGG
-  ~=   GGGGG  8$  GGGGG   GGGGGGGGGGGGG   GGGGGGGGGGGGG GGGGGGGGGGGGG,GGGGGG   GGGGGG        GGGGGGG
- N   GGGGG   G   GGGGG +,   GGGGGGGGGGGO  GGGGGGGGGGGGO $GGGGGGGGGGGGGGGGGGG   GGGGGG        GGGGGGG
-G   GGGGGGG    N, GG8    G  $GGGGGGGGGGD  GGGGGGGGGGGGG GGGGGGGGGGGGGGGGGGGG   GGGGGG        GGGGGGG
- GZ   GGGGGGG    GG    G:  GGGGG GGGGGG8        GGGGGGG GGGGGGG GGGGGGGGGGGG   GGGGGGGGGGGGGGGGGGGGG
-   G8   GGGGGGO       G  ,GGGGG  GGGGGG         GGGGGGG GGGGGGG  GGGGGGGGGGG   GGGGGGGGGGGGGGGGGGGGG
-     N    GGGGGGO   N8  GGGGG,   GGGGGGGGGGGGGGGGGGGGGG GGGGGGG  GGGGGGGGGGG   GGGGGGGGGGGGGGGGGGGGG
-       G    GGGGGGGG   GGGGG     GGGGGGGGGGGGGGGGGGGGGG GGGGGGG   GGGGGGGGGG   GGGGGGGGGGGGGGGGGGGGG
-         N    NGGGG, NGGGGO      GGGGGGGGGGGGGGGGGGGGGG GGGGGGG    GGGGGGGGG   GGGGGGGGGGGGGGG    
-           G    GGG GGGGG        GGGGGGGGGGGGGGGGGGGGG8 GGGGGGG     GGGGGGGG                        
-             G    8GGGGG         GGGGGGGGG              GGGGGGG      GGGGGGG                        
-               G   GGG7                                  G                                          
-                 G GG~                                                                              
-                   G                               
--->
 <!DOCTYPE html>
 <html class="no-js" <?php language_attributes(); ?> itemscope itemtype="http://schema.org/Blog" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
+<!--
+                                                                               GGGGGG        GGGGGGG
+             GGG                                                               GGGGGG        GGGGGGG
+            G GGGG              GGGGGGGGGGGGGGGGGGGGGG   GGGGGG       GGGGGGG  GGGGGG        GGGGGGG
+           G   GGGG             GGGGGGGGGGGGGGGGGGGGGG   GGGGGGG      GGGGGGG  GGGGGG        GGGGGGG
+         G    GGGGG  GG         GGGGGGGGGGGGGGGGGGGGGG   GGGGGGGG     GGGGGGG  GGGGGG        GGGGGGG
+        G   GGGGG   GGGG        GGGGGGGGGGGGGGGGGGGGGG   GGGGGGGGG    GGGGGGG  GGGGGG        GGGGGGG
+       G   GGGGG   G  GGGG      GGGGGGGGGGGGGGG          GGGGGGGGGG   GGGGGGG  GGGGGG        GGGGGGG
+     G   GGGGG   G   GGGGGGG    GGGGGGG      GGGGGGGGG   GGGGGGGGGGG  GGGGGGG  GGGGGG        GGGGGGG
+    G   GGGGG  GG  GGGG GGGGGG  GGGGGGG   GGGGGGGGGGGGG GGGGGGGGGGGGG GGGGGGG  GGGGGG        GGGGGGG
+  GG   GGGGG  GG  GGGGG   GGGGGGGGGGGGG   GGGGGGGGGGGGG GGGGGGGGGGGGGGGGGGGG   GGGGGG        GGGGGGG
+ G   GGGGG   G   GGGGG GG   GGGGGGGGGGG   GGGGGGGGGGGGG GGGGGGGGGGGGGGGGGGGG   GGGGGG        GGGGGGG
+G   GGGGGGG    GG GGG    G  $GGGGGGGGGG   GGGGGGGGGGGGG GGGGGGGGGGGGGGGGGGGG   GGGGGG        GGGGGGG
+ GG   GGGGGGG    GG    G   GGGGG GGGGGG         GGGGGGG GGGGGGG GGGGGGGGGGGG   GGGGGGGGGGGGGGGGGGGGG
+   GG   GGGGGGO       G  GGGGGG  GGGGGG         GGGGGGG GGGGGGG  GGGGGGGGGGG   GGGGGGGGGGGGGGGGGGGGG
+     G    GGGGGGO   GG  GGGGGG   GGGGGGGGGGGGGGGGGGGGGG GGGGGGG  GGGGGGGGGGG   GGGGGGGGGGGGGGGGGGGGG
+       G    GGGGGGGG   GGGGG     GGGGGGGGGGGGGGGGGGGGGG GGGGGGG   GGGGGGGGGG   GGGGGGGGGGGGGGGGGGGGG
+         G    GGGGGG GGGGGG      GGGGGGGGGGGGGGGGGGGGGG GGGGGGG    GGGGGGGGG   GGGGGGGGGGGGGGG
+           G    GGG GGGGG        GGGGGGGGGGGGGGGGGGGGGG GGGGGGG     GGGGGGGG
+             G    GGGGGG         GGGGGGGGG              GGGGGGG      GGGGGGG
+               G   GGGG
+                 G GG
+                   G
+-->
 <head id="www-gnu-com" data-template-set="gnu-wordpress-theme" profile="http://gmpg.org/xfn/11">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- force latest IE rendering engine -->
 	<meta charset="<?php bloginfo('charset'); ?>"><?php if (is_search()) { echo "\n\t"; ?><meta name="robots" content="noindex, nofollow" /><?php } echo "\n"; ?>
@@ -120,7 +117,7 @@ G   GGGGGGG    N, GG8    G  $GGGGGGGGGGD  GGGGGGGGGGGGG GGGGGGGGGGGGGGGGGGGG   G
 	<!-- Fav Icon -->
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/_/img/favicon.ico" />
 	<!-- Styles -->
-	<link rel="stylesheet" href="http://mnbbehrins.americas.quiksilver.corp/~bbehrens/mervin-sites/GNU-1314/style.css" /><?php //bloginfo('stylesheet_url'); ?>
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
 	<!-- Misc. -->
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<!-- all our JS is at the bottom of the page, except for Modernizr. -->

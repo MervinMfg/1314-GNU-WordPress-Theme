@@ -208,10 +208,13 @@ Template Name: Snowboards Detail Template
 							<div class="cart-success hidden"><p>The item has been added to your cart.<br /><a href="/shopping-cart/">View your shopping cart.</a></p></div>
 							<div class="cart-failure hidden"><p>There has been an error adding the item to your cart. Try again later.</p></div>
 						</div>
-						<?php /*<div class="holiday-shipping">
-							<a href="#holiday-shipping">Holiday Shipping Schedule - Order before December 18th for gauranteed delivery</a>
-							<p>Orders placed after noon Pacific time Dec. 18th may not arrive before Dec. 25th. Starting December 19th we cannot guarantee Christmas delivery. Our warehouse will be closed for the holidays, but dealers will still try to fulfill orders as soon as they can.</p>
-						</div>*/ ?>
+						<div class="product-buy-alert">
+							<a href="#free-shipping">Free Shipping for orders over $100!</a>
+							<div class="alert-details">
+								<p>Offer only applies to customers with a valid United States or Canada delivery addresses, we do not deliver to P.O. Boxes. Offer expires March 31, 11:59 PM PST, 2014</p>
+								<p>Free shipping applies only to the following products: Any mix of products that aggregates to $100 U.S. Dollars in one order.</p>
+							</div>
+						</div>
 						<h2><?php the_field('gnu_product_slogan'); ?></h2>
 						<div class="product-description">
 							<?php the_content(); ?>
@@ -524,10 +527,9 @@ Template Name: Snowboards Detail Template
 				<?php
 					// display the related products
 					display_related_products($GLOBALS['language']);
+					// display comments
+					comments_template();
 				?>
-
-				<?php comments_template(); ?>
-
 			</div><!-- end .main-column -->
 		</div><!-- end #content -->
 <?php

@@ -552,54 +552,7 @@ body.international .product-overview-page .free-shipping-banner { display: none;
 .single-gnu_snowboards .product-images .image-list-thumbs { width: 100px; }
 
 /* Right column */
-.product-overview .column-right { width: 400px; padding-left: 80px; float: left; background: url("_/img/bg-splat-blue.png") no-repeat 20px 0px; position: relative; margin-top: 20px; 		/*.holiday-shipping {
-			font-family: "gnuregular", Helvetica, Arial, sans-serif;
-			padding-bottom: 20px;
-
-			a {
-				width: 400px;
-				height: 100px;
-				display: block;
-				background: #CC0000 url('_/img/holiday-shipping.png');
-				color: #fff;
-				text-indent: -999999px;
-			}
-			p {
-				height: 105px;
-				overflow: hidden;
-				background: #fff;
-				color: #CC0000;
-				padding: 10px;
-				display: none;
-			}
-		}
-		.holiday-shipping.selected {
-			a {
-				background-position: 0 -100px;
-			}
-			p {
-				display: block;
-			}
-		}
-		.product-free-shipping {
-			border: dashed 2px $blogColor;
-			padding: 10px;
-			margin-bottom: 20px;
-			cursor: pointer;
-
-			.free-shipping-details {
-				display: none;
-				padding-top: 10px;
-
-				&.show {
-					display: block;
-				}
-				p {
-					font-size: 12px;
-					margin-bottom: 5px;
-				}
-			}
-		}*/ }
+.product-overview .column-right { width: 400px; padding-left: 80px; float: left; background: url("_/img/bg-splat-blue.png") no-repeat 20px 0px; position: relative; margin-top: 20px; }
 .product-overview .column-right.title-image { background: none; }
 .product-overview .column-right.title-image h1 { background-image: url("_/img/_RIDERS-CHOICE.png"); height: 230px; width: 230px; padding: 0; margin-bottom: 20px; text-indent: 100%; white-space: nowrap; overflow: hidden; }
 .product-overview .column-right h1 { font-size: 48px; color: #fff; padding: 40px 20px 0 0; height: 200px; width: 280px; text-shadow: 2px 2px 0 black; }
@@ -631,6 +584,12 @@ body.international .product-overview-page .free-shipping-banner { display: none;
 .product-overview .column-right .product-buy .cart-success.visible p { padding: 10px; border: dashed 2px yellow; }
 .product-overview .column-right .product-buy .cart-failure.hidden { display: none; }
 .product-overview .column-right .product-buy .cart-failure.visible { display: block; padding-top: 20px; }
+.product-overview .column-right .product-buy-alert { font-family: "gnuregular", Helvetica, Arial, sans-serif; padding-bottom: 20px; }
+.product-overview .column-right .product-buy-alert a { width: 400px; height: 100px; display: block; background: #0099ff url("_/img/free-shipping-100.png"); color: #fff; text-indent: -999999px; }
+.product-overview .column-right .product-buy-alert .alert-details { overflow: hidden; background: black url("_/img/free-shipping-100-bg.png"); color: #CC0000; padding: 20px; display: none; }
+.product-overview .column-right .product-buy-alert .alert-details p { margin-bottom: 5px; }
+.product-overview .column-right .product-buy-alert.selected a { background-position: 0 -100px; }
+.product-overview .column-right .product-buy-alert.selected .alert-details { display: block; }
 .product-overview .column-right .product-description { padding-bottom: 10px; }
 .product-overview .column-right .product-description p { padding-bottom: 10px; }
 .product-overview .column-right .product-description ul { padding: 0px 0 5px 25px; margin: 0; list-style: square; }

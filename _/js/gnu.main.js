@@ -509,10 +509,10 @@ GNU.main = {
                 }
             });
         });
-        /*// holiday shipping toggle
-        $('.holiday-shipping').click(function () {
+        // product alert
+        $('.product-buy-alert').on('click', function () {
             $(this).toggleClass('selected');
-        });*/
+        });
     },
     bindingOverviewInit: function () {
         var self = this;
@@ -654,10 +654,10 @@ GNU.main = {
                 }
             });
         });
-        /*// holiday shipping toggle
-        $('.holiday-shipping').click(function () {
+        // product alert
+        $('.product-buy-alert').on('click', function () {
             $(this).toggleClass('selected');
-        });*/
+        });
     },
     weirdwearProductInit: function () {
         var self = this;
@@ -746,10 +746,10 @@ GNU.main = {
                 }
             });
         });
-        /*// holiday shipping toggle
-        $('.holiday-shipping').click(function () {
+        // product alert
+        $('.product-buy-alert').on('click', function () {
             $(this).toggleClass('selected');
-        });*/
+        });
     },
     accessoriesProductInit: function () {
         var self = this;
@@ -818,10 +818,10 @@ GNU.main = {
                 }
             });
         });
-        /*// holiday shipping toggle
-        $('.holiday-shipping').click(function () {
+        // product alert
+        $('.product-buy-alert').on('click', function () {
             $(this).toggleClass('selected');
-        });*/
+        });
     },
     teamDetailsInit: function () {
         if (typeof teamAlbumId != "undefined") {

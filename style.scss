@@ -1650,7 +1650,7 @@ body.international .product-overview-page .free-shipping-banner {
 		}
 		.product-price {
 			padding-bottom: 20px;
-			font-family: "gnuregular", Helvetica, Arial, sans-serif;
+			font-family: $gnuFont;
 
 			p {
 				font-size: 18px;
@@ -1671,7 +1671,7 @@ body.international .product-overview-page .free-shipping-banner {
 
 			label {
 				cursor: pointer;
-				font-family: "gnuregular", Helvetica, Arial, sans-serif;
+				font-family: $gnuFont;
 				text-transform: uppercase;
 				display: inline-block;
 				color: $apparelColor;
@@ -1720,7 +1720,7 @@ body.international .product-overview-page .free-shipping-banner {
 						font-size: 24px;
 						text-decoration: none;
 						text-transform: uppercase;
-						font-family: "gnuregular", Helvetica, Arial, sans-serif;
+						font-family: $gnuFont;
 
 						&:hover {
 							background: $blogColor;
@@ -1729,7 +1729,7 @@ body.international .product-overview-page .free-shipping-banner {
 				}
 				&.find-dealer a {
 					color: $apparelColor;
-					font-family: "gnuregular", Helvetica, Arial, sans-serif;
+					font-family: $gnuFont;
 					font-size: 18px;
 					text-transform: uppercase;
 				}
@@ -1758,54 +1758,38 @@ body.international .product-overview-page .free-shipping-banner {
 				}
 			}
 		}
-		/*.holiday-shipping {
-			font-family: "gnuregular", Helvetica, Arial, sans-serif;
+		.product-buy-alert {
+			font-family: $gnuFont;
 			padding-bottom: 20px;
 
 			a {
 				width: 400px;
 				height: 100px;
 				display: block;
-				background: #CC0000 url('_/img/holiday-shipping.png');
+				background: #0099ff url('_/img/free-shipping-100.png');
 				color: #fff;
 				text-indent: -999999px;
 			}
-			p {
-				height: 105px;
+			.alert-details {
 				overflow: hidden;
-				background: #fff;
+				background: #000 url('_/img/free-shipping-100-bg.png');
 				color: #CC0000;
-				padding: 10px;
+				padding: 20px;
 				display: none;
-			}
-		}
-		.holiday-shipping.selected {
-			a {
-				background-position: 0 -100px;
-			}
-			p {
-				display: block;
-			}
-		}
-		.product-free-shipping {
-			border: dashed 2px $blogColor;
-			padding: 10px;
-			margin-bottom: 20px;
-			cursor: pointer;
 
-			.free-shipping-details {
-				display: none;
-				padding-top: 10px;
-
-				&.show {
-					display: block;
-				}
 				p {
-					font-size: 12px;
 					margin-bottom: 5px;
 				}
 			}
-		}*/
+			&.selected {
+				a {
+					background-position: 0 -100px;
+				}
+				.alert-details {
+					display: block;
+				}
+			}
+		}
 		.product-description {
 			padding-bottom:10px;
 
@@ -2001,7 +1985,7 @@ body.international .product-overview .column-right .product-free-shipping {
 		}
 		.product-details .quick-specs li {
 			padding-bottom: 10px;
-			font-family: "gnuregular", Helvetica, Arial, sans-serif;
+			font-family: $gnuFont;
 			font-size: 18px;
 			text-transform: uppercase;
 		}
@@ -2013,7 +1997,7 @@ body.international .product-overview .column-right .product-free-shipping {
 		}
 		.product-details .quick-specs p {
 			padding-top: 10px;
-			font-family: Helvetica, Arial, sans-serif;
+			font-family: $bodyFont;
 			font-size: 14px;
 			text-transform: none;
 		}
@@ -2105,7 +2089,7 @@ body.international .product-overview .column-right .product-free-shipping {
 			width: 90px;
 			height: 60px;
 			background: url('_/img/product-video-cta.png') no-repeat;
-			font-family: "gnuregular", Helvetica, Arial, sans-serif;
+			font-family: $gnuFont;
 			font-size: 18px;
 			text-transform: uppercase;
 			color: #000;
@@ -2288,7 +2272,7 @@ body.international .product-overview .column-right .product-free-shipping {
 			}
 			p {
 				color: $blogColor;
-				font-family: "gnuregular", Helvetica, Arial, sans-serif;
+				font-family: $gnuFont;
 
 				span {
 					color: #fff;
@@ -2461,7 +2445,7 @@ ul.collab-list li {
 		}
 			.team-details .left-column .rider-overview p strong,
 			.team-details .left-column .rider-overview p span {
-				font-family: "gnuregular", Helvetica, Arial, sans-serif;
+				font-family: $gnuFont;
 			}
 		.team-details .left-column .rider-overview .personal-site {
 			padding-bottom: 10px;
@@ -2490,7 +2474,7 @@ ul.collab-list li {
 			.team-details .left-column ul.riders-gear li a p {
 				font-size: 12px;
 				color: $blogColor;
-				font-family: "gnuregular", Helvetica, Arial, sans-serif;
+				font-family: $gnuFont;
 				text-transform: uppercase;
 			}
 				.team-details .left-column ul.riders-gear li a p span {
@@ -2529,7 +2513,7 @@ ul.collab-list li {
 					background: rgba(153, 51, 204, .7);
 					color: #fff;
 					padding: 3px 5px;
-					font-family: "gnuregular", Helvetica, Arial, sans-serif;
+					font-family: $gnuFont;
 					text-transform: uppercase;
 
 					transition: background 100ms ease-in-out, color 200ms ease-in-out;
@@ -2560,7 +2544,7 @@ ul.collab-list li {
 	.team-details .right-column strong {
 		color: $snowboardsColor;
 		padding: 10px 0;
-		font-family: "gnuregular", Helvetica, Arial, sans-serif;
+		font-family: $gnuFont;
 		text-transform: uppercase;
 	}
 	.team-details .right-column p {
@@ -2834,7 +2818,7 @@ ul.collab-list li {
 
 			p {
 				color:#fff;
-				font-family: "gnuregular", Helvetica, Arial, sans-serif;
+				font-family: $gnuFont;
 				transition: color 200ms ease-in-out;
 				-webkit-transition: color 200ms ease-in-out;
 				-moz-transition: color 200ms ease-in-out;
@@ -3268,7 +3252,7 @@ ul.collab-list li {
 					background: rgba(0, 0, 0, .8);
 					color: #fff;
 					padding: 0 5px;
-					font-family: "gnuregular", Helvetica, Arial, sans-serif;
+					font-family: $gnuFont;
 					text-transform: uppercase;
 
 					transition: background 100ms ease-in-out, color 200ms ease-in-out;
@@ -3664,7 +3648,7 @@ body.international .shopping-cart-wrapper { display: none; }
 #shptrn_cart_items_header label {
 	float:left;
 	font-weight:700;
-	font-family: "gnuregular", Helvetica, Arial, sans-serif;
+	font-family: $gnuFont;
 	text-transform: uppercase;
 	color: #fff;
 }
@@ -3777,7 +3761,7 @@ body.international .shopping-cart-wrapper { display: none; }
 }
 .shptrn_cart_price_row span.left {
 	float:left;
-	font-family: "gnuregular", Helvetica, Arial, sans-serif;
+	font-family: $gnuFont;
 	text-transform: uppercase;
 }
 .shptrn_cart_price_row span.right {
@@ -3791,7 +3775,7 @@ body.international .shopping-cart-wrapper { display: none; }
 	background-image:0;
 	padding:10px 30px;
 	color:#000;
-	font-family: "gnuregular", Helvetica, Arial, sans-serif;
+	font-family: $gnuFont;
 	text-transform: uppercase;
 }
 .shptrn_atc_button button:hover,.shptrn_checkout_button button:hover {
