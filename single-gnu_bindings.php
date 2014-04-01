@@ -188,13 +188,13 @@ Template Name: Bindings Detail Template
 							<div class="cart-success hidden"><p>The item has been added to your cart.<br /><a href="/shopping-cart/">View your shopping cart.</a></p></div>
 							<div class="cart-failure hidden"><p>There has been an error adding the item to your cart. Try again later.</p></div>
 						</div>
-						<div class="product-buy-alert">
+						<?php /*<div class="product-buy-alert">
 							<a href="#free-shipping">Free Shipping for orders over $100!</a>
 							<div class="alert-details">
 								<p>Offer only applies to customers with a valid United States or Canada delivery addresses, we do not deliver to P.O. Boxes. Offer expires March 31, 11:59 PM PST, 2014</p>
 								<p>Free shipping applies only to the following products: Any mix of products that aggregates to $100 U.S. Dollars in one order.</p>
 							</div>
-						</div>
+						</div>*/ ?>
 						<h2><?php the_field('gnu_product_slogan'); ?></h2>
 						<div class="product-description">
 							<?php the_content(); ?>
