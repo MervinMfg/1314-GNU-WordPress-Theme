@@ -111,8 +111,15 @@
 			po.src = 'https://apis.google.com/js/plusone.js';
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
 		})();
+		// Pinterest
+		(function(d){
+			var f = d.getElementsByTagName('SCRIPT')[0], p = d.createElement('SCRIPT');
+			p.type = 'text/javascript';
+			p.async = true;
+			p.src = '//assets.pinterest.com/js/pinit.js';
+			f.parentNode.insertBefore(p, f);
+		}(document));
 	</script>
-	<script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
 	<!-- Google Analytics -->
 	<script type="text/javascript">
 		var _gaq = _gaq || [];
