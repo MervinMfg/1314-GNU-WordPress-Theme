@@ -39,7 +39,7 @@ Template Name: Home Template
 			<div class="main-column">
 				<h2 class="keep-snowboarding-weird">Keep Snowboarding Weird</h2>
 				<section class="facebook-box">
-					<div class="fb-like-box" data-href="http://www.facebook.com/gnuSnowboards" data-width="292" data-height="564" data-show-faces="false" data-colorscheme="dark" data-stream="true" data-show-border="false" data-header="false"></div>
+					<div class="fb-like-box" data-href="http://www.facebook.com/gnuSnowboards" data-width="292" data-height="564" data-show-faces="false" data-colorscheme="light" data-stream="true" data-show-border="false" data-header="false"></div>
 				</section>
 				<section class="featured-weird-cinema">
 					<div class="video">
